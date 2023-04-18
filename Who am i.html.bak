@@ -474,317 +474,711 @@
 	flex-wrap:wrap;
 	width:inherit;
 	height:inherit;
+	padding:30px 0;
+	justify-content:center;
 }
 .containered .hello{
-	width:250px;
-	height:200px;
-	background:pink;
-	margin:8px;
-	border-radius:5px;
-	position:relative;
-}
-
-.containered .hello2{
-	width:250px;
-	height:200px;
-	background:purple;
-	margin:8px;
-	border-radius:5px;
-	position:relative;
-	paddinf:0;
-}
-.containered .hello span{
-	position:absolute;
-	bottom:0;
-	left:0;
-	right:0;
+	width:280px;
+	height:180px;
 	background:#eee;
-	border-radius:0 0 5px 5px;
-	text-align:center;
-	padding:4px 0;
-	font-weight:500;
-}
-.lastspan{
-	position:absolute;
-	bottom:0;
-	left:0;
-	right:0;
-	background:#eee;
-	border-radius:0 0 5px 5px;
-	text-align:center;
-	padding:4px 0;
-	font-weight:500;
-	z-index:999;
-}
-.flex-even{
-	width:50px;
-	height:90px;
-	font-size:9px;
-	margin:0;
+	border:1px solid rgba(0,0,0,0.1);
+	margin:10px;
 	position:relative;
-	overflow;hidden
-	padding:0;
 }
-.hii{
-	width:45px;
+.containered .hello .title{
+	position:absolute;
+	top:-40px;
+	width:100%;
+	height:30px;
+	background:#f0b017;
 }
-.anchorTags{
-	text-decoration:none;
-	color:#777;
+.checkbox-box{
+	margin:6px 5px 5px 5px;
+	width:15px;
+	height:15px;
 }
+.title .checkbox-title{
+	margin-top:-10px;
+	font-weight:700;
+	color:black;
+	
+}
+.checkbox{
+	margin:6px 5px;
+	width:15px;
+	height:15px;
 
+}
+.submit-btn{
+	padding:10px 50px;
+	background:black;
+	color:#fff;
+}
+.btn-submit{
+	width:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
 				</style>
-                <!-- content wrapper -->
-                <div class="content-wrapper" >
+				
+				
+				<!-- content wrapper -->
+                
+				<div class="content-wrapper" >
                     <div class="row" >
                         <div class="col-md-12" >
-                
+                <form>
 							<div class="banners mb-4" style="width:100%; height:500px; padding:0px; ">
                                
-                              
-								<div class="containered">
+                             	<div class="containered">
 
-									<div class="hello"><a class="anchorTags" href="Who am i.html"><img src="one.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Who Am I? Change Your Life</span></a></div>
+									<div class="hello" style=" display:flex;   flex-direction:column;">
+										<div class="title">
+											<input class="checkbox" onclick="myfunc1()" type="checkbox" id="My Life" value="My Life">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">My Life</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="My Life" type="checkbox" id="A growth mindset" value="A growth mindset">
+										<label for="checkbox" >A growth mindset</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="My Life" type="checkbox" id="Personal Values" value="Personal Values">
+										<label for="checkbox" >Personal values</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="My Life" type="checkbox" id="Strengths and weaknesses" value="Strengths and weaknesses">
+										<label for="checkbox">Strengths and weaknesses</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="My Life" type="checkbox" id="Fears and insecurities" value="Fears and insecurities">
+										<label for="checkbox">Fears and insecurities</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="My Life" type="checkbox" id="achievements and failures" value="achievements and failures">
+										<label for="checkbox">achievements and failures</label>
+										</div>
+										
+									</div>
 
-									<div class="hello"><img src="two.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Find Your Community</span></div>
 
-									<div class="hello"><img src="four.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>I Can Help</span></div>
 
-									<div class="hello"><img src="four-1.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Share My Experiences</span></div>
 
-									<div class="hello"><img src="five.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Edutainment,Culture, & Lifestyle</span></div>
-
-									<div class="hello"><img src="six.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Creating a Plan?</span></div>
-
-									<div class="hello"><img src="seven.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>I Need Help[Resources]</span></div>
-
-									<div class="hello2">
-									<span class="lastspan">The Mentoring Portals</span>
+									<div class="hello" style=" display:flex;   flex-direction:column;">
+										<div class="title">
+											<input class="checkbox" onclick="myfun2()" type="checkbox" id="My Finances" value="My Finances">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">My Finances</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="My Finances" type="checkbox" id="Goals and aspirations" value="Goals and aspirations">
+										<label for="checkbox">Goals and aspirations</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="My Finances" type="checkbox" id="Budgeting & managing money" value="Budgeting & managing money">
+										<label for="checkbox">Budgeting & managing money</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="My Finances" type="checkbox" id="Debt and savings" value="Debt and savings">
+										<label for="checkbox">Debt and savings</label>
+										</div>
+										
+									</div>
+									
+									
+									
+									<div class="hello" style=" display:flex;   flex-direction:column;">
+										<div class="title">
+											<input class="checkbox" onclick="myfun3()" type="checkbox" id="Social Life/Family/Friends" value="Social Life/Family/Friends">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Social Life/Family/Friends</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Social Life/Family/Friends" type="checkbox" id="Social confidence in social settings" value="Social confidence in social settings">
+										<label for="checkbox">Social confidence in social settings</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Social Life/Family/Friends" type="checkbox" id="Social circles and communities" value="Social circles and communities">
+										<label for="checkbox">Social circles and communities</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Social Life/Family/Friends" type="checkbox" id="Closest confidants" value="Closest confidants">
+										<label for="checkbox">Closest confidants</label>
+										</div>
+										
+									</div>
+									
+									
+									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
+										<div class="title">
+											<input class="checkbox checkbox-box" onclick="myfun4()" type="checkbox" id="Surroundings" value="Surroundings">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Surroundings</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Surroundings" type="checkbox" id="Clutter and minimalism" value="Clutter and minimalism">
+										<label for="checkbox">Clutter and minimalism</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Surroundings"  type="checkbox" id="Favorite smells, textures, & tastes" value="Favorite smells, textures, & tastes">
+										<label for="checkbox">Favorite smells, textures, & tastes</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Surroundings" type="checkbox" id="Cleanliness and organization" value="Cleanliness and organization">
+										<label for="checkbox">Cleanliness and organization</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Surroundings" type="checkbox" id="Level of comfort with noise" value="Level of comfort with noise">
+										<label for="checkbox">Level of comfort with noise</label>
+										</div>
+										
+									</div>
+									
+									
+									
+									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
+										<div class="title">
+											<input class=" checkbox checkbox-box" onclick="myfun5()" type="checkbox" id="Health" value="Health">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Health</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Health" type="checkbox" id="Preventive care and health screenings" value="Preventive care and health screenings">
+										<label for="checkbox">Preventive care and health screenings</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Health" type="checkbox" id="Mental health and emotional well-being" value="Mental health and emotional well-being">
+										<label for="checkbox">Mental health and emotional well-being</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Health" type="checkbox" id="Relationship with food and eating habits" value="Relationship with food and eating habits">
+										<label for="checkbox">Relationship with food and eating habits</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Health" type="checkbox" id="self-care and stress management" value="self-care and stress management">
+										<label for="checkbox">self-care and stress management</label>
+										</div>
+										
+									</div>
+									
+									
+									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
+										<div class="title">
+											<input class="checkbox checkbox-box" onclick="myfun6()" type="checkbox" id="Work/Job/Unemployed" value="Work/Job/Unemployed">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Work/Job/Unemployed</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Preferred work environments" value="Preferred work environments">
+										<label for="checkbox">Preferred work environments</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Work style and schedule" value="Work style and schedule">
+										<label for="checkbox">Work style and schedule</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Short-term and long-term career goals" value="Short-term and long-term career goals">
+										<label for="checkbox">Short-term and long-term career goals</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Job searching and networking" value="Job searching and networking">
+										<label for="checkbox">Job searching and networking</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Self-employment or entrepreneurship" value="Self-employment or entrepreneurship">
+										<label for="checkbox">Self-employment or entrepreneurship</label>
+										</div>
+										
+									</div>
+									
+                            </div>
+                     </div>
+						</form>
 						
+						<script>
 
-
-	 <div class="d-md-flex portals portals-1">
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/portal/" data-toggle="tooltip" data-placement="top" title="" data-original-title="CITIES OF HOPE &amp; DESPAIR">
-                      <span class="icon"><i class="flati flaticon-cityscape flati-1x"></i></span>
-                      <span><div>1000+</div>Cities of Hope &amp; Despair</span>
-                      
-                  </a>
-                                    </div>
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/justice/" data-toggle="tooltip" data-placement="top" title="JUSTICE ROW / LEGAL / POLITICS" data-original-title="JUSTICE ROW / LEGAL / POLITICS">
-                       <span class="icon"><i class="flati flaticon-balance flati-1x"></i></span>
-                  <span>Justice Row / Legal / Politics</span>
-                 
-                  </a>
-                                    </div>
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/nonprofit/" data-toggle="tooltip" data-placement="top" title="" data-original-title="NON PROFIT CDC`S">
-                      <span class="icon"><i class="flati flaticon-building flati-1x"></i></span>
-                    <span>Non Profit CDC's</span>
-                  
-                  </a>
-                                    </div>
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/international/" data-toggle="tooltip" data-placement="top" title="" data-original-title="INTERNATIONAL / UNIVERSE">
-                     <span class="icon"> <i class="flati flaticon-planet-earth flati-1x"></i></span>
-                    <span>International / Universe</span>
-                  
-                  </a>
-                                    </div>
-
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/education" data-toggle="tooltip" data-placement="top" title="" data-original-title="EDUCATION / SCHOOLS / TRAINING / YOUTH / ENTERTAINMENT">
-                      <span class="icon"><i class="flati flaticon-presentation flati-1x"></i></span>
-                    <span>Education / Schools / Training / Youth / Entertainment</span>
-                  
-                  </a>
-                                    </div>
-
-                                </div>
-                                <div class="d-md-flex portals portals-2" >
-                                    <div class="flex-even hii">
-                                        <a href="https://www.kingstreets.com/community/" data-toggle="tooltip" data-placement="top" title="" data-original-title="COMMUNITY THINK TANK / INCUBATOR">
-                       <span class="icon"><i class="flati flaticon-community flati-1x"></i></span>
-                        <span>Community Think Tank / Incubator</span>
-                 
-                  </a>
-                                    </div>
-                                    <div class="flex-even hii" style="width:40px; overflow:hidden">
-                                        <a href="https://www.kingstreets.com/homepersonal/" data-toggle="tooltip" data-placement="top" title="" data-original-title="HOME / PERSONAL / DEVELOPMENT / INVESTMENT">
-                      <span class="icon"><i class="flati flaticon-target flati-1x"></i></span>
-                    <span>Home / Personal / Developement / Investment</span>
-                  </a>
-                                    </div>
-                                    <div class="flex-even hii" style="width:45px; overflow:hidden">
-                                        <a href="https://www.kingstreets.com/supportcenter/" data-toggle="tooltip" data-placement="top" title="" data-original-title="SUPPORT CENTER / BUSINESS / FINANCES / NEWS / WORK / MANAGEMENT">
-                      <span class="icon"><i class="flati flaticon-support flati-1x"></i></span>
-                    <span>Support Center / Business / Finances / News / Work</span>
-                  
-                  </a>
-                                    </div>
-                                    <div class="flex-even hii">
-                                        <a href="https://www.kingstreets.com/church/" data-toggle="tooltip" data-placement="top" title="" data-original-title="CHURCH / SOUL / SPIRTUAL">
-                      <span class="icon"><i class="flati flaticon-church flati-1x"></i></span>
-                        <span>Church / Soul / Spiritual</span>
-                  </a>
-                                    </div>
-
-                                    <div class="flex-even hii">
-                                        <a href="https://www.kingstreets.com/health" data-toggle="tooltip" data-placement="top" title="" data-original-title="HEALTH / MEDICAL">
-                      <span class="icon"><i class="flati flaticon-heartbeat flati-1x"></i></span>
-                    <span>Health / Medical</span>
-                  
-                  </a>
-                                    </div>
-
-                                </div>
+						</script>
+						
+							<!-- Profile section-->
+							
+							
+							
+								<style>
+								.profile{
+									width:70%;
+									margin:40px auto;
+									padding:15px;
+									overflow:auto;
+									display:flex;
+									flex-direction:column;
+									border:1px solid gray; 
+									position:relative;
+									letter-spacing:1px;
+									box-shadow:0 5px 10px rgba(0,0,0,0.2);
+								}
+								.profile h1{
+									font-family:'Poppins',sans-serif;
+									font-size:21px;
+									font-weight:600;
+									color:#1d1c1c;
+								}
+								.profile h2{
+									font-family:'Poppins',sans-serif;
+									font-size:17px;
+									font-weight:500;color:#1d1c1c;
+								
+								}
+								.profile ul li{
+									text-transform:capitalize;
+								}
+								.guidelines{
+									width:70%;
+									margin:40px auto;
+									padding:15px;
+									overflow:auto;
+									display:flex;
+									flex-direction:column;
+									border:1px solid gray; 
+									position:relative;
+									letter-spacing:1px;
+									box-shadow:0 5px 10px rgba(0,0,0,0.2);
+								
+								}
+								.guidelines h1{
+									font-family:'Poppins',sans-serif;
+									font-size:19px;
+									font-weight:600;
+									color:#1d1c1c;
+									letter-spacing:0px;
+								}
+								
+								.guidelines h2{
+									font-family:'Poppins',sans-serif;
+									font-size:17px;
+									font-weight:500;color:#1d1c1c;
+								
+								}
+								</style>
+							
+							<div id="profiles" class="profile">
+							<h1 style="color:#f0b017">Hi!</h1>
+							<h2 id="profiletasks">Your selected attributes will be displayed here.</h2>
+							</div>								
 					
-</div>
-
-
-</div>
-
-
-
-                    
+					
+							<div class="guidelines" id="guidelines">
+							<h1 style="color:#f0b017">Guidelines</h1>
+							<h2 id="guidelines-para">
+							 Guidelines with respect to your selected attributes.You can share your experiences , your past and present for further guidelines.
+							</h2>
+							
+							
+							</div>
 					
 					
 					
 					
+                           </div>
+						   
+						   
+						   
+						   
+						   
+						   
+						   
+						   
+						   <style>
+							.ShareMyExperiences{
+								width:100%;
+								display:flex;
+								justify-content:center;
+								align-items:center;
+								
+							}
+							.embedded{
+								width:70%;
+							}
+							.p-box{
+							
+									box-shadow:0 5px 10px rgba(0,0,0,0.2);
+									margin:30px 0;
+							}
+							
+							.titled {
+								text-transform: uppercase;
+								color: #111;
+								border-bottom: #f1f2f2 5px solid;
+								padding-bottom: 10px;
+								position: relative;
+								font-weight: 700;
+								font-size: 1.5em;
+							}
+							h1.titled::after {
+								content: '';
+								left: 0;
+								background-color: #f0b017;
+								width: 85px;
+								height: 5px;
+								position: absolute;
+								bottom: -5px;
+						   </style>
+						   
+				<div class="ShareMyExperiences" style="background-color:white">
+				<div class="embedded">
+					<div class="row mt-4">
+				<div class="col-md-12">
+					 <!-- Breadcrumb NavXT 6.6.0 -->
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingstreets." href="https://www.kingstreets.com" class="home" ><span property="name"></span></a><meta property="position" content="1"></span>  <span property="itemListElement" typeof="ListItem"><span property="name" class="archive post-sharemyexperiences-archive current-item" style="letter-spacing:1px">You can share your experiences , your past and present for further guidelines or help.</span><meta property="url" content="https://www.kingstreets.com/sharemyexperiences/"><meta property="position" content="2"></span>					
+<h1 class="titled mb-2">Share Your Experience</h1>
 					
-                            </div>
-                            
-							<!-- kings tv -->
-                            <h2 class="subtitle mb-0"><a href="https://www.kingstreets.com/kings-tv/" target="new">King's TV</a></h2>
-
-
-
-
-                            <div class="row">
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/39ILoDWK-P4"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/edutainment/" class="btn btn-primary btn-sm">Edutainment</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/RjzC-8-P8DY"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/edutainment/" class="btn btn-primary btn-sm">Edutainment</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/Pv4xWJHva3g"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/fraternities/" class="btn btn-primary btn-sm">Fraternities</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/FZwbO1ANKIs"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/fraternities/" class="btn btn-primary btn-sm">Fraternities</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/xzvklmoHO3M"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/sororities/" class="btn btn-primary btn-sm">Sororities</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/4KcgPUvZw58"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/sororities/" class="btn btn-primary btn-sm">Sororities</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-                                <div class="col-md-12">
-                                    <a href="http://www.kingstreets.com/kings-tv/" class="btn btn-warning">More</a>
-                                </div>
-
-
-
-
-                            </div>
-                            <!-- end kings tv -->
-                        </div>
+					<a href="https://www.kingstreets.com/share-my-experiences-form/" class="btn btn-primary">Submit Your Experience ! </a>
+				</div>
+			</div>
+
+							<div class="row p-box">
+				   
+					
+					<div class="col-md-5">
+						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2022/02/26-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
+
+					 <div class="col-md-7">
+						<h3>GRWM While I Share My MSW (Masters of Social Work) Experience As a Minority/Black Student</h3>
+						<div class='post-content'></div> 
+						<a href="https://www.kingstreets.com/sharemyexperiences/grwm-while-i-share-my-msw-masters-of-social-work-experience-as-a-minority-black-student-2/" class="btn btn-success">Read More</a>   
+					</div>
+					
+				</div>
+					   
+
+								<div class="row p-box">
+				   
+					
+					<div class="col-md-5">
+						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2022/02/25-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
+
+					 <div class="col-md-7">
+						<h3>Black American in Brazil shares his experience</h3>
+						<div class='post-content'></div> 
+						<a href="https://www.kingstreets.com/sharemyexperiences/black-american-in-brazil-shares-his-experience/" class="btn btn-success">Read More</a>   
+					</div>
+					
+				</div>
+					   
+
+								<div class="row p-box">
+				   
+					
+					<div class="col-md-5">
+						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2021/10/1-65-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
+
+					 <div class="col-md-7">
+						<h3>Why Some Africans Have Problems With African Americans When They Immigrate to the USA (Crys Logic)</h3>
+						<div class='post-content'></div> 
+						<a href="https://www.kingstreets.com/sharemyexperiences/why-some-africans-have-problems-with-african-americans-when-they-immigrate-to-the-usa-crys-logic/" class="btn btn-success">Read More</a>   
+					</div>
+					
+				</div>
+					   
+
+								<div class="row p-box">
+				   
+					
+					<div class="col-md-5">
+						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2021/10/1-64-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
+
+					 <div class="col-md-7">
+						<h3>SOCIAL WORK | 4 Tips To Be a Successful Social Worker</h3>
+						<div class='post-content'></div> 
+						<a href="https://www.kingstreets.com/sharemyexperiences/social-work-4-tips-to-be-a-successful-social-worker/" class="btn btn-success">Read More</a>   
+					</div>
+					
+				</div>
+					   
+
+								<div class="row p-box">
+				   
+					
+					<div class="col-md-5">
+						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2021/10/1-63-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
+
+					 <div class="col-md-7">
+						<h3>GRWM While I Share My MSW (Masters of Social Work) Experience As a Minority/Black Student</h3>
+						<div class='post-content'></div> 
+						<a href="https://www.kingstreets.com/sharemyexperiences/grwm-while-i-share-my-msw-masters-of-social-work-experience-as-a-minority-black-student/" class="btn btn-success">Read More</a>   
+					</div>
+					
+				</div>
+					   
+
+							
+			<div class="col-md-12">
+					
+					 
+				
+	<nav class="navigation pagination" role="navigation" aria-label="Pages">
+		<h2 class="screen-reader-text">Pages</h2>
+		<div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>
+<a class="page-numbers" href="https://www.kingstreets.com/sharemyexperiences/page/2/">2</a>
+<a class="page-numbers" href="https://www.kingstreets.com/sharemyexperiences/page/3/">3</a>
+<a class="page-numbers" href="https://www.kingstreets.com/sharemyexperiences/page/4/">4</a>
+<a class="next page-numbers" href="https://www.kingstreets.com/sharemyexperiences/page/2/">Next</a></div>
+	</nav>					</div>
+	</div>
+		</div>		</div>
+				
+				
+				
+						   
+						   
+						   
+						   
+						   
                        
 					   </div>
                 </div>
+				
+				
+				
+				
+				
+				<script>
+				var listArray=[];						function myfun2(){
+							var checkboxtwo =document.getElementById("My Finances");
+							var guidelines=document.getElementById("guidelines-para");
+				
+							if(checkboxtwo.checked == true){
+								var allcheckboxes = document.getElementsByName("My Finances");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=true;
+									listArray.push(allcheckboxes[i].value);
+							
+							guidelines.innerHTML = `General guidelines for My Finances <br><br> My Finances: Your finances are a crucial part of your life and can greatly impact your overall well-being. Consider your current financial situation, including your income, expenses, assets, and liabilities. Reflect on your financial goals and values.<br>
+Goals and Aspirations: Your goals and aspirations are important factors in determining who you are and what you want out of life. Consider what you want to achieve in your personal and professional life, both in the short-term and the long-term. Reflect on what drives you and motivates you to succeed. <br>
+Budgeting & Managing Money: Budgeting and managing money are key skills for achieving financial stability and reaching your goals. Consider your spending habits, financial priorities, and strategies for managing your money. Reflect on how you can improve your financial management skills and develop healthy money habits. <br>
+Debt: Debt can be a significant source of stress and can impact your financial health. Consider your current debt situation, including any outstanding loans or credit card balances. Reflect on strategies for managing and paying off your debt. <br>
+Savings: Saving money is an important part of achieving financial security and reaching your goals. Consider your current savings habits, including how much you save and where you save it. Reflect on strategies for increasing your savings and building a strong financial foundation. <br>
+When exploring the question, "Who am I?" it's important to consider your financial situation and goals as an integral part of your identity. By reflecting on these five points, you can gain a better understanding of your financial values, goals, and priorities, and work towards achieving financial stability and success. Remember to approach the process with openness, honesty, and self-compassion, and seek out resources and support when needed. <br>
+
+
+`;
+			
+						
+							
+							
+								}
+							}else{
+								var allcheckboxes = document.getElementsByName("My Finances");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=false;
+									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
+									guidelines.innerHTML = "";
+								}
+							}
+							
+						}
+						function myfun3(){
+							var checkboxthree =document.getElementById("Social Life/Family/Friends");
+							var guidelines=document.getElementById("guidelines-para");
+							if(checkboxthree.checked == true){
+								var allcheckboxes = document.getElementsByName("Social Life/Family/Friends");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=true;
+									listArray.push(allcheckboxes[i].value);
+							guidelines.innerHTML = `General guidelines for Social Life/Family/Friends <br><br> Social Life/Family/Friends: Your social life, including your relationships with family and friends, can greatly influence your sense of self and your overall well-being. Consider your current relationships and the role they play in your life. Reflect on how you maintain these relationships and how they contribute to your happiness and personal growth.<br>
+Social Confidence in Social Settings: Social confidence refers to your ability to interact with others in social settings, whether it's at work, school, or social events. Consider your level of social confidence and any areas where you may feel uncomfortable or insecure. Reflect on strategies for improving your social skills and building confidence in social settings. <br>
+Social Circles and Communities: Your social circles and communities can be a source of support, belonging, and personal growth. Consider the different groups and communities you belong to, such as your workplace, school, or hobbies. Reflect on how these communities contribute to your sense of identity and how you can become more involved and connected. <br>
+Closest Confidants: Your closest confidants, such as your best friends or family members, play a significant role in your life and can greatly influence your sense of self. Consider the people you confide in the most and the role they play in your life. Reflect on how these relationships contribute to your personal growth and well-being. <br>
+When exploring the question, "Who am I?" it's important to consider your social life and relationships as an integral part of your identity. By reflecting on these four points, you can gain a better understanding of your social values, goals, and priorities, and work towards building strong and supportive relationships. Remember to approach the process with openness, honesty, and self-compassion, and seek out support and resources when needed. <br>
+
+
+`;
+			
+								}
+							}else{
+								var allcheckboxes = document.getElementsByName("Social Life/Family/Friends");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=false;
+									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
+									guidelines.innerHTML = "";
+								}
+							}
+							
+						}
+						function myfun4(){
+							var checkboxfour =document.getElementById("Surroundings");
+							var guidelines=document.getElementById("guidelines-para");
+							if(checkboxfour.checked == true){
+								var allcheckboxes = document.getElementsByName("Surroundings");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=true;
+									listArray.push(allcheckboxes[i].value);
+							guidelines.innerHTML = `General guidelines for Surroundings <br><br>Surroundings: Your surroundings can greatly impact your mood, productivity, and overall well-being. Consider the spaces you spend the most time in, such as your home, workplace, or favorite hangouts. Reflect on how these spaces make you feel and how they contribute to your sense of self.<br>
+Clutter and Minimalism: Clutter and minimalism can both have a significant impact on your surroundings and your sense of well-being. Consider your preferences for clutter or minimalism and how they affect your mood and productivity. Reflect on strategies for maintaining a clutter-free and organized space that aligns with your preferences. <br>
+Favorite Smells, Textures, & Tastes: Your favorite smells, textures, and tastes can be a reflection of your personality and preferences. Consider your favorite scents, fabrics, and foods, and how they contribute to your sense of comfort and well-being. Reflect on how you can incorporate these preferences into your surroundings to create a space that feels truly you. <br>
+Cleanliness and Organization: Cleanliness and organization are important aspects of creating a comfortable and productive environment. Consider your level of comfort with messiness and disorganization and how they affect your mood and productivity. Reflect on strategies for maintaining a clean and organized space that aligns with your preferences. <br>
+Level of Comfort with Noise: Your level of comfort with noise can greatly impact your ability to focus and relax in your surroundings. Consider your preferences for noise level and how it affects your mood and productivity. Reflect on strategies for creating a space that aligns with your preferences, whether it's a quiet and peaceful space or a bustling and lively environment. <br>
+When exploring the question, "Who am I?" it's important to consider your surroundings and the impact they have on your well-being. By reflecting on these five points, you can gain a better understanding of your preferences, values, and priorities when it comes to your environment. Remember to approach the process with openness, honesty, and self-compassion, and seek out support and resources when needed. <br>
+
+`;
+			
+								}
+							}else{
+								var allcheckboxes = document.getElementsByName("Surroundings");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=false;
+									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
+									guidelines.innerHTML = "";
+								}
+							}
+							
+						}
+						function myfun5(){
+							var checkboxfive =document.getElementById("Health");
+							var guidelines=document.getElementById("guidelines-para");
+							if(checkboxfive.checked == true){
+								var allcheckboxes = document.getElementsByName("Health");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=true;
+									listArray.push(allcheckboxes[i].value);
+							guidelines.innerHTML = `General guidelines for Health <br><br>Health: Your physical health is an important aspect of your overall well-being. Consider your current level of health and any chronic conditions or illnesses you may have. Reflect on strategies for maintaining and improving your physical health, such as exercise and proper nutrition.<br>
+Preventive Care and Health Screenings: Preventive care and health screenings are important for maintaining good health and detecting potential health problems early. Consider your current level of engagement with preventive care, such as regular check-ups and health screenings. Reflect on any barriers you may face in accessing preventive care and strategies for overcoming them. <br>
+Mental Health and Emotional Well-being: Your mental health and emotional well-being are just as important as your physical health. Consider your current level of mental health and any emotional challenges you may be facing. Reflect on strategies for maintaining and improving your mental health, such as therapy and self-care practices. <br>
+Relationship with Food and Eating Habits: Your relationship with food and eating habits can greatly impact your physical and emotional well-being. Consider your current eating habits and any challenges you may face when it comes to food. Reflect on strategies for developing a healthy and positive relationship with food, such as mindful eating and seeking support from a nutritionist or therapist if needed. <br>
+Self-care and Stress Management: Self-care and stress management are important for maintaining good mental and emotional health. Consider your current level of self-care and any stressors you may be facing. Reflect on strategies for developing a self-care routine that aligns with your needs and preferences, such as meditation, exercise, or hobbies that bring you joy. <br>
+When exploring the question, "Who am I?" it's important to consider your physical and mental health, as well as your relationship with food and self-care practices. By reflecting on these five points, you can gain a better understanding of your health needs and priorities, and work towards developing a healthy and fulfilling lifestyle. Remember to approach the process with openness, honesty, and self-compassion, and seek out support and resources when needed. <br>
+
+
+`;
+			
+								}
+							}else{
+								var allcheckboxes = document.getElementsByName("Health");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=false;
+									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
+									guidelines.innerHTML = "";
+								}
+							}
+							
+						}
+						function myfun6(){
+							var checkboxsix =document.getElementById("Work/Job/Unemployed");
+							var guidelines=document.getElementById("guidelines-para");
+							if(checkboxsix.checked == true){
+								var allcheckboxes = document.getElementsByName("Work/Job/Unemployed");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=true;
+									listArray.push(allcheckboxes[i].value);
+							guidelines.innerHTML = `General guidelines for Work/Job/Unemployed <br><br>Work/Job/Unemployed: Your career is an important aspect of your identity and can greatly impact your overall well-being. Consider your current employment status and any career-related challenges or aspirations you may have. Reflect on strategies for finding meaningful and fulfilling work, whether you are currently employed or seeking employment.<br>
+Preferred Work Environments: Your preferred work environment can greatly impact your productivity and job satisfaction. Consider the types of work environments that you thrive in, such as working from home, working in a team-oriented environment, or working independently. Reflect on strategies for finding or creating a work environment that aligns with your preferences and needs. <br>
+Work Style and Schedule: Your work style and schedule can also impact your job satisfaction and overall well-being. Consider the work style and schedule that you prefer, such as a flexible schedule, a consistent routine, or a highly structured environment. Reflect on strategies for finding or creating a work schedule that aligns with your preferences and needs. <br>
+Short-term and Long-term Career Goals: Having clear career goals can help guide your career decisions and keep you motivated and focused. Consider your short-term and long-term career goals, and reflect on strategies for achieving them. This may involve seeking out education or training, networking with professionals in your field, or seeking out mentors or career coaches. <br>
+Job Searching and Networking: Whether you are currently employed or seeking employment, job searching and networking are important skills to have. Consider strategies for job searching and networking, such as building a strong online presence, attending industry events, or seeking out mentorship or guidance from professionals in your field. <br>
+Self-employment or Entrepreneurship: Self-employment or entrepreneurship may be a viable option for those who want more control over their career path and work schedule. Consider your interest in self-employment or entrepreneurship, and reflect on strategies for starting and growing a business. <br>
+When exploring the question, "Who am I?" it's important to consider your career aspirations, preferred work environment, work style and schedule, and job searching and networking skills. By reflecting on these six points, you can gain a better understanding of your career goals and priorities, and work towards building a fulfilling and meaningful career. Remember to approach the process with openness, honesty, and self-compassion, and seek out support and resources when needed. <br>
+
+
+`;
+			
+								}
+							}else{
+								var allcheckboxes = document.getElementsByName("Work/Job/Unemployed");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=false;
+									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
+									guidelines.innerHTML = "";
+								}
+							}
+							
+						}
+						function myfunc1(){
+							var checkboxone =document.getElementById("My Life");
+							var guidelines=document.getElementById("guidelines-para");
+							
+							
+							if(checkboxone.checked == true){
+								var allcheckboxes = document.getElementsByName("My Life");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=true;
+									listArray.push(allcheckboxes[i].value);
+							guidelines.innerHTML = `General guidelines for My Life <br><br>My Life: Your life experiences, both positive and negative, shape who you are. Consider your family background, childhood experiences, education, career, relationships, and any significant life events. Reflect on how these experiences have influenced your beliefs, values, and attitudes.<br>
+A Growth Mindset: Adopting a growth mindset means believing that your abilities can be developed through dedication and hard work. Consider your attitudes towards learning, challenges, and failure. Reflect on how you approach new experiences and how you handle setbacks. <br>
+Personal Values: Your values are the principles or beliefs that guide your behavior and decision-making. Consider what is most important to you in life, such as honesty, compassion, or creativity. Reflect on how your values align with your actions and goals. <br>
+Strengths and Weaknesses: Your strengths are the skills and abilities that come naturally to you, while your weaknesses are areas where you struggle. Consider your natural talents, learned skills, and areas for improvement. Reflect on how you can leverage your strengths and work on your weaknesses. <br>
+Fears and Insecurities: Everyone has fears and insecurities, but acknowledging them can help you better understand yourself. Consider what makes you feel anxious or uncertain, whether it's public speaking, rejection, or uncertainty about the future. Reflect on how you can work on overcoming these fears. <br>
+Achievements and Failures: Your achievements and failures are both important parts of your personal journey. Consider your proudest accomplishments, as well as the times when you fell short of your goals. Reflect on what you learned from both your successes and your failures. <br>
+When exploring the question, "Who am I?" it's important to approach the process with openness, honesty, and self-compassion. Remember that your identity is complex and multifaceted, and it's okay to have multiple aspects to your personality and experiences. By reflecting on these six points, you can gain a deeper understanding of yourself and work towards becoming the best version of yourself. <br>
+
+
+`;
+			
+								}
+							}else{
+								var allcheckboxes = document.getElementsByName("My Life");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=false;
+									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
+									guidelines.innerHTML = "";
+			
+								}
+							}
+							
+							}
+							
+							
+
+
+
+
+				var checkboxes=document.querySelectorAll(".checkbox");
+				var profiletasks=document.getElementById("profiletasks");
+				
+				for(var checkbox of checkboxes){
+						checkbox.addEventListener('click',function(){
+							if(this.checked == true){
+								listArray.push(this.value);
+							profiletasks.innerHTML = `You have selected the following attributes: <br><br> `+ `> `+ listArray.join(`<br> > `);
+			
+						
+							}else{
+								listArray = listArray.filter(e => e !== this.value);
+						profiletasks.innerHTML = `You have selected the following attributes: <br><br> `+  `> ` + listArray.join(`<br> > `);
+			
+							}
+						})
+					}
+									
+				
+				</script>
+                
+				
+				
+				
+				
+				
+				
+				
+				
+				
                 <!-- end content wrapper -->
 
                 <!-- footer -->

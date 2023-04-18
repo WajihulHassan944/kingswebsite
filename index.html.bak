@@ -530,7 +530,7 @@
 }
 .anchorTags{
 	text-decoration:none;
-	color:#777;
+	color:black;
 }
 
 				</style>
