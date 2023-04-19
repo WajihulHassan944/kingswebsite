@@ -387,8 +387,9 @@
                         </div>
                         <div class="logo">
                             <!-- <img src="img/logo.png" class="img-fluid"> -->
-                            <a href="https://www.kingstreets.com/" class="custom-logo-link" rel="home" aria-current="page"><img width="460" height="82" src="https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo.png" class="custom-logo" alt="Kingstreets" srcset="https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo.png 460w, https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo-300x53.png 300w" sizes="(max-width: 460px) 100vw, 460px" /></a>                            </div>
-                        <div class="freedomring">
+                            <a href="https://www.kingstreets.com/" class="custom-logo-link" rel="home" aria-current="page"><img class="logo-img" width="460" height="82" src="https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo.png" class="custom-logo" alt="Kingstreets" srcset="https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo.png 460w, https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo-300x53.png 300w"  /></a>                            </div>
+                        
+						<div class="freedomring">
                             <img src="https://www.kingstreets.com/wp-content/themes/kingstreets/assets/img/freedomring.png" width="100">
                         </div>
                         <div class="credentials flex-fill">
@@ -491,7 +492,7 @@
 	margin:8px;
 	border-radius:5px;
 	position:relative;
-	paddinf:0;
+	padding:0;
 }
 .containered .hello span{
 	position:absolute;
@@ -531,6 +532,39 @@
 .anchorTags{
 	text-decoration:none;
 	color:#777;
+}
+
+@media(max-width:700px)
+{
+.kingtv{
+margin-top:1300px;
+}
+.hello2{
+display:flex;
+flex-direction:row;flex-wrap:wrap;
+overflow:auto;
+}
+
+.logo-img{
+	width:300px;
+}
+}
+
+
+@media(max-width:430px)
+{
+
+.logo-img{
+	width:300px;
+}
+.kingtv{
+margin-top:1300px;
+}
+.hello2{
+display:flex;
+flex-direction:row;flex-wrap:wrap;
+overflow:auto;
+}
 }
 
 				</style>
@@ -654,7 +688,7 @@
 					
 					
                             </div>
-                            
+                            <div class="kingtv">
 							<!-- kings tv -->
                             <h2 class="subtitle mb-0"><a href="https://www.kingstreets.com/kings-tv/" target="new">King's TV</a></h2>
 
@@ -779,7 +813,7 @@
 
 
 
-                            </div>
+                            </div></div>
                             <!-- end kings tv -->
                         </div>
                        

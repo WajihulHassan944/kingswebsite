@@ -3,6 +3,11 @@
 
 <head>
     <!-- Required meta tags -->
+					
+				
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+				
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
@@ -387,7 +392,7 @@
                         </div>
                         <div class="logo">
                             <!-- <img src="img/logo.png" class="img-fluid"> -->
-                            <a href="https://www.kingstreets.com/" class="custom-logo-link" rel="home" aria-current="page"><img width="460" height="82" src="https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo.png" class="custom-logo" alt="Kingstreets" srcset="https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo.png 460w, https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo-300x53.png 300w" sizes="(max-width: 460px) 100vw, 460px" /></a>                            </div>
+                            <a href="https://www.kingstreets.com/" class="custom-logo-link" rel="home" aria-current="page"><img class="logo-img" width="460" height="82" src="https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo.png" class="custom-logo" alt="Kingstreets" srcset="https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo.png 460w, https://www.kingstreets.com/wp-content/uploads/2020/10/cropped-logo-300x53.png 300w" sizes="(max-width: 460px) 100vw, 460px" /></a>                            </div>
                         <div class="freedomring">
                             <img src="https://www.kingstreets.com/wp-content/themes/kingstreets/assets/img/freedomring.png" width="100">
                         </div>
@@ -520,6 +525,62 @@
 	justify-content:center;
 	align-items:center;
 }
+
+
+
+
+@media(max-width:700px)
+{
+	.containered .hello1{
+		margin-bottom:40px;
+		
+	}
+	
+	#profiles{
+	display:none;
+	}
+	#guidelines{
+	display:none;}
+	.ShareMyExperiences{
+		position:relative;
+		margin-top:1050px;
+	}
+	#archive{
+	margin-bottom:20px;}
+	.showReport{
+	width:100%;
+	}
+	
+.logo-img{
+	width:300px;
+}
+}
+
+@media(max-width:430px)
+{
+	.containered .hello1{
+		margin-bottom:40px;
+		
+	}
+	
+.logo-img{
+	width:300px;
+}
+	#profiles{
+	display:none;
+	}
+	#guidelines{
+	display:none;}
+	.ShareMyExperiences{
+		position:relative;
+		margin-top:1050px;
+	}
+	#archive{
+	margin-bottom:20px;}
+	.showReport{
+	width:100%;
+	}
+}
 				</style>
 				
 				
@@ -530,10 +591,11 @@
                         <div class="col-md-12" >
                 <form>
 							<div class="banners mb-4" style="width:100%; height:500px; padding:0px; ">
-                               
-                             	<div class="containered">
+                               <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingstreets." href="https://www.kingstreets.com" class="home" ><span property="name"></span></a><meta property="position" content="1"></span>  <span property="itemListElement" typeof="ListItem"><span property="name" class="archive post-sharemyexperiences-archive current-item" style="letter-spacing:1px;">If you select any of the checkbox, you are at the brighter & positive side. It will reflect you have sound knowledge about yourself. At the end, your report will be generated, based on your selected attributes. </span><meta property="url" content="https://www.kingstreets.com/sharemyexperiences/"><meta property="position" content="2"></span>					
 
-									<div class="hello" style=" display:flex;   flex-direction:column;">
+                             	<div class="containered" style="margin-top:20px;">
+
+									<div class="hello hello1" style=" display:flex;   flex-direction:column;">
 										<div class="title">
 											<input class="checkbox" onclick="myfunc1()" type="checkbox" id="My Life" value="My Life">
 											<label for="checkbox-title" style="font-weight:600; color:black; ">My Life</label>
@@ -569,7 +631,7 @@
 
 
 
-									<div class="hello" style=" display:flex;   flex-direction:column;">
+									<div class="hello hello1" style=" display:flex;   flex-direction:column;">
 										<div class="title">
 											<input class="checkbox" onclick="myfun2()" type="checkbox" id="My Finances" value="My Finances">
 											<label for="checkbox-title" style="font-weight:600; color:black; ">My Finances</label>
@@ -594,7 +656,7 @@
 									
 									
 									
-									<div class="hello" style=" display:flex;   flex-direction:column;">
+									<div class="hello hello1" style=" display:flex;   flex-direction:column;">
 										<div class="title">
 											<input class="checkbox" onclick="myfun3()" type="checkbox" id="Social Life/Family/Friends" value="Social Life/Family/Friends">
 											<label for="checkbox-title" style="font-weight:600; color:black; ">Social Life/Family/Friends</label>
@@ -779,11 +841,11 @@
 								}
 								</style>
 							
-							<div id="profiles" class="profile">
+							<div id="profiles" class="profile" onclick="myyy()">
 							<h1 style="color:#f0b017">Hi!</h1>
 							<h2 id="profiletasks">Your selected attributes will be displayed here.</h2>
+							
 							</div>								
-					
 					
 							<div class="guidelines" id="guidelines">
 							<h1 style="color:#f0b017">Guidelines</h1>
@@ -847,7 +909,7 @@
 					<div class="row mt-4">
 				<div class="col-md-12">
 					 <!-- Breadcrumb NavXT 6.6.0 -->
-<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingstreets." href="https://www.kingstreets.com" class="home" ><span property="name"></span></a><meta property="position" content="1"></span>  <span property="itemListElement" typeof="ListItem"><span property="name" class="archive post-sharemyexperiences-archive current-item" style="letter-spacing:1px">You can share your experiences , your past and present for further guidelines or help.</span><meta property="url" content="https://www.kingstreets.com/sharemyexperiences/"><meta property="position" content="2"></span>					
+<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingstreets." href="https://www.kingstreets.com" class="home" ><span property="name"></span></a><meta property="position" content="1"></span>  <span property="itemListElement" typeof="ListItem"><span property="name" id="archive" class="archive post-sharemyexperiences-archive current-item" style="letter-spacing:1px">You can share your experiences , your past and present for further guidelines or help.</span><meta property="url" content="https://www.kingstreets.com/sharemyexperiences/"><meta property="position" content="2"></span>					
 <h1 class="titled mb-2">Share Your Experience</h1>
 					
 					<a href="https://www.kingstreets.com/share-my-experiences-form/" class="btn btn-primary">Submit Your Experience ! </a>
@@ -946,11 +1008,136 @@
 		</div>		</div>
 				
 				
-				
+
+
+						<style>
+						.ReportWrapper{
+							width:100%;
+							display:flex;
+							justify-content:center;
+							align-items:center;
+							flex-direction:column;
+							margin-top:40px;
+							
+						}
+						.showReport{
+							width:15%;
+							margin:10px 0;
+							cursor:pointer;height:50px;
+						}
+						.showReport h3{
+							padding:10px 20px;
+							color:white;
+							background:black;
+							font-size:17px;
+							font-weight:400;
+							text-align:center;
+						}
+						.showReport h3:hover{
+							color:black;
+							border:1px solid black;
+							background:white;
+							
+						}
+						.reportarea{
+							padding:20px;
+							display:flex;
+							justify-content:center;
+							align-items:center;
+							width:70%;
+							display:none;
+						}
+						.titleds{
+								text-transform: uppercase;
+								color: #111;
+								border-bottom: #f1f2f2 5px solid;
+								padding-bottom: 10px;
+								position: relative;
+								font-weight: 700;
+								font-size: 1.5em;
+							}
+							.reportSectionone{
+								width:280px;
+								height:180px;
+								border:1px solid rgba(0,0,0,0.1);
+								margin:10px;
+								display:flex;
+								flex-direction:column;
+								
+							}
+							.secOneHolding{
+								display:flex;
+								flex-wrap:wrap;
+								justify-content:center;
+								align-items:center;
+								margin:20px 0;
+							}
+							.reportSectionone h1{
+								margin-left:3px;
+								margin-top:5px;
+								font-size:17px;
+							}
+							.reportSectionone h1.titleds::after {
+								content: '';
+								left: 0;
+								background-color: #902f90;
+								width: 85px;
+								height: 5px;
+								position: absolute;
+								bottom: -5px;
 						   
-						   
-						   
-						   
+							.reportSectionone p{
+								padding:5px;
+							}
+							.secTwoHolding{
+								width:70%;
+								padding:20px;
+								margin:20px 0;
+							}
+						</style>
+						
+						<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+						<div class="ReportWrapper">
+							<div class="showReport">
+								<h3 id="test" onclick="showTheReport()">Show Report</h3>
+							</div>
+							
+							
+							<div id="reportarea" class="reportarea">
+							<div>
+							
+							
+								<h1 class="titled mb-2">Selected Attributes</h1>
+								
+								
+								<div class="secOneHolding">
+								<div class="reportSectionone reportSection1"><h1 class="titleds mb-2">My Life</h1><p id="sec1selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection2"><h1 class="titleds mb-2">My Finances</h1><p id="sec2selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection3"><h1 class="titleds mb-2">Health</h1><p id="sec3selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection4"><h1 class="titleds mb-2">Surroundings</h1><p id="sec4selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection5"><h1 class="titleds mb-2">Social</h1><p id="sec5selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection6"><h1 class="titleds mb-2">Job</h1><p id="sec6selects" style="margin-left:5px;"></p></div>
+								
+								</div>
+								
+								<div class="secTwoHolding " style="margin-bottom:30px;">
+								<h4 style="font-size:19px;">Evaluation Based on your Selection</h4>
+								<p id="secTwoHoldingPara"></p>
+								</div>
+								
+								<canvas id="canvas" style="width:100%;max-width:600px; margin-left:50px;"></canvas>
+
+							</div>
+							
+							
+							</div>
+							</div>	
+						
 						   
                        
 					   </div>
@@ -1168,12 +1355,325 @@ When exploring the question, "Who am I?" it's important to approach the process 
 					}
 									
 				
+				
+				
+				
+				
+				
+				
+							var array1 = [];
+							var array2 = [];
+							var array3 = [];
+							var array4 = [];
+							var array5 = [];
+							var array6 = [];
+				
+							var sec1selects = document.getElementById("sec1selects");
+							var sec2selects = document.getElementById("sec2selects");
+							var sec3selects = document.getElementById("sec3selects");
+							var sec4selects = document.getElementById("sec4selects");
+							var sec5selects = document.getElementById("sec5selects");
+							var sec6selects = document.getElementById("sec6selects");
+							
+							
+							var count1=0;
+							var count2=0;
+							var count3=0;
+							var count4=0;
+							var count5=0;
+							var count6=0;
+							
+							
+							var perc1=0
+							var perc2=0
+							var perc3=0
+							var perc4=0
+							var perc5=0
+							var perc6=0
+							
+							var reportSection1 = document.querySelector(".reportSection1");
+							var reportSection2 = document.querySelector(".reportSection2");
+							var reportSection3 = document.querySelector(".reportSection3");
+							var reportSection4 = document.querySelector(".reportSection4");
+							var reportSection5 = document.querySelector(".reportSection5");
+							var reportSection6 = document.querySelector(".reportSection6");
+							
+							var percentageArray = [];
+							
+							var secTwoHoldingPara = document.getElementById("secTwoHoldingPara");
+				var reportarea=document.getElementById("reportarea");
+							function showTheReport(){
+							
+								reportarea.style.display="block";
+						
+							
+							
+							if(listArray.includes('A growth mindset')){
+								if(!array1.includes('A growth mindset')){
+								array1.push("A growth mindset");}
+							}
+							
+							if(listArray.includes('Personal Values')){
+							if(!array1.includes('Personal Values')){
+								array1.push("Personal Values");}
+							}
+							
+							if(listArray.includes('Strengths and weaknesses')){
+							if(!array1.includes('Strengths and weaknesses')){
+								array1.push("Strengths and weaknesses");}
+							}
+							
+							if(listArray.includes('Fears and insecurities')){
+							if(!array1.includes('Fears and insecurities')){
+								array1.push("Fears and insecurities");}
+							}
+							
+							if(listArray.includes('achievements and failures')){
+							if(!array1.includes('achievements and failures')){
+								array1.push("achievements and failures");}
+							}
+							
+							
+							
+							
+							if(listArray.includes('Goals and aspirations')){
+							if(!array2.includes('Goals and aspirations')){
+								array2.push("Goals and aspirations");}
+							}
+							if(listArray.includes('Budgeting & managing money')){
+							if(!array2.includes('Budgeting & managing money')){
+								array2.push("Budgeting & managing money");}
+							}
+							if(listArray.includes('Debt and savings')){
+							if(!array2.includes('Debt and savings')){
+								array2.push("Debt and savings");}
+							}
+							
+							
+							
+							if(listArray.includes('Social confidence in social settings')){
+							if(!array3.includes('Social confidence in social settings')){
+								array3.push("Social confidence in social settings");}
+							}
+							if(listArray.includes('Social circles and communities')){
+							if(!array3.includes('Social circles and communities')){
+								array3.push("Social circles and communities");}
+							}
+							if(listArray.includes('Closest confidants')){
+							if(!array3.includes('Closest confidants')){
+								array3.push("Closest confidants");}
+							}
+							
+							
+							
+							if(listArray.includes('Clutter and minimalism')){
+							if(!array4.includes('Clutter and minimalism')){
+								array4.push("Clutter and minimalism");}
+							}
+							if(listArray.includes('Favorite smells, textures, & tastes')){
+							if(!array4.includes('Favorite smells, textures, & tastes')){
+								array4.push("Favorite smells, textures, & tastes");}
+							}
+							if(listArray.includes('Cleanliness and organization')){
+							if(!array4.includes('Cleanliness and organization')){
+								array4.push("Cleanliness and organization");}
+							}
+							if(listArray.includes('Level of comfort with noise')){
+							if(!array4.includes('Level of comfort with noise')){
+								array4.push("Level of comfort with noise");}
+							}
+							
+							
+							
+							if(listArray.includes('Preventive care and health screenings')){
+							if(!array5.includes('Preventive care and health screenings')){
+								array5.push("Preventive care and health screenings");}
+							}
+							if(listArray.includes('Mental health and emotional well-being')){
+							if(!array5.includes('Mental health and emotional well-being')){
+								array5.push("Mental health and emotional well-being");}
+							}
+							if(listArray.includes('Relationship with food and eating habits')){
+							if(!array5.includes('Relationship with food and eating habits')){
+								array5.push("Relationship with food and eating habits");}
+							}
+							if(listArray.includes('self-care and stress management')){
+							if(!array5.includes('self-care and stress management')){
+								array5.push("self-care and stress management");}
+							}
+			
+			
+			
+			
+			
+							if(listArray.includes('Preferred work environments')){
+							if(!array6.includes('Preferred work environments')){
+								array6.push("Preferred work environments");}
+							}
+							if(listArray.includes('Work style and schedule')){
+							if(!array6.includes('Work style and schedule')){
+								array6.push("Work style and schedule");}
+							}
+							if(listArray.includes('Short-term and long-term career goals')){
+							if(!array6.includes('Short-term and long-term career goals')){
+								array6.push("Short-term and long-term career goals");}
+							}
+							if(listArray.includes('Job searching and networking')){
+							if(!array6.includes('Job searching and networking')){
+								array6.push("Job searching and networking");}
+							}
+							if(listArray.includes('Self-employment or entrepreneurship')){
+							if(!array6.includes('Self-employment or entrepreneurship')){
+								array6.push("Self-employment or entrepreneurship");}
+							}
+							
+							
+							
+							
+							
+							sec1selects.innerHTML = array1.join(`<br>`);
+							sec2selects.innerHTML = array2.join(`<br>`);
+							sec3selects.innerHTML = array3.join(`<br>`);
+							sec4selects.innerHTML = array4.join(`<br>`);
+							sec5selects.innerHTML = array5.join(`<br>`);
+							sec6selects.innerHTML = array6.join(`<br>`);
+							
+							count1=array1.length;
+							count2=array2.length;
+							count3=array3.length;
+							count4=array4.length;
+							count5=array5.length;
+							count6=array6.length;
+							
+							
+							perc1 = Math.floor((count1/5)*100);
+							
+							perc2 = Math.floor((count2/3)*100);
+							perc3 = Math.floor((count3/3)*100);
+							perc4 = Math.floor((count4/4)*100);
+							perc5 = Math.floor((count5/4)*100);
+							perc6 = Math.floor((count6/5)*100);
+							
+							var avg = (perc1 + perc2 + perc3 + perc4 + perc5 + perc6)/6;
+							percentageArray.push(perc1,perc2,perc3,perc4,perc5,perc6)
+							
+							secTwoHoldingPara.innerHTML=`You know ${perc1}% about your life. <br>
+							You know ${perc2}% about your finances management. <br>You know ${perc3}% about your Sociality. <br>
+							You know ${perc4}% about your Surroundings. <br>You know ${perc5}% about your Health. <br>
+							You know ${perc6}% about your Job. <br><br><strong>Overall, percentage you know about yourself , your ups and downs is ${avg}%</strong>`;
+							
+							if(array1.length == []){
+							reportSection1.style.display="none";
+							}else{
+							reportSection1.style.display="block";
+							
+							}
+							
+							
+							if(array2.length == []){
+							reportSection2.style.display="none";
+							}else{
+							reportSection2.style.display="block";
+							
+							}
+							
+							
+							if(array3.length == []){
+							reportSection3.style.display="none";
+							}else{
+							reportSection3.style.display="block";
+							
+							}
+							
+							
+							if(array4.length == []){
+							reportSection4.style.display="none";
+							}else{
+							reportSection4.style.display="block";
+							
+							}
+							
+							
+							if(array5.length == []){
+							reportSection5.style.display="none";
+							}else{
+							reportSection5.style.display="block";
+							
+							}
+							
+							
+							if(array6.length == []){
+							reportSection6.style.display="none";
+							}else{
+							reportSection6.style.display="block";
+							
+							}
+	
+	
+	
+	
+	
+creating_chart(
+   'canvas',
+	'line',
+	['My Life', 'My Finances','Social Life', 'Surrounding', 'Health', 'Job'],
+	percentageArray,
+	'Points Earned Based on your Self-knowledge'
+);
+
+function creating_chart(get_wrapper, type_of_chart, labels_of_chart, data_of_charts, title_of_chart) {
+   var ctx = document.getElementById(get_wrapper).getContext('2d');
+   var myChart = new Chart(ctx, {
+      type: type_of_chart,
+      data: {
+         labels: labels_of_chart,
+         datasets: [{
+            label: title_of_chart,
+            data: data_of_charts,
+            backgroundColor: '#eee',
+            borderColor: '#777',
+            borderWidth: 2,
+            pointBackgroundColor: 'silver',
+            pointBorderColor: 'black',
+            pointBorderWidth: 5,
+         }]
+      },
+      options: {
+         scales: {
+            xAxes: [{
+               gridLines: {
+                  display: false
+               }
+            }],
+            yAxes: [{
+               gridLines: {
+                  display: false
+               }
+            }]
+         },
+         tooltips: {
+            callbacks: {
+               label: function(t, d) {
+                  var xLabel = d.datasets[t.datasetIndex].label;
+                  var yLabel = d.datasets[t.datasetIndex].data[t.index];
+                  return xLabel +' '+ yLabel + ' % ';
+               }
+            }
+         }
+      }
+   });
+};
+				
+
+
+			
+			}	
+				
+				
+				
+				
 				</script>
                 
-				
-				
-				
-				
 				
 				
 				
