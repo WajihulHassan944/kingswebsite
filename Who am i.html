@@ -6,7 +6,10 @@
 					
 				
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-				
+	
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+			
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -839,8 +842,71 @@
 									font-weight:500;color:#1d1c1c;
 								
 								}
+								.report-container{
+									width:100%;
+									display:flex;
+									justify-content:center;
+									align-items:center;
+								}
 								</style>
+								
+								
+								
+								
+			
+							<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+						<div class="ReportWrapper" style="margin:70px 0;">
+						
+						<div class="report-container" style="margin-top:10px;" >
+							<div class="showReport" >
+								<h3 id="test" onclick="showTheReport()" >Show Report</h3>
+							</div>
+							</div>
 							
+							<div id="reportarea" class="reportarea">
+							<div>
+							
+							
+							
+								<h1 class="titled mb-2">Selected Attributes</h1>
+								
+								
+								<div class="secOneHolding">
+								<div class="reportSectionone reportSection1"><h1 class="titleds mb-2">My Life</h1><p id="sec1selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection2"><h1 class="titleds mb-2">My Finances</h1><p id="sec2selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection3"><h1 class="titleds mb-2">Health</h1><p id="sec3selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection4"><h1 class="titleds mb-2">Surroundings</h1><p id="sec4selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection5"><h1 class="titleds mb-2">Social</h1><p id="sec5selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection6"><h1 class="titleds mb-2">Job</h1><p id="sec6selects" style="margin-left:5px;"></p></div>
+								
+								</div>
+								
+								<div class="secTwoHolding " style="margin-bottom:30px;">
+								<h4 style="font-size:19px;">Evaluation Based on your Selection</h4>
+								<p id="secTwoHoldingPara"></p>
+								</div>
+								
+								<canvas id="canvas" style="width:100%;max-width:600px; margin-left:50px;"></canvas>
+
+							</div>
+							
+							
+							</div>
+							</div>	
+						
+						
+						
+						
+						
+						
+						
+						
+						
 							<div id="profiles" class="profile" onclick="myyy()">
 							<h1 style="color:#f0b017">Hi!</h1>
 							<h2 id="profiletasks">Your selected attributes will be displayed here.</h2>
@@ -863,19 +929,9 @@
 						   
 						   
 						   
-						   
-						   
-						   
-						   
+						   						   
 						   
 						   <style>
-							.ShareMyExperiences{
-								width:100%;
-								display:flex;
-								justify-content:center;
-								align-items:center;
-								
-							}
 							.embedded{
 								width:70%;
 							}
@@ -904,108 +960,7 @@
 								bottom: -5px;
 						   </style>
 						   
-				<div class="ShareMyExperiences" style="background-color:white">
-				<div class="embedded">
-					<div class="row mt-4">
-				<div class="col-md-12">
-					 <!-- Breadcrumb NavXT 6.6.0 -->
-<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingstreets." href="https://www.kingstreets.com" class="home" ><span property="name"></span></a><meta property="position" content="1"></span>  <span property="itemListElement" typeof="ListItem"><span property="name" id="archive" class="archive post-sharemyexperiences-archive current-item" style="letter-spacing:1px">You can share your experiences , your past and present for further guidelines or help.</span><meta property="url" content="https://www.kingstreets.com/sharemyexperiences/"><meta property="position" content="2"></span>					
-<h1 class="titled mb-2">Share Your Experience</h1>
-					
-					<a href="https://www.kingstreets.com/share-my-experiences-form/" class="btn btn-primary">Submit Your Experience ! </a>
-				</div>
-			</div>
-
-							<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2022/02/26-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
-
-					 <div class="col-md-7">
-						<h3>GRWM While I Share My MSW (Masters of Social Work) Experience As a Minority/Black Student</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/sharemyexperiences/grwm-while-i-share-my-msw-masters-of-social-work-experience-as-a-minority-black-student-2/" class="btn btn-success">Read More</a>   
 					</div>
-					
-				</div>
-					   
-
-								<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2022/02/25-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
-
-					 <div class="col-md-7">
-						<h3>Black American in Brazil shares his experience</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/sharemyexperiences/black-american-in-brazil-shares-his-experience/" class="btn btn-success">Read More</a>   
-					</div>
-					
-				</div>
-					   
-
-								<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2021/10/1-65-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
-
-					 <div class="col-md-7">
-						<h3>Why Some Africans Have Problems With African Americans When They Immigrate to the USA (Crys Logic)</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/sharemyexperiences/why-some-africans-have-problems-with-african-americans-when-they-immigrate-to-the-usa-crys-logic/" class="btn btn-success">Read More</a>   
-					</div>
-					
-				</div>
-					   
-
-								<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2021/10/1-64-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
-
-					 <div class="col-md-7">
-						<h3>SOCIAL WORK | 4 Tips To Be a Successful Social Worker</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/sharemyexperiences/social-work-4-tips-to-be-a-successful-social-worker/" class="btn btn-success">Read More</a>   
-					</div>
-					
-				</div>
-					   
-
-								<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2021/10/1-63-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
-
-					 <div class="col-md-7">
-						<h3>GRWM While I Share My MSW (Masters of Social Work) Experience As a Minority/Black Student</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/sharemyexperiences/grwm-while-i-share-my-msw-masters-of-social-work-experience-as-a-minority-black-student/" class="btn btn-success">Read More</a>   
-					</div>
-					
-				</div>
-					   
-
-							
-			<div class="col-md-12">
-					
-					 
-				
-	<nav class="navigation pagination" role="navigation" aria-label="Pages">
-		<h2 class="screen-reader-text">Pages</h2>
-		<div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>
-<a class="page-numbers" href="https://www.kingstreets.com/sharemyexperiences/page/2/">2</a>
-<a class="page-numbers" href="https://www.kingstreets.com/sharemyexperiences/page/3/">3</a>
-<a class="page-numbers" href="https://www.kingstreets.com/sharemyexperiences/page/4/">4</a>
-<a class="next page-numbers" href="https://www.kingstreets.com/sharemyexperiences/page/2/">Next</a></div>
-	</nav>					</div>
-	</div>
-		</div>		</div>
 				
 				
 
@@ -1096,47 +1051,6 @@
 							}
 						</style>
 						
-						<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-						<div class="ReportWrapper">
-							<div class="showReport">
-								<h3 id="test" onclick="showTheReport()">Show Report</h3>
-							</div>
-							
-							
-							<div id="reportarea" class="reportarea">
-							<div>
-							
-							
-								<h1 class="titled mb-2">Selected Attributes</h1>
-								
-								
-								<div class="secOneHolding">
-								<div class="reportSectionone reportSection1"><h1 class="titleds mb-2">My Life</h1><p id="sec1selects" style="margin-left:5px;"></p></div>
-								
-								<div class="reportSectionone reportSection2"><h1 class="titleds mb-2">My Finances</h1><p id="sec2selects" style="margin-left:5px;"></p></div>
-								
-								<div class="reportSectionone reportSection3"><h1 class="titleds mb-2">Health</h1><p id="sec3selects" style="margin-left:5px;"></p></div>
-								
-								<div class="reportSectionone reportSection4"><h1 class="titleds mb-2">Surroundings</h1><p id="sec4selects" style="margin-left:5px;"></p></div>
-								
-								<div class="reportSectionone reportSection5"><h1 class="titleds mb-2">Social</h1><p id="sec5selects" style="margin-left:5px;"></p></div>
-								
-								<div class="reportSectionone reportSection6"><h1 class="titleds mb-2">Job</h1><p id="sec6selects" style="margin-left:5px;"></p></div>
-								
-								</div>
-								
-								<div class="secTwoHolding " style="margin-bottom:30px;">
-								<h4 style="font-size:19px;">Evaluation Based on your Selection</h4>
-								<p id="secTwoHoldingPara"></p>
-								</div>
-								
-								<canvas id="canvas" style="width:100%;max-width:600px; margin-left:50px;"></canvas>
-
-							</div>
-							
-							
-							</div>
-							</div>	
 						
 						   
                        
