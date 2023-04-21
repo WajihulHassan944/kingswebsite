@@ -876,11 +876,11 @@
 								
 								<div class="reportSectionone reportSection2"><h1 class="titleds mb-2">My Finances</h1><p id="sec2selects" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone reportSection3"><h1 class="titleds mb-2">Health</h1><p id="sec3selects" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone reportSection3"><h1 class="titleds mb-2">Social Life/Family/Friends</h1><p id="sec3selects" style="margin-left:5px;"></p></div>
 								
 								<div class="reportSectionone reportSection4"><h1 class="titleds mb-2">Surroundings</h1><p id="sec4selects" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone reportSection5"><h1 class="titleds mb-2">Social</h1><p id="sec5selects" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone reportSection5"><h1 class="titleds mb-2">Health</h1><p id="sec5selects" style="margin-left:5px;"></p></div>
 								
 								<div class="reportSectionone reportSection6"><h1 class="titleds mb-2">Job</h1><p id="sec6selects" style="margin-left:5px;"></p></div>
 								
@@ -890,7 +890,7 @@
 								<h4 style="font-size:19px;">Evaluation Based on your Selection</h4>
 								<p id="secTwoHoldingPara"></p>
 								</div>
-								
+								<p style="color:red; margin:20px 0">You need to reload the page in order to regenrate the report</p>
 								<canvas id="canvas" style="width:100%;max-width:600px; margin-left:50px;"></canvas>
 
 							</div>
@@ -909,7 +909,36 @@
 						
 							<div id="profiles" class="profile" onclick="myyy()">
 							<h1 style="color:#f0b017">Hi!</h1>
-							<h2 id="profiletasks">Your selected attributes will be displayed here.</h2>
+							<div id="reportarea2" class="reportarea2" style="margin-left:-60px;">
+							<div>
+							
+							
+							
+								<h1  style="margin-left:60px;">Your Selected Attributes are:</h1>
+								
+								
+								<div class="secOneHolding" style="display:flex; flex-wrap:wrap">
+								<div class="reportSectionone1 reportSection11" style="border:none;"><h1 >My Life</h1><p id="sec1selects1" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone1 reportSection22" style="border:none;"><h1 >My Finances</h1><p id="sec2selects2" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone1 reportSection33" style="border:none;"><h1 >Social Life/Family/Friends</h1><p id="sec3selects3" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone1 reportSection44" style="border:none;"><h1 >Surroundings</h1><p id="sec4selects4" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone1 reportSection55" style="border:none;"><h1 >Health</h1><p id="sec5selects5" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone1 reportSection66" style="border:none;"><h1 >Job</h1><p id="sec6selects6" style="margin-left:5px;"></p></div>
+								
+								</div>
+								
+								
+							</div>
+							
+							
+							</div>
+							
+							
 							
 							</div>								
 					
@@ -1002,6 +1031,15 @@
 							width:70%;
 							display:none;
 						}
+						
+						.reportarea2{
+							padding:20px;
+							display:flex;
+							justify-content:center;
+							align-items:center;
+							width:70%;
+							display:none;
+						}
 						.titleds{
 								text-transform: uppercase;
 								color: #111;
@@ -1020,6 +1058,15 @@
 								flex-direction:column;
 								
 							}
+							
+							.reportSectionone1{
+								width:280px;
+								border:1px solid rgba(0,0,0,0.1);
+								margin:10px;
+								display:flex;
+								flex-direction:column;
+								
+							}
 							.secOneHolding{
 								display:flex;
 								flex-wrap:wrap;
@@ -1028,6 +1075,12 @@
 								margin:20px 0;
 							}
 							.reportSectionone h1{
+								margin-left:3px;
+								margin-top:5px;
+								font-size:17px;
+							}
+							
+							.reportSectionone1 h1{
 								margin-left:3px;
 								margin-top:5px;
 								font-size:17px;
@@ -1251,19 +1304,18 @@ When exploring the question, "Who am I?" it's important to approach the process 
 
 
 				var checkboxes=document.querySelectorAll(".checkbox");
-				var profiletasks=document.getElementById("profiletasks");
 				
 				for(var checkbox of checkboxes){
 						checkbox.addEventListener('click',function(){
 							if(this.checked == true){
 								listArray.push(this.value);
-							profiletasks.innerHTML = `You have selected the following attributes: <br><br> `+ `> `+ listArray.join(`<br> > `);
-			
+								
+								
+								
 						
 							}else{
 								listArray = listArray.filter(e => e !== this.value);
-						profiletasks.innerHTML = `You have selected the following attributes: <br><br> `+  `> ` + listArray.join(`<br> > `);
-			
+						
 							}
 						})
 					}
@@ -1289,6 +1341,19 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							var sec5selects = document.getElementById("sec5selects");
 							var sec6selects = document.getElementById("sec6selects");
 							
+							var sec1selects1 = document.getElementById("sec1selects1");
+							var sec2selects2 = document.getElementById("sec2selects2");
+							var sec3selects3 = document.getElementById("sec3selects3");
+							var sec4selects4 = document.getElementById("sec4selects4");
+							var sec5selects5 = document.getElementById("sec5selects5");
+							var sec6selects6 = document.getElementById("sec6selects6");
+							
+							
+							
+							
+							
+							
+							
 							
 							var count1=0;
 							var count2=0;
@@ -1312,13 +1377,27 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							var reportSection5 = document.querySelector(".reportSection5");
 							var reportSection6 = document.querySelector(".reportSection6");
 							
+							
+							
+							var reportSection11 = document.querySelector(".reportSection11");
+							var reportSection22 = document.querySelector(".reportSection22");
+							var reportSection33 = document.querySelector(".reportSection33");
+							var reportSection44 = document.querySelector(".reportSection44");
+							var reportSection55 = document.querySelector(".reportSection55");
+							var reportSection66 = document.querySelector(".reportSection66");
+							
+							
+							
+							
 							var percentageArray = [];
 							
 							var secTwoHoldingPara = document.getElementById("secTwoHoldingPara");
 				var reportarea=document.getElementById("reportarea");
+				var reportarea2=document.getElementById("reportarea2");
 							function showTheReport(){
 							
 								reportarea.style.display="block";
+						reportarea2.style.display="block";
 						
 							
 							
@@ -1452,6 +1531,17 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							sec5selects.innerHTML = array5.join(`<br>`);
 							sec6selects.innerHTML = array6.join(`<br>`);
 							
+							
+							sec1selects1.innerHTML = array1.join(`<br>`);
+							sec2selects2.innerHTML = array2.join(`<br>`);
+							sec3selects3.innerHTML = array3.join(`<br>`);
+							sec4selects4.innerHTML = array4.join(`<br>`);
+							sec5selects5.innerHTML = array5.join(`<br>`);
+							sec6selects6.innerHTML = array6.join(`<br>`);
+							
+							
+							
+							
 							count1=array1.length;
 							count2=array2.length;
 							count3=array3.length;
@@ -1478,48 +1568,61 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							
 							if(array1.length == []){
 							reportSection1.style.display="none";
+							reportSection11.style.display="none";
+							
 							}else{
 							reportSection1.style.display="block";
+							reportSection11.style.display="block";
 							
 							}
 							
 							
 							if(array2.length == []){
 							reportSection2.style.display="none";
+							reportSection22.style.display="none";
 							}else{
 							reportSection2.style.display="block";
+							reportSection22.style.display="block";
 							
 							}
 							
 							
 							if(array3.length == []){
 							reportSection3.style.display="none";
+							reportSection33.style.display="none";
 							}else{
 							reportSection3.style.display="block";
+							reportSection33.style.display="block";
 							
 							}
 							
 							
 							if(array4.length == []){
 							reportSection4.style.display="none";
+							reportSection44.style.display="none";
 							}else{
 							reportSection4.style.display="block";
+							reportSection44.style.display="block";
 							
 							}
 							
 							
 							if(array5.length == []){
 							reportSection5.style.display="none";
+							reportSection55.style.display="none";
 							}else{
 							reportSection5.style.display="block";
+							reportSection55.style.display="block";
 							
 							}
 							
 							
 							if(array6.length == []){
 							reportSection6.style.display="none";
+							reportSection66.style.display="none";
 							}else{
 							reportSection6.style.display="block";
+							reportSection66.style.display="block";
 							
 							}
 	
@@ -1582,7 +1685,10 @@ function creating_chart(get_wrapper, type_of_chart, labels_of_chart, data_of_cha
 
 			
 			}	
-				
+			
+
+
+										
 				
 				
 				
