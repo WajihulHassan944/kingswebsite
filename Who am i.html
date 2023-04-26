@@ -1091,65 +1091,37 @@
 }
 
 </style>
-
-<?php 
-$errors = "";
-		$db = mysqli_connect('localhost','root','','todo');
-		$task = '';
-		if (isset($_POST['submit'])) {
-			$task = $_POST['task'];
-			if(empty($task)){
-				$errors = "You must write something first";
-				
-			}else{
-			
-		mysqli_query($db, "INSERT INTO tasks (task) VALUES ('$task')");	
-		$task = '';
-			}
-		}
-		
-		
-		$tasks = mysqli_query($db, "SELECT * FROM tasks");
-		
-  ?>	
-  
 							<center><p style="color:red; font-weight:700;  font-size:19px; ">Whatever you will type in the help section , it will be public.</p></center>
+							
 							<div style="padding:10px 0 30px 0;"><div id="chat-window">
 							<div class="main-title">Help Center</div>
-							
-							<div id="chat-messages">
-							
-							<?php 
-								while($row = mysqli_fetch_array($tasks)){
-									?>
-									<div class="message user-message">
-									<img src="https://i.ibb.co/5nFMgZr/user.png" alt="user icon"> <?php  echo $row['task']; ?>
-									</div><br>
-									<?php
-								}
-							?>
-							
-							</div>
-							<form id="chat-form" method="POST" >
+							<div id="chat-messages"></div>
+							<form id="chat-form" method="POST">
 							<input
 								type="text"
 								id="chat-input"
 								autocomplete="off"
 								placeholder="Type your message here"
-								name="task"
 								required
 							/>
-							<button type="submit" name="submit">Send</button>
+							<button type="submit">Send</button>
 							</form>
 							</div>
     </div>
 	
 	
-  
 							<script>
-							
-			
-
+	 const input = document.getElementById("chat-input")   			
+const form = document.getElementById('chat-form');
+form.addEventListener("submit", async (e) => {
+				e.preventDefault();
+				const message = input.value;
+				alert(message);
+				input.value = "";
+				document.getElementById("chat-messages").innerHTML += `<div class="message user-message">
+				<img src="https://i.ibb.co/5nFMgZr/user.png" alt="user icon"> <span>${message}</span>
+				</div><br>`;
+});
 
 const historyInput = document.querySelector('#historyValue');
 let checkboxValues = [
@@ -2587,9 +2559,7 @@ function creating_chart(get_wrapper, type_of_chart, labels_of_chart, data_of_cha
 										
 				
 				
-		if ( window.history.replaceState ) {
-  window.history.replaceState( null, null, window.location.href );
-}		
+				
 				</script>
                 
 				
