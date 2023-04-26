@@ -4,7 +4,8 @@
 <head>
     <!-- Required meta tags -->
 					
-				
+		
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">		
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 	
 <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -401,11 +402,10 @@
                         </div>
                         <div class="credentials flex-fill">
 
-                            <a href="https://www.kingstreets.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.kingstreets.com%2F" alt="Login" class="btn btn-warning btn-sm">
-    Login</a>
+                            <a href="#" alt="Login" class="btn btn-warning btn-sm" id="login">Login</a>
 
 
-                            <a href="http://www.kingstreets.com/create-an-account/" class="btn btn-primary btn-sm ">Register</a>
+                            <a href="#" class="btn btn-primary btn-sm " id="register">Register</a>
                         </div>
                     </div>
                 </header>
@@ -950,17 +950,913 @@
 							
 							
 							</div>
+							
+							<style>
+							.lifePreprocessor{
+								width:70%;
+								padding:10px;
+								margin:30px auto;
+							}
+							.lifePreprocessor h1{
+								font-size:17px;
+								margin:10px 0;
+								color:#f0b017;
+							}
+							#main-heading{
+								font-weight:700;
+								font-size:23px;
+								text-align:center;
+								margin:30px 0;
+							}
+							</style>
+							
+							<div class="lifePreprocessor">
+							<h1 id="main-heading">Life Preprocessor <br>Your Selections Reflect that you know in depth about yourself and you are happy with what you are</h1>
+							
+							<div style="display:flex; justify-content:space-between;">
+							<div id="History"><h1>History</h1>  <input type="text" placeholder="Add more" id="historyValue"><br><br> <div id="forHistory"></div>    </div>
+							<div id="Status"><h1>Current Status</h1>  <input type="text" placeholder="Add more" id="statusValue"><br><br> <div id="forStatus"></div>  </div>
+							</div>
+							<div id="Outcomes" style="margin-left:35%; margin-top:50px;"><h1>Possible Outcomes</h1>   <input type="text" placeholder="Add more" id="outcomeValue"><br><br> <div id="possibleOutcomes"></div>  </div>
+							
+							<div onclick="combined()" style="text-align:center; padding:10px 40px ;cursor:pointer; border:1px solid black; background-color: #f7efe5; color: black; margin:40px 0;">Show All of My Selections</div>
+							
+							</div>
+							
+							<style>
+								.preprocessorOutcomes{
+									width:70%;
+				
+									background-color: #674188;
+									padding: 20px;
+									border-radius: 10px;
+									margin:20px 0;
+									
+								}
+								.preprocessorOutcomes h1{
+								font-size: 1.5rem;
+								text-align: center;
+								font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+								margin-bottom: 0.5rem;
+								color: #fffbf5;
+								font-style: italic;
+								}
+								
+								
+								.preprocessorOutcomes h2{
+								font-size: 1.1rem;
+								font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+								margin-bottom: 0.2rem;
+								color: #fffbf5;
+								}
+							</style>
+							<div style="width:100%; display:flex; justify-content:center; margin-bottom:30px;">
+							<div class="preprocessorOutcomes">
+							<h1>Your Selections Reflect that you know in depth about yourself and you are happy with what you are</h1>
+							<div><h2>History</h2><div id="outcome1" style="color:#fff; margin-bottom:10px;"></div></div>
+							<div><h2>CurrentStatus</h2><div id="outcome2" style="color:#fff;margin-bottom:10px;"></div></div>
+							<div><h2>Outcomes</h2><div id="outcome3" style="color:#fff;margin-bottom:10px;"></div></div>
+							
+							
+							
+							</div></div>
+							
+							
+							
+							<style>
+#chat-window {
+  width: 500px;
+  margin: 0 auto;
+  background-color: #674188;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 50px;
+  box-shadow:0 5px 10px rgba(0,0,0,0.2);
+}
+
+.user-message {
+  font-family: "Nunito", sans-serif;
+  background-color: #f7efe5; /* light color */
+  text-align: left; /* changed text align to left */
+  padding: 15px; /* added padding */
+  display: flex;
+  align-items: center;
+  font-style: italic;
+}
+.user-message img,
+.bot-message img {
+  width: 40px; /* adjust the width of the icon */
+  height: 40px; /* adjust the height of the icon */
+  margin-right: 20px; /* add some margin to separate the icon from the message */
+}
+
+#chat-messages {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+  height: calc(100vh - 200px);
+  max-height: calc(100vh - 200px);
+  overflow: auto;
+}
+
+#chat-form {
+  display: flex;
+  align-items: center;
+}
+
+#chat-input {
+  flex-grow: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+#chat-window button[type="submit"] {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: #f7efe5;
+  color: #674188;
+  border: none;
+  font-size: 1rem;
+  font-weight: bold;
+}
+#chat-window .main-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin-bottom: 0.5rem;
+  color: #fffbf5;
+  font-style: italic;
+}
+
+</style>
+
+<?php 
+$errors = "";
+		$db = mysqli_connect('localhost','root','','todo');
+		$task = '';
+		if (isset($_POST['submit'])) {
+			$task = $_POST['task'];
+			if(empty($task)){
+				$errors = "You must write something first";
+				
+			}else{
+			
+		mysqli_query($db, "INSERT INTO tasks (task) VALUES ('$task')");	
+		$task = '';
+			}
+		}
+		
+		
+		$tasks = mysqli_query($db, "SELECT * FROM tasks");
+		
+  ?>	
+  
+							<center><p style="color:red; font-weight:700;  font-size:19px; ">Whatever you will type in the help section , it will be public.</p></center>
+							<div style="padding:10px 0 30px 0;"><div id="chat-window">
+							<div class="main-title">Help Center</div>
+							
+							<div id="chat-messages">
+							
+							<?php 
+								while($row = mysqli_fetch_array($tasks)){
+									?>
+									<div class="message user-message">
+									<img src="https://i.ibb.co/5nFMgZr/user.png" alt="user icon"> <?php  echo $row['task']; ?>
+									</div><br>
+									<?php
+								}
+							?>
+							
+							</div>
+							<form id="chat-form" method="POST" >
+							<input
+								type="text"
+								id="chat-input"
+								autocomplete="off"
+								placeholder="Type your message here"
+								name="task"
+								required
+							/>
+							<button type="submit" name="submit">Send</button>
+							</form>
+							</div>
+    </div>
+	
+	
+  
+							<script>
+							
+			
+
+
+const historyInput = document.querySelector('#historyValue');
+let checkboxValues = [
+  'Childhood memories',
+  'Favorite toys as a child',
+  'First pet',
+  'First crush',
+  'Earliest school memories',
+  'First job',
+  'High school experiences',
+  'College experiences',
+  'First love',
+  'First heartbreak',
+  'First road trip',
+  'Significant travel experiences',
+  'Major life changes',
+  'Career milestones',
+  'Favorite books growing up',
+  'Favorite TV shows growing up',
+  'Favorite movies growing up',
+  'Favorite songs growing up',
+  'Personal achievements',
+  'Life-changing decisions',
+  'Cultural or religious experiences',
+  'Significant relationships',
+  'Hobbies or interests',
+  'Favorite foods',
+  'Personal challenges',
+  'Life lessons learned',
+  'Favorite childhood games',
+  'Favorite outdoor activities',
+  'Favorite indoor activities',
+  'Favorite holiday traditions'
+];
+							
+
+localStorage.setItem('HArray', JSON.stringify(checkboxValues));
+
+
+const myHistoryArray = JSON.parse(localStorage.getItem("HArray"));
+	
+
+let checkboxesContainer = document.getElementById('forHistory');
+						
+historyInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const input = event.target.value.trim();
+    if (input) {
+	myHistoryArray.push(input);
+	  checkboxesContainer.innerHTML = "";
+	  generateCheckBoxes1();
+	  localStorage.setItem('HArray', JSON.stringify(myHistoryArray));
+      event.target.value = ''; // clear input field
+    }
+	
+  }
+});
+
+function generateCheckBoxes1(){
+
+  for (let i = 0; i < myHistoryArray.length || i < checkboxValues.length ; i++) {
+    let checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.value = myHistoryArray[i];
+    checkbox.id = `checkbox-${i}`;
+
+    let label = document.createElement('label');
+    label.for = `checkbox-${i}`;
+    label.innerHTML = myHistoryArray[i];
+
+    checkboxesContainer.appendChild(checkbox);
+    checkboxesContainer.appendChild(label);
+    checkboxesContainer.appendChild(document.createElement('br'));
+  }
+
+ }
+generateCheckBoxes1();
+
+let checkboxesContainer2 = document.getElementById('forStatus');
+
+
+let checkboxValues2 = [
+  'Current job title',
+  'Current employer',
+  'Work experience',
+  'Education level',
+  'Current salary',
+  'Current location',
+  'Marital status',
+  'Number of children',
+  'Current housing situation',
+  'Favorite hobbies',
+  'Favorite books',
+  'Favorite TV shows',
+  'Favorite movies',
+  'Favorite songs',
+  'Favorite foods',
+  'Fitness routine',
+  'Mental health practices',
+  'Religious or spiritual practices',
+  'Political beliefs',
+  'Environmental beliefs',
+  'Favorite travel destinations',
+  'Current social media usage',
+  'Favorite podcasts',
+  'Favorite artists or musicians',
+  'Favorite video games',
+  'Current financial goals',
+  'Current health goals',
+  'Current career goals',
+  'Current personal growth goals',
+  'Current relationship goals'
+];
+							
+
+
+const statusInput = document.querySelector('#statusValue');
+
+
+
+
+						
+statusInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const input = event.target.value.trim();
+    if (input) {
+	checkboxValues2.push(input);
+	  checkboxesContainer2.innerHTML = "";
+	  generateCheckBoxes2();
+      event.target.value = ''; // clear input field
+    }
+	
+  }
+});
+
+
+function generateCheckBoxes2(){
+
+  for (let i = 0; i < checkboxValues2.length; i++) {
+    let checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.value =  checkboxValues2[i];
+    checkbox.id = `checkbox-${i}`;
+
+    let label = document.createElement('label');
+    label.for = `checkbox-${i}`;
+    label.innerHTML = checkboxValues2[i];
+
+    checkboxesContainer2.appendChild(checkbox);
+    checkboxesContainer2.appendChild(label);
+    checkboxesContainer2.appendChild(document.createElement('br'));
+  }
+
+ }
+generateCheckBoxes2();
+ 
+ 
+ 
+ 
+ 
+ 
+let checkboxesContainer3 = document.getElementById('possibleOutcomes');
+
+let checkboxValues3 = [
+  'Greater sense of self-awareness',
+  'Greater sense of purpose and direction',
+  'Improved mental health',
+  'Improved physical health',
+  'Stronger relationships',
+  'Increased financial stability',
+  'Increased career success',
+  'Increased personal fulfillment',
+  'Increased happiness and life satisfaction',
+  'Improved decision-making abilities',
+  'More meaningful connections with others',
+  'Greater empathy and compassion for others',
+  'Deeper understanding of oneself',
+  'Improved communication skills',
+  'Improved conflict resolution skills',
+  'Greater creativity and innovation',
+  'Greater resilience and adaptability',
+  'Improved time management skills',
+  'Improved problem-solving abilities',
+  'Greater sense of community',
+  'Increased social support',
+  'Increased sense of belonging',
+  'Increased sense of security',
+  'Increased sense of purpose',
+  'Increased self-confidence',
+  'Greater appreciation for life',
+  'Greater sense of gratitude',
+  'Improved spiritual or religious practices',
+  'Greater environmental awareness and activism',
+  'Greater social justice awareness and activism',
+   'Content and satisfied with life',
+  'Desire for more personal growth',
+  'Desire for more career growth',
+  'Desire for more financial success',
+  'Desire for more meaningful relationships',
+  'Desire for more adventure and excitement',
+  'Desire for more stability and security',
+  'Feeling lost or uncertain about the future',
+  'Struggle with mental health issues',
+  'Struggle with physical health issues',
+  'Difficulty maintaining healthy relationships',
+  'Difficulty finding purpose or meaning in life',
+  'Feeling unfulfilled in current job or career',
+  'Feeling unfulfilled in current relationships',
+  'Struggle with addiction or substance abuse',
+  'Struggle with financial instability',
+  'Struggle with personal identity or self-worth',
+  'Desire for more travel and exploration',
+  'Desire for more creative outlets',
+  'Desire for more community involvement',
+  'Desire for more spiritual fulfillment',
+  'Desire for more intellectual stimulation',
+  'Desire for more environmental activism',
+  'Desire for more social justice activism',
+  'Desire for more leisure and relaxation',
+  'Desire for more personal development',
+  'Desire for more professional development',
+  'Desire for more emotional intelligence',
+  'Desire for more physical fitness'
+];						
+	
+
+const outcomeInput = document.querySelector('#outcomeValue');
+
+outcomeInput.addEventListener('keydown', (event) => {
+  if (event.key === 'Enter') {
+    const input = event.target.value.trim();
+    if (input) {
+	checkboxValues3.push(input);
+	  checkboxesContainer3.innerHTML = "";
+	  generateCheckBoxes3();
+      event.target.value = ''; // clear input field
+    }
+	
+  }
+});
+
+function generateCheckBoxes3(){
+
+  for (let i = 0; i < checkboxValues3.length; i++) {
+    let checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.value =checkboxValues3[i];
+    checkbox.id = `checkbox-${i}`;
+
+    let label = document.createElement('label');
+    label.for = `checkbox-${i}`;
+    label.innerHTML = checkboxValues3[i];
+
+    checkboxesContainer3.appendChild(checkbox);
+    checkboxesContainer3.appendChild(label);
+    checkboxesContainer3.appendChild(document.createElement('br'));
+  }
+
+ }
+generateCheckBoxes3();
+ 
+ 
+
+function showSelectedCheckboxes1() {
+    let selectedCheckboxes = document.querySelectorAll('#History input[type="checkbox"]:checked');
+    let selectedValues = [];
+
+    for (let i = 0; i < selectedCheckboxes.length; i++) {
+      selectedValues.push(selectedCheckboxes[i].value);
+    }
+	document.getElementById("outcome1").innerHTML = selectedValues.join(`<br>`);
+  }
+
+
+function showSelectedCheckboxes2() {
+    let selectedCheckboxes = document.querySelectorAll('#Status input[type="checkbox"]:checked');
+    let selectedValues = [];
+
+    for (let i = 0; i < selectedCheckboxes.length; i++) {
+      selectedValues.push(selectedCheckboxes[i].value);
+    }
+	document.getElementById("outcome2").innerHTML = selectedValues.join(`<br>`);
+  }
+
+
+function showSelectedCheckboxes3() {
+    let selectedCheckboxes = document.querySelectorAll('#Outcomes input[type="checkbox"]:checked');
+    let selectedValues = [];
+
+    for (let i = 0; i < selectedCheckboxes.length; i++) {
+      selectedValues.push(selectedCheckboxes[i].value);
+    }
+	document.getElementById("outcome3").innerHTML = selectedValues.join(`<br>`);
+  }
+
+
+function combined(){
+	showSelectedCheckboxes1();
+	showSelectedCheckboxes2();
+	showSelectedCheckboxes3();
+}
+
+
+
+</script>
+							
+							
+							
+							
+							
+							
+							
+							
+							<style>
+				.todos{
+					display:flex;
+					justify-content:center;
+					box-shadow:0 5px 15px rgba(0,0,0,0.2);
+					margin:30px auto;
+					width:70%;
+					border:1px solid #777;
+				
+				}
+				.todos-wrapper{
+					margin-top:50px;
+					margin-bottom:50px;
+					max-width:500px;
+					overflow:auto;
 					
-					
-					
+				}
+.wrapper{
+  max-width: 405px;
+  padding: 28px 0 30px;
+  margin: 137px auto;
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+#task-btn{
+	padding:10px 0;
+	border:none;
+	font-weight:600;
+	background:#fff;
+	border:1px solid #777;
+	letter-spacing:1px;
+	box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+#time{
+	margin-top:-5px;
+}
+.task-input{
+  height: 210px;
+  padding: 0 5px;
+  position: relative;
+  display:flex;
+  flex-direction:column;
+}
+.task-input img{
+  top: 50%;
+  position: absolute;
+  transform: translate(17px, -50%);
+}
+.task-input input{
+  height: 50px;
+  width: 100%;
+  margin:20px 0;
+  outline: none;
+  font-size: 18px;
+  border-radius: 5px;
+  padding: 0 20px 0 20px;
+  border: 1px solid #999;
+}
+.task-input input:focus,
+.task-input input.active{
+  padding-left: 20px;
+  border: 2px solid #3C87FF;
+}
+.task-input input::placeholder{
+  color: #bfbfbf;
+}
+.controls, li{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls{
+  padding: 18px 25px;
+  border-bottom: 1px solid #ccc;
+}
+.filters span{
+  margin: 0 8px;
+  font-size: 17px;
+  color: #444444;
+  cursor: pointer;
+}
+.filters span:first-child{
+  margin-left: 0;
+}
+.filters span.active{
+  color: #3C87FF;
+}
+.controls .clear-btn{
+  border: none;
+  opacity: 0.6;
+  outline: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  padding: 7px 13px;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  pointer-events: none;
+  transition: transform 0.25s ease;
+  background: linear-gradient(135deg, #1798fb 0%, #2D5CFE 100%);
+}
+.clear-btn.active{
+  opacity: 0.9;
+  pointer-events: auto;
+}
+.clear-btn:active{
+  transform: scale(0.93);
+}
+.task-box{
+  margin-top: 20px;
+  margin-right: 5px;
+  padding: 0 20px 10px 25px;
+}
+.task-box.overflow{
+  overflow-y: auto;
+  max-height: 300px;
+}
+.task-box::-webkit-scrollbar{
+  width: 5px;
+}
+.task-box::-webkit-scrollbar-track{
+  background: #f1f1f1;
+  border-radius: 25px;
+}
+.task-box::-webkit-scrollbar-thumb{
+  background: #e6e6e6;
+  border-radius: 25px;
+}
+.task-box .task{
+  list-style: none;
+  font-size: 17px;
+  margin-bottom: 18px;
+  padding-bottom: 16px;
+  align-items: flex-start;
+  border-bottom: 1px solid #ccc;
+}
+.task-box .task:last-child{
+  margin-bottom: 0;
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.task-box .task label{
+  display: flex;
+  align-items: flex-start;
+}
+.task label input{
+  margin-top: 7px;
+  accent-color: #3C87FF;
+}
+.task label p{
+  user-select: none;
+  margin-left: 12px;
+  word-wrap: break-word;
+}
+.task label p.checked{
+  text-decoration: line-through;
+}
+.task-box .settings{
+  position: relative;
+}
+.settings :where(i, li){
+  cursor: pointer;
+}
+.settings .task-menu{
+  z-index: 10;
+  right: -5px;
+  bottom: -65px;
+  padding: 5px 0;
+  background: #fff;
+  position: absolute;
+  border-radius: 4px;
+  transform: scale(0);
+  transform-origin: top right;
+  box-shadow: 0 0 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+.task-box .task:last-child .task-menu{
+  bottom: 0;
+  transform-origin: bottom right;
+}
+.task-box .task:first-child .task-menu{
+  bottom: -65px;
+  transform-origin: top right;
+}
+.task-menu.show{
+  transform: scale(1);
+}
+.task-menu li{
+  height: 25px;
+  font-size: 16px;
+  margin-bottom: 2px;
+  padding: 17px 15px;
+  cursor: pointer;
+  justify-content: flex-start;
+}
+.task-menu li:last-child{
+  margin-bottom: 0;
+}
+.settings li:hover{
+  background: #f5f5f5;
+}
+.settings li i{
+  padding-right: 8px;
+}
+
+@media (max-width: 400px) {
+  body{
+    padding: 0 10px;
+  }
+  .wrapper {
+    padding: 20px 0;
+  }
+  .filters span{
+    margin: 0 5px;
+  }
+  .task-input{
+    padding: 0 20px;
+  }
+  .controls{
+    padding: 18px 20px;
+  }
+  .task-box{
+    margin-top: 20px;
+    margin-right: 5px;
+    padding: 0 15px 10px 20px;
+  }
+  .task label input{
+    margin-top: 4px;
+  }
+}</style>				
+				
+							<div class="todos">
+								<div class="todos-wrapper">
+								
+								
+		<h1 style="font-size:19px; color:#f0b017; font-weight:600; margin-bottom:30px; text-align:center;">You can add and track your tasks here</h1>						
+	  <div class="task-input">
+        <input type="text" id="task" placeholder="Add a new task" >
+        <input type="number" id="time" min="1" step="1" placeholder="Add timeline for the task">
+    <button type="button" onclick="addTask()" id="task-btn">Add</button>
+      </div>
+      <div class="controls">
+        <div class="filters">
+          <span class="active" id="all">All</span>
+          <span id="pending">Pending</span>
+          <span id="completed">Completed</span>
+        </div>
+        <button class="clear-btn">Clear All</button>
+      </div>
+      <ul class="task-box"></ul>
+								
+								
+								
+								
+								</div>
+							</div>
 					
                            </div>
 						   
-						   
+				<script>
+				
+				const taskInput = document.querySelector(".task-input #task"),
+filters = document.querySelectorAll(".filters span"),
+clearAll = document.querySelector(".clear-btn"),
+taskBox = document.querySelector(".task-box");
+
+const timeInput = document.getElementById('time');
+
+
+let editId,
+isEditTask = false,
+todos = JSON.parse(localStorage.getItem("todo-list"));
+
+filters.forEach(btn => {
+    btn.addEventListener("click", () => {
+        document.querySelector("span.active").classList.remove("active");
+        btn.classList.add("active");
+        showTodo(btn.id);
+    });
+});
+  
+  
+  
+function showTodo(filter) {
+    let liTag = "";
+    if(todos) {
+        todos.forEach((todo, id) => {
+            let completed = todo.status == "completed" ? "checked" : "";
+            if(filter == todo.status || filter == "all") {
+			
+			
+                liTag += `<li class="task">
+                            <label for="${id}">
+                                <input onclick="updateStatus(this)" type="checkbox" id="${id}" ${completed}>
+                                <p class="${completed}">${todo.name}       <strong>${todo.time} days </strong></p>
+                            </label>
+							
+							
+							
+                            <div class="settings">
+                                <i onclick="showMenu(this)" class="uil uil-ellipsis-h"></i>
+                                <ul class="task-menu">
+                                    <li onclick='editTask(${id}, "${todo.name}" , "${todo.time}")'><i class="uil uil-pen"></i>Edit</li>
+                                    <li onclick='deleteTask(${id}, "${filter}")'><i class="uil uil-trash"></i>Delete</li>
+                                </ul>
+                            </div>
+                        </li>`;
+            }
+        });
+    }
+    taskBox.innerHTML = liTag || `<span>You don't have any task here</span>`;
+    let checkTask = taskBox.querySelectorAll(".task");
+    !checkTask.length ? clearAll.classList.remove("active") : clearAll.classList.add("active");
+    taskBox.offsetHeight >= 300 ? taskBox.classList.add("overflow") : taskBox.classList.remove("overflow");
+}
+showTodo("all");
+
+function showMenu(selectedTask) {
+    let menuDiv = selectedTask.parentElement.lastElementChild;
+    menuDiv.classList.add("show");
+    document.addEventListener("click", e => {
+        if(e.target.tagName != "I" || e.target != selectedTask) {
+            menuDiv.classList.remove("show");
+        }
+    });
+}
+
+function updateStatus(selectedTask) {
+    let taskName = selectedTask.parentElement.lastElementChild;
+    if(selectedTask.checked) {
+        taskName.classList.add("checked");
+        todos[selectedTask.id].status = "completed";
+    } else {
+        taskName.classList.remove("checked");
+        todos[selectedTask.id].status = "pending";
+    }
+    localStorage.setItem("todo-list", JSON.stringify(todos))
+}
+
+function editTask(taskId, textName , textTime) {
+    editId = taskId;
+    isEditTask = true;
+    taskInput.value = textName;
+    timeInput.value = textTime;
+    taskInput.focus();
+    taskInput.classList.add("active");
+}
+
+function deleteTask(deleteId, filter) {
+    isEditTask = false;
+    todos.splice(deleteId, 1);
+    localStorage.setItem("todo-list", JSON.stringify(todos));
+    showTodo(filter);
+}
+
+clearAll.addEventListener("click", () => {
+    isEditTask = false;
+    todos.splice(0, todos.length);
+    localStorage.setItem("todo-list", JSON.stringify(todos));
+    showTodo()
+});
+
+
+function addTask(){
+	 let userTask = taskInput.value.trim();
+	let userTime = timeInput.value.trim();
+
+	
+	
+        if(!isEditTask) {
+		todos = !todos ? [] : todos;
+            let taskInfo = {name: userTask,time: userTime , status: "pending"};
+            todos.push(taskInfo);
+          
+        } else {
+            isEditTask = false;
+            todos[editId].name = userTask;
+			todos[editId].time = userTime;
+        }
+        taskInput.value = "";
+        timeInput.value = "";
+        localStorage.setItem("todo-list", JSON.stringify(todos));
+        showTodo(document.querySelector("span.active").id);
+        
+}
+
+				</script>		   
 						   
 						   						   
 						   
 						   <style>
+						   
+						   
 							.embedded{
 								width:70%;
 							}
@@ -1691,7 +2587,9 @@ function creating_chart(get_wrapper, type_of_chart, labels_of_chart, data_of_cha
 										
 				
 				
-				
+		if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}		
 				</script>
                 
 				
