@@ -904,9 +904,8 @@ async function eventsToOccur(){
   .catch(error => alert(error));
 }
 
-setInterval(()=>{
 	eventsToOccur();
-},2);
+
 </script>
 
  <style>

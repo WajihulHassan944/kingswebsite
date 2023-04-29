@@ -873,15 +873,17 @@ async function eventsToOccur(){
 	await fetch('https://find-community-backend.onrender.com/events')
   .then(response => response.json())
   .then(events => {
-   // const recentEvents = events.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
+    const recentEvents = events.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
 
-    const slideshowContainer = document.querySelector('#upcomingEventss');
+    const slideshowContainer = document.getElementById('upcomingEventss');
 
-    events.forEach(event => {
+    recentEvents.forEach(event => {
       const slide = document.createElement('div');
       slide.classList.add('slide');
       slide.innerHTML = `
         <h2>${event.name}</h2>
+		
+		
         <p>${event.date}</p>
         <p>${event.description}</p>
       `;
