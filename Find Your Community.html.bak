@@ -651,6 +651,7 @@ const form2 = document.getElementById("add-task-form");
 const form3 = document.getElementById("form3");
 const form4 = document.getElementById("add-task-form");
 
+const communities = document.getElementById("communities");
 form3.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -668,13 +669,29 @@ form3.addEventListener("submit", async (event) => {
       interest: interest,
       description: description,
     }),
-});	
-  if (!response.ok) {
-    alert("response ok");
+});
+	if (response.ok) {
+    const data = await response.json();
+    const { _id, name , interest, description } = data;
+    const div = document.createElement("div");
+    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
+	const p = document.createElement("p");
+    
+	h2.textContent = name;
+	h3.textContent = interest;
+	p.textContent = description;
+    
+	div.appendChild(h2);
+	div.appendChild(h3);
+	div.appendChild(p);
+	communities.appendChild(div);
+    name.value = "";
+	interest.value = "";
+	description.value = "";
   } else {
-    alert("Failed to add task");
+    alert("Failed to add community");
   }
-
 });
 
 
