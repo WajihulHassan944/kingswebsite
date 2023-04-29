@@ -653,7 +653,7 @@ function createCommunity() {
   const description = document.getElementById('communityDescription').value;
 
   // Send a POST request to the server to create a new community
-  fetch('https://find-community-backend.onrender.com/communities', {
+  fetch('/communities', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -681,7 +681,7 @@ function createEvent() {
   const location = document.getElementById('eventLocation').value;
 
   // Send a POST request to the server to create a new event
-  fetch('https://find-community-backend.onrender.com/events', {
+  fetch('/events', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -709,7 +709,7 @@ function createEvent() {
 function searchCommunities() {
   const interest = document.getElementById('interest').value;
 
-  fetch(`https://find-community-backend.onrender.com/communities?interest=${interest}`)
+  fetch(`/communities?interest=${interest}`)
     .then(response => response.json())
     .then(communities => {
       const communitiesContainer = document.getElementById('communities');
@@ -735,7 +735,7 @@ function searchCommunities() {
 function searchEvents() {
   const location = document.getElementById('location').value;
 
-  fetch(`https://find-community-backend.onrender.com/events?location=${location}`)
+  fetch(`/events?location=${location}`)
     .then(response => response.json())
     .then(events => {
       const eventsContainer = document.getElementById('events');
