@@ -625,7 +625,7 @@ button:hover {
           <option>State</option>
           <option>Country</option>
         </select>
-        <button type="submit" onclick="createEvent()">Create</button>
+        <button type="submit">Create</button>
       </form>
 	  
 	
@@ -649,7 +649,7 @@ button:hover {
 const form1 = document.getElementById("add-task-form");
 const form2 = document.getElementById("add-task-form");
 const form3 = document.getElementById("form3");
-const form4 = document.getElementById("add-task-form");
+const form4 = document.getElementById("form4");
 
 const communities = document.getElementById("communities");
 form3.addEventListener("submit", async (event) => {
@@ -681,19 +681,18 @@ form3.addEventListener("submit", async (event) => {
 
 
 
+form4.addEventListener("submit", async (event) => {
+  event.preventDefault();
 
-function createEvent() {
-alert("submission made");
   const name = document.getElementById('eventName').value;
   const date = document.getElementById('eventDate').value;
   const description = document.getElementById('eventDescription').value;
   const location = document.getElementById('eventLocation').value;
 
-  // Send a POST request to the server to create a new event
-  fetch('https://find-community-backend.onrender.com/events', {
-    method: 'POST',
+  const response = await fetch("https://find-community-backend.onrender.com/events", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json',
+      "Content-Type": "application/json",
     },
     body: JSON.stringify({
       name: name,
@@ -701,15 +700,11 @@ alert("submission made");
       description: description,
       location: location,
     }),
-  })
-    .then((res) => res.json())
-    .then((data) => {
-      alert(data);
-      alert('Event created successfully');
-      location.reload();
-    })
-    .catch((err) => console.error(err));
-}
+});
+	if (response.ok) {
+    alert("ok");
+	}
+});
 
 
 
