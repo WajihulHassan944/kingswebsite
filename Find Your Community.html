@@ -577,12 +577,12 @@ button:hover {
 	<div class="input-group-wrapper">
       <form id="form1"><div class="input-group">
         <input type="text"  id="interest" placeholder="Search for communities by interest">
-        <button type="submit" onclick="searchCommunities()">Search</button></form>
+        <button type="submit" >Search</button></form>
       </div>
 	  
 	  <div class="input-group">
 		<form id="form2"><input type="text" id="location" placeholder="Search for events by location">
-		<button onclick="searchEvents()">Search</button></form>
+		<button >Search</button></form>
 	</div>
 	</div>
   </div>
@@ -735,8 +735,7 @@ form1.addEventListener("submit", async (event) => {
         communitiesContainer.appendChild(card);
       });
     });
-}
-
+});
 
 
 form2.addEventListener("submit", async (event) => {
@@ -774,7 +773,7 @@ form2.addEventListener("submit", async (event) => {
         eventsContainer.appendChild(card);
       });
     });
-}
+});
 
 
 const communitiess = document.getElementById("communities");
@@ -801,10 +800,11 @@ window.addEventListener("DOMContentLoaded", async () => {
 	div.appendChild(p);
 	communitiess.appendChild(div);
     
-  } 
-});
+  }); 
+};
 
 });
+
 </script>
 
 
