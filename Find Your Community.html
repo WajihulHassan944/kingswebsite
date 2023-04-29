@@ -690,7 +690,7 @@ form4.addEventListener("submit", async (event) => {
   const name = document.getElementById('eventName').value;
   
   const date1  = document.getElementById("eventDate").value;
-const date = new Date(date1);
+	const date = new Date(date1);
 const formattedDate = date.toLocaleDateString('en-US');
   const description = document.getElementById('eventDescription').value;
   const location = document.getElementById('eventLocation').value;
@@ -750,32 +750,29 @@ form2.addEventListener("submit", async (event) => {
   event.preventDefault();
   const location = document.getElementById('location').value;
 
-  await fetch(`https://find-community-backend.onrender.com/events?location=${location}`)
+  await fetch(`https://find-community-backend.onrender.com/events?locationValue=${location}`)
     .then(response => response.json())
     .then(events => {
       const eventsContainer = document.getElementById('events');
       eventsContainer.innerHTML = '';
 
-	 events
-    .filter((val)=>{
-	
-      if(val.locationValue.toLowerCase().includes(location.toLowerCase())) 
-      return events;
-    })
-    .map((value)=>{
-     return    `<div>
-	 const card = document.createElement('div');
+      events.forEach(event => {
+        const card = document.createElement('div');
         card.className = 'card';
         const name = document.createElement('h3');
-        name.textContent = value.name;
+        name.textContent = event.name;
         const date = document.createElement('span');
-        date.textContent = Date: ${value.date};
+		
+		const date11 = new Date(`${event.date}`);
+		const formattedDate = date11.toLocaleDateString('en-US');
+		
+        date.textContent = `Date: ${formattedDate}`;
         const location = document.createElement('span');
-        location.textContent = Location: ${value.location};
+        location.textContent = `Location: ${event.location}`;
         const locationValue = document.createElement('span');
-        locationValue.textContent = Location: ${value.locationValue};
+        locationValue.textContent = `Location: ${event.locationValue}`;
         const description = document.createElement('p');
-        description.textContent = Description: ${value.description};
+        description.textContent = `Description: ${event.description}`;
 		
         card.appendChild(name);
         card.appendChild(date);
@@ -784,14 +781,6 @@ form2.addEventListener("submit", async (event) => {
         card.appendChild(locationValue);
         card.appendChild(description);
         eventsContainer.appendChild(card);
-	 </div>`
-    })
-	  
-	  
-	  
-	  
-	  
-	  
       });
     });
 });
@@ -855,11 +844,13 @@ showAllEvents.addEventListener("click", async () => {
 	const p = document.createElement("p");
     const p2 = document.createElement("p");
     
-	
+		const date11 = new Date(date);
+		const formattedDate = date11.toLocaleDateString('en-US');
+			
 	
 	
 	h2.textContent = name;
-	h3.textContent = date;
+	h3.textContent = formattedDate;
 	p.textContent = description;
     p2.textContent = locationValue;
 	

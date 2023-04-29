@@ -775,7 +775,7 @@ form2.addEventListener("submit", async (event) => {
         const locationValue = document.createElement('span');
         locationValue.textContent = Location: ${value.locationValue};
         const description = document.createElement('p');
-        description.textContent = `Description: ${value.description}`;
+        description.textContent = Description: ${value.description};
 		
         card.appendChild(name);
         card.appendChild(date);
