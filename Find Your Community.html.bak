@@ -778,6 +778,8 @@ form2.addEventListener("submit", async (event) => {
 
 const communitiess = document.getElementById("communities");
 const eventss = document.getElementById("events");
+
+
 window.addEventListener("DOMContentLoaded", async () => {
   const response = await fetch("https://find-community-backend.onrender.com/communities");
 
@@ -785,6 +787,7 @@ window.addEventListener("DOMContentLoaded", async () => {
     const communities = await response.json();
 
     communities.forEach((community) => {
+	
     const { _id, name , interest, description } = community;
     const div = document.createElement("div");
     const h2 = document.createElement("h2");
@@ -801,6 +804,55 @@ window.addEventListener("DOMContentLoaded", async () => {
 	communitiess.appendChild(div);
     
   }); 
+};
+
+});
+
+
+
+
+
+
+
+
+
+
+
+window.addEventListener("DOMContentLoaded", async () => {
+  const response = await fetch("https://find-community-backend.onrender.com/events");
+
+  if (response.ok) {
+    const events = await response.json();
+
+const name = document.getElementById('eventName').value;
+  const date = document.getElementById('eventDate').value;
+  const description = document.getElementById('eventDescription').value;
+  const location = document.getElementById('eventLocation').value;
+ const locationValue = document.getElementById("locationValue").value;
+  
+
+    events.forEach((event) => {
+    const { _id, name , date, description, locationValue } = event;
+    const div = document.createElement("div");
+    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
+	const p = document.createElement("p");
+    const p2 = document.createElement("p");
+    
+	h2.textContent = name;
+	h3.textContent = date;
+	p.textContent = description;
+    p2.textContent = locationValue;
+	
+	div.appendChild(h2);
+	div.appendChild(h3);
+	div.appendChild(p);
+	div.appendChild(p2);
+	eventss.appendChild(div);
+    
+  }); 
+};
+
 });
 
 </script>
