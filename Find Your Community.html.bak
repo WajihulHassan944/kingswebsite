@@ -676,8 +676,14 @@ form3.addEventListener("submit", async (event) => {
     }),
 });
 	if (response.ok) {
-    alert("ok");
+    
+    alert("New Community Created");
+	location.reload();
 	}
+	
+	name.value="";
+	description.value="";
+	interest.value="";
 });
 
 
@@ -710,8 +716,16 @@ const formattedDate = date.toLocaleDateString('en-US');
     }),
 });
 	if (response.ok) {
-    alert("ok");
+    alert("New Event Created");
+	location.reload();
 	}
+	
+	
+	name.value="";
+	description.value="";
+	date1.value="";
+	location.value="";
+	locationValue.value="";
 });
 
 
@@ -776,7 +790,6 @@ form2.addEventListener("submit", async (event) => {
 		
         card.appendChild(name);
         card.appendChild(date);
-        card.appendChild(time);
         card.appendChild(location);
         card.appendChild(locationValue);
         card.appendChild(description);
@@ -792,8 +805,9 @@ const eventss = document.getElementById("events");
 
 const showAllcommunities = document.getElementById("showAllcommunities");
 showAllcommunities.addEventListener("click", async () => {
+	
   const response = await fetch("https://find-community-backend.onrender.com/communities");
-
+	alert("loading please wait");
   if (response.ok) {
     const communities = await response.json();
 
@@ -821,17 +835,11 @@ showAllcommunities.addEventListener("click", async () => {
 
 
 
-
-
-
-
-
-
-
 const showAllEvents = document.getElementById("showAllEvents");
 showAllEvents.addEventListener("click", async () => {
+	
   const response = await fetch("https://find-community-backend.onrender.com/events");
-
+	alert("loading please wait");
   if (response.ok) {
     const events = await response.json();
   
@@ -865,6 +873,25 @@ showAllEvents.addEventListener("click", async () => {
 
 });
 
+async function eventsToOccur(){
+	await fetch('https://find-community-backend.onrender.com/events')
+  .then(response => response.json())
+  .then(events => {
+    // Filter the events to keep only upcoming ones, then sort them by date and select the three latest ones
+    const now = new Date();
+    const upcomingEvents = events.filter(event => new Date(event.date) > now)
+                                  .sort((a, b) => new Date(a.date) - new Date(b.date))
+                                  .slice(0, 3);
+
+    // Create the slideshow using the three latest upcoming events
+    for (let i = 0; i < 3; i++) {
+      const event = upcomingEvents[i];
+      // Display the event information however you like, such as:
+      console.log(`Upcoming Event ${i + 1}: ${event.name} on ${event.date}`);
+    }
+  })
+  .catch(error => console.error(error));
+}
 </script>
 
 
