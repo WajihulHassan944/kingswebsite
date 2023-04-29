@@ -621,10 +621,10 @@ button:hover {
           <option>Area of town</option>
           <option>Community</option>
           <option>City</option>
-          <option>County</option>
           <option>State</option>
           <option>Country</option>
         </select>
+		<input type="text" id="locationValue" placeholder="Enter location value">
         <button type="submit">Create</button>
       </form>
 	  
@@ -646,12 +646,13 @@ button:hover {
 
 
 <script>
-const form1 = document.getElementById("add-task-form");
-const form2 = document.getElementById("add-task-form");
+const form1 = document.getElementById("form1");
+const form2 = document.getElementById("form2");
 const form3 = document.getElementById("form3");
 const form4 = document.getElementById("form4");
 
-const communities = document.getElementById("communities");
+
+
 form3.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -679,8 +680,6 @@ form3.addEventListener("submit", async (event) => {
 
 
 
-
-
 form4.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -688,7 +687,7 @@ form4.addEventListener("submit", async (event) => {
   const date = document.getElementById('eventDate').value;
   const description = document.getElementById('eventDescription').value;
   const location = document.getElementById('eventLocation').value;
-
+ const locationValue = document.getElementById("locationValue").value;
   const response = await fetch("https://find-community-backend.onrender.com/events", {
     method: "POST",
     headers: {
@@ -699,6 +698,7 @@ form4.addEventListener("submit", async (event) => {
       date: date,
       description: description,
       location: location,
+	  locationValue:locationValue,
     }),
 });
 	if (response.ok) {
@@ -710,10 +710,11 @@ form4.addEventListener("submit", async (event) => {
 
 
 
-function searchCommunities() {
+form1.addEventListener("submit", async (event) => {
+  event.preventDefault();
   const interest = document.getElementById('interest').value;
 
-  fetch(`https://find-community-backend.onrender.com/communities?interest=${interest}`)
+  await fetch(`https://find-community-backend.onrender.com/communities?interest=${interest}`)
     .then(response => response.json())
     .then(communities => {
       const communitiesContainer = document.getElementById('communities');
@@ -736,10 +737,13 @@ function searchCommunities() {
     });
 }
 
-function searchEvents() {
+
+
+form2.addEventListener("submit", async (event) => {
+  event.preventDefault();
   const location = document.getElementById('location').value;
 
-  fetch(`https://find-community-backend.onrender.com/events?location=${location}`)
+  await fetch(`https://find-community-backend.onrender.com/events?location=${location}`)
     .then(response => response.json())
     .then(events => {
       const eventsContainer = document.getElementById('events');
@@ -756,12 +760,16 @@ function searchEvents() {
         time.textContent = `Time: ${event.time}`;
         const location = document.createElement('span');
         location.textContent = `Location: ${event.location}`;
+        const locationValue = document.createElement('span');
+        locationValue.textContent = `Location: ${event.locationValue}`;
         const description = document.createElement('p');
         description.textContent = `Description: ${event.description}`;
+		
         card.appendChild(name);
         card.appendChild(date);
         card.appendChild(time);
         card.appendChild(location);
+        card.appendChild(locationValue);
         card.appendChild(description);
         eventsContainer.appendChild(card);
       });
@@ -769,6 +777,34 @@ function searchEvents() {
 }
 
 
+const communitiess = document.getElementById("communities");
+const eventss = document.getElementById("events");
+window.addEventListener("DOMContentLoaded", async () => {
+  const response = await fetch("https://find-community-backend.onrender.com/communities");
+
+  if (response.ok) {
+    const communities = await response.json();
+
+    communities.forEach((community) => {
+    const { _id, name , interest, description } = community;
+    const div = document.createElement("div");
+    const h2 = document.createElement("h2");
+    const h3 = document.createElement("h3");
+	const p = document.createElement("p");
+    
+	h2.textContent = name;
+	h3.textContent = interest;
+	p.textContent = description;
+    
+	div.appendChild(h2);
+	div.appendChild(h3);
+	div.appendChild(p);
+	communitiess.appendChild(div);
+    
+  } 
+});
+
+});
 </script>
 
 
