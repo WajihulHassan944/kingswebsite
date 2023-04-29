@@ -845,8 +845,8 @@ showAllEvents.addEventListener("click", async () => {
 	const p = document.createElement("p");
     const p2 = document.createElement("p");
     
-	let date = new Date(`${date}`);
-const formattedDate = `${date.getDate().toString().padStart(2, '0')}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getFullYear().toString()}`;
+	const date2 = new Date(`${date}`);
+const formattedDate = `${date2.getDate().toString().padStart(2, '0')}-${(date2.getMonth() + 1).toString().padStart(2, '0')}-${date2.getFullYear().toString()}`;
 
 	
 	
