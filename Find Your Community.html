@@ -883,8 +883,10 @@ async function eventsToOccur(){
       slide.innerHTML = `
         <h2>${event.name}</h2>
 		
+		const date12 = new Date(${event.date});
+		const formattedDate = date12.toLocaleDateString('en-US');
 		
-        <p>${event.date}</p>
+        <p>${formattedDate}</p>
         <p>${event.description}</p>
       `;
       slideshowContainer.appendChild(slide);

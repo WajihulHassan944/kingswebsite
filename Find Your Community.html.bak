@@ -911,7 +911,7 @@ async function eventsToOccur(){
 </script>
 
  <style>
-      #slideshow {
+      #upcomingEventss {
         width: 100%;
         height: 400px;
         position: relative;
