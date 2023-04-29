@@ -688,7 +688,9 @@ form4.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const name = document.getElementById('eventName').value;
-  const date = document.getElementById('eventDate').value;
+  
+  const date = new Date(document.getElementById('eventDate').value);
+const formattedDate = `${date.getDate().toString().padStart(2, '0')}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getFullYear().toString()}`;
   
   const description = document.getElementById('eventDescription').value;
   const location = document.getElementById('eventLocation').value;
@@ -700,7 +702,7 @@ form4.addEventListener("submit", async (event) => {
     },
     body: JSON.stringify({
       name: name,
-      date: date,
+      date: formattedDate,
       description: description,
       location: location,
 	  locationValue:locationValue,
@@ -759,13 +761,11 @@ form2.addEventListener("submit", async (event) => {
         const name = document.createElement('h3');
         name.textContent = event.name;
 		
-		const date = new Date(`${event.date}`);
-const formattedDate = `${date.getDate().toString().padStart(2, '0')}-${(date.getMonth() + 1).toString().padStart(2, '0')}-${date.getFullYear().toString()}`;
-
+		
 
 		
-        const date1 = document.createElement('span');
-        date1.textContent = `Date: ${formattedDate}`;
+        const date = document.createElement('span');
+        date.textContent = `Date: ${event.date}`;
         const time = document.createElement('span');
         time.textContent = `Time: ${event.time}`;
         const location = document.createElement('span');
@@ -813,7 +813,7 @@ showAllcommunities.addEventListener("click", async () => {
 	div.appendChild(h2);
 	div.appendChild(h3);
 	div.appendChild(p);
-	communitiess.appendChild(div);
+	communitiess.innerHTML = div;
     
   }); 
 };
@@ -845,13 +845,11 @@ showAllEvents.addEventListener("click", async () => {
 	const p = document.createElement("p");
     const p2 = document.createElement("p");
     
-	const date2 = new Date(`${date}`);
-const formattedDate = `${date2.getDate().toString().padStart(2, '0')}-${(date2.getMonth() + 1).toString().padStart(2, '0')}-${date2.getFullYear().toString()}`;
-
+	
 	
 	
 	h2.textContent = name;
-	h3.textContent = formattedDate;
+	h3.textContent = date;
 	p.textContent = description;
     p2.textContent = locationValue;
 	
@@ -859,7 +857,7 @@ const formattedDate = `${date2.getDate().toString().padStart(2, '0')}-${(date2.g
 	div.appendChild(h3);
 	div.appendChild(p);
 	div.appendChild(p2);
-	eventss.appendChild(div);
+	eventss.innerHTML = div;
     
   }); 
 };
