@@ -536,18 +536,22 @@ form.addEventListener('submit', async (e) => {
   const location = document.getElementById("location").value;
   const category = document.getElementById("category").value;
 
-  const formData = new FormData();
-  formData.append('title', title);
-  formData.append('content', content);
-  formData.append('file', file);
-  formData.append('location', location);
-  formData.append('category', category);
-
+  
   try {
     const response = await fetch('https://backend-for-experiences.onrender.com/experiences', {
       method: 'POST',
-      body: formData,
-    });
+      headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      title: title,
+      content: content,
+      fileUrl: file,
+      location: location,
+      category: category,
+    }),
+	
+	});
     const data = await response.json();
     alert(data);
   } catch (error) {
