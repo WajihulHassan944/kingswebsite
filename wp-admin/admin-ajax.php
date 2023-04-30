@@ -1,1 +1,0 @@
-No Content: https://www.kingstreets.com/wp-admin/admin-ajax.php
