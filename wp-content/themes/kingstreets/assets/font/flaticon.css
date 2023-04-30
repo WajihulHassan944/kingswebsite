@@ -1,0 +1,56 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?7d3fbeb59d30ba0dc4bc01f6651b86d0") format("truetype"), url("./flaticon.woff?7d3fbeb59d30ba0dc4bc01f6651b86d0") format("woff"), url("./flaticon.woff2?7d3fbeb59d30ba0dc4bc01f6651b86d0") format("woff2"), url("./flaticon.eot?7d3fbeb59d30ba0dc4bc01f6651b86d0#iefix") format("embedded-opentype"), url("./flaticon.svg?7d3fbeb59d30ba0dc4bc01f6651b86d0#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before,
+i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-balance:before {
+    content: "\f101";
+}
+
+.flaticon-building:before {
+    content: "\f102";
+}
+
+.flaticon-church:before {
+    content: "\f103";
+}
+
+.flaticon-cityscape:before {
+    content: "\f104";
+}
+
+.flaticon-community:before {
+    content: "\f105";
+}
+
+.flaticon-heartbeat:before {
+    content: "\f106";
+}
+
+.flaticon-planet-earth:before {
+    content: "\f107";
+}
+
+.flaticon-presentation:before {
+    content: "\f108";
+}
+
+.flaticon-support:before {
+    content: "\f109";
+}
+
+.flaticon-target:before {
+    content: "\f10a";
+}
