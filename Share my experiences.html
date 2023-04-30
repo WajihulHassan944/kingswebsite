@@ -521,7 +521,7 @@
     </div>
 </div>
 
-<button id="fetchExperiences()">Show</button>
+<button onclick="fetchExperiences()">Show</button>
 		<div id="data-container"></div>					
 				
 	</div>
@@ -571,7 +571,7 @@ form.addEventListener('submit', async (e) => {
 
 
 
-
+const con = document.getElementById("data-container");
 
 async function fetchExperiences() {
 alert("show clicked");
@@ -580,7 +580,7 @@ alert("show clicked");
     const data = await response.json();
     data.forEach(experience => {
       const { name, title, content, location, category } = experience;
-      document.getElementById("data-container").innerHTML += `${name} shared the experience "${title}" about ${location} (${category}): ${content}`;
+      con.innerHTML += `${name} shared the experience "${title}" about ${location} (${category}): ${content}`;
     });
   } catch (error) {
     alert(error);
