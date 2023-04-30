@@ -570,7 +570,7 @@ async function handleSubmitExperience(event) {
 
   // Submit data to backend
   try {
-    const experienceResponse = await fetch('https://backend-for-experiences.onrender.com/experiences', {
+    const experienceResponse = await fetch('http://localhost:3000/experiences', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -587,7 +587,7 @@ async function handleSubmitExperience(event) {
     const experienceData = await experienceResponse.json();
 
     if (mediaData) {
-      const mediaResponse = await fetch(`https://backend-for-experiences.onrender.com/experiences/${experienceData.id}/media`, {
+      const mediaResponse = await fetch(`http://localhost:3000/experiences/${experienceData.id}/media`, {
         method: 'POST',
         body: mediaData
       });
