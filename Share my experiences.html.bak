@@ -530,11 +530,11 @@ const form = document.querySelector('#myform');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
-  const title = form.title.value;
-  const content = form.content.value;
-  const file = form.file.files[0];
-  const location = form.location.value;
-  const category = form.category.value;
+  const title = document.getElementById("title").value;
+  const content = document.getElementById("content").value;
+  const file = document.getElementById("file").files[0];
+  const location = document.getElementById("location").value;
+  const category = document.getElementById("category").value;
 
   const formData = new FormData();
   formData.append('title', title);
