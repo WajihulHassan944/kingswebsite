@@ -500,14 +500,15 @@
  <div class="container">
       <h1>Share Your Experience</h1>
       <form id="myform">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" />
+
         <label for="title">Title</label>
         <input type="text" id="title" name="title" />
 
         <label for="content">Content</label>
         <textarea id="content" name="content"></textarea>
 
-        <label for="file">Upload a File</label>
-        <input type="file" id="file" name="file" accept="image/*, audio/*, video/*" />
 
         <label for="location">Location</label>
         <input type="text" id="location" name="location" />
@@ -530,9 +531,9 @@ const form = document.querySelector('#myform');
 
 form.addEventListener('submit', async (e) => {
   e.preventDefault();
+  const name = document.getElementById("name").value;
   const title = document.getElementById("title").value;
   const content = document.getElementById("content").value;
-  const file = document.getElementById("file").files[0];
   const location = document.getElementById("location").value;
   const category = document.getElementById("category").value;
 
@@ -544,9 +545,9 @@ form.addEventListener('submit', async (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      title: title,
+      name: name,
+	  title: title,
       content: content,
-      fileUrl: file,
       location: location,
       category: category,
     }),
@@ -557,6 +558,11 @@ form.addEventListener('submit', async (e) => {
   } catch (error) {
     alert(error);
   }
+  name.value="";
+  title.value="";
+  content.value="";
+  location.value="";
+  category.value="";
 });
 
 </script>
