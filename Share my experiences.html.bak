@@ -521,6 +521,7 @@
     </div>
 </div>
 
+<button id="fetchExperiences()">Show</button>
 		<div id="data-container"></div>					
 				
 	</div>
@@ -552,18 +553,36 @@ form.addEventListener('submit', async (e) => {
       category: category,
     }),
 	
+  name.value="";
+  title.value="";
+  content.value="";
+  location.value="";
+  category.value="";
 	});
     const data = await response.json();
     alert(data);
   } catch (error) {
     alert(error);
   }
-  name.value="";
-  title.value="";
-  content.value="";
-  location.value="";
-  category.value="";
 });
+
+
+
+
+
+async function fetchExperiences() {
+  try {
+    const response = await fetch('https://backend-for-experiences.onrender.com/experiences');
+    const data = await response.json();
+    data.forEach(experience => {
+      const { name, title, content, location, category } = experience;
+      document.getElementById("data-container").innerHTML += `${name} shared the experience "${title}" about ${location} (${category}): ${content}`;
+    });
+  } catch (error) {
+    alert(error);
+  }
+}
+
 
 </script>
 
