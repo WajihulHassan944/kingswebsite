@@ -75,6 +75,7 @@ $(document).ready(function() {
       center: 'title',
       right: 'month,agendaWeek,agendaDay'
     },
+	allDayDefault: true,
     events: []
   });
 
@@ -111,7 +112,8 @@ $(document).ready(function() {
     // create new event object
     const newEvent = {
       title: title,
-      start: moment(date).format('YYYY-MM-DD')
+      start: moment(date).format('YYYY-MM-DD'),
+	  allDay: true
     };
 
     try {
