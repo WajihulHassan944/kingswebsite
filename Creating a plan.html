@@ -3,6 +3,17 @@
 
 <head>
     <!-- Required meta tags -->
+	
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+				
+		
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">		
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+	
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+			
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100&display=swap" rel="stylesheet">
@@ -11,7 +22,7 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Kingstreets &#8211; The Way Home</title>
+    <title>Kingstreets &#8211; Creating a plan</title>
     <style>
         #wpadminbar #wp-admin-bar-vtrts_free_top_button .ab-icon:before {
             content: "\f185";
@@ -387,18 +398,16 @@
                         </div>
                         <div class="logo">
                             <!-- <img src="img/logo.png" class="img-fluid"> -->
-                            <a href="https://www.kingstreets.com/" class="custom-logo-link" rel="home" aria-current="page"><img class="logo-img" width="460" height="82" src="wp-content/uploads/2020/10/cropped-logo.png" class="custom-logo" alt="Kingstreets" srcset="wp-content/uploads/2020/10/cropped-logo.png 460w, wp-content/uploads/2020/10/cropped-logo-300x53.png 300w"  /></a>                            </div>
-                        
-						<div class="freedomring">
+                            <a href="https://www.kingstreets.com/" class="custom-logo-link" rel="home" aria-current="page"><img class="logo-img" width="460" height="82" src="wp-content/uploads/2020/10/cropped-logo.png" class="custom-logo" alt="Kingstreets" srcset="wp-content/uploads/2020/10/cropped-logo.png 460w, wp-content/uploads/2020/10/cropped-logo-300x53.png 300w" sizes="(max-width: 460px) 100vw, 460px" /></a>                            </div>
+                        <div class="freedomring">
                             <img src="wp-content/themes/kingstreets/assets/img/freedomring.png" width="100">
                         </div>
                         <div class="credentials flex-fill">
 
-                            <a href="https://www.kingstreets.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.kingstreets.com%2F" alt="Login" class="btn btn-warning btn-sm">
-    Login</a>
+                            <a href="#" alt="Login" class="btn btn-warning btn-sm" id="login">Login</a>
 
 
-                            <a href="http://www.kingstreets.com/create-an-account/" class="btn btn-primary btn-sm ">Register</a>
+                            <a href="#" class="btn btn-primary btn-sm " id="register">Register</a>
                         </div>
                     </div>
                 </header>
@@ -468,357 +477,266 @@
                 </nav>
                 <!-- end navbar -->
 
-                <style>
+            	
 				
-.containered{
-	display:flex;
-	flex-wrap:wrap;
-	width:inherit;
-	height:inherit;
-}
-.containered .hello{
-	width:250px;
-	height:200px;
-	background:pink;
-	margin:8px;
-	border-radius:5px;
-	position:relative;
-}
+				<!-- content wrapper -->
 
-.containered .hello2{
-	width:250px;
-	height:200px;
-	background:purple;
-	margin:8px;
-	border-radius:5px;
-	position:relative;
-	padding:0;
-}
-.containered .hello span{
-	position:absolute;
-	bottom:0;
-	left:0;
-	right:0;
-	background:#eee;
-	border-radius:0 0 5px 5px;
-	text-align:center;
-	padding:4px 0;
-	font-weight:500;
-}
-.lastspan{
-	position:absolute;
-	bottom:0;
-	left:0;
-	right:0;
-	background:#eee;
-	border-radius:0 0 5px 5px;
-	text-align:center;
-	padding:4px 0;
-	font-weight:500;
-	z-index:999;
-}
-.flex-even{
-	width:50px;
-	height:90px;
-	font-size:9px;
-	margin:0;
-	position:relative;
-	overflow;hidden
-	padding:0;
-}
-.hii{
-	width:45px;
-}
-.anchorTags{
-	text-decoration:none;
-	color:#777;
-}
-
-@media(max-width:700px)
-{
-.kingtv{
-margin-top:1300px;
-}
-.hello2{
-display:flex;
-flex-direction:row;flex-wrap:wrap;
-overflow:auto;
-}
-
-.logo-img{
-	width:300px;
-}
-}
-
-
-@media(max-width:430px)
-{
-
-.logo-img{
-	width:300px;
-}
-.kingtv{
-margin-top:1300px;
-}
-.hello2{
-display:flex;
-flex-direction:row;flex-wrap:wrap;
-overflow:auto;
-}
-}
-
-				</style>
-                <!-- content wrapper -->
-                <div class="content-wrapper" >
+			   
+				<div class="content-wrapper" >
                     <div class="row" >
                         <div class="col-md-12" >
-                
-							<div class="banners mb-4" style="width:100%; height:500px; padding:0px; ">
-                               
-                              
-								<div class="containered">
+            
+			
 
-									<div class="hello"><a class="anchorTags" href="Who am i.html"><img src="one.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Who Am I? Change Your Life</span></a></div>
+<div class="plan-container">
 
-									<div class="hello"><a class="anchorTags" href="Find Your Community.html"><img src="two.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Find Your Community</span></a></div>
-
-									<div class="hello"><a class="anchorTags" href="I can help.html"><img src="four.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>I Can Help</span></a></div>
-
-									<div class="hello"><a class="anchorTags" href="Share my experiences.html"><img src="four-1.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Share My Experiences</span></a></div>
-
-									<div class="hello"><a class="anchorTags" href="Edutainment, Culture and Lifestyle.html"><img src="five.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Edutainment,Culture, & Lifestyle</span></a></div>
-
-									<div class="hello"><a class="anchorTags" href="Creating a plan.html"><img src="six.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>Creating a Plan?</span></a></div>
-
-									<div class="hello"><a class="anchorTags" href="I need help.html"><img src="seven.jpg" style="width:100%; height:100%; aspect-ratio:1;"><span>I Need Help[Resources]</span></a></div>
-
-									<div class="hello2">
-									<span class="lastspan">The Mentoring Portals</span>
-						
-
-
-	 <div class="d-md-flex portals portals-1">
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/portal/" data-toggle="tooltip" data-placement="top" title="" data-original-title="CITIES OF HOPE &amp; DESPAIR">
-                      <span class="icon"><i class="flati flaticon-cityscape flati-1x"></i></span>
-                      <span><div>1000+</div>Cities of Hope &amp; Despair</span>
-                      
-                  </a>
-                                    </div>
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/justice/" data-toggle="tooltip" data-placement="top" title="JUSTICE ROW / LEGAL / POLITICS" data-original-title="JUSTICE ROW / LEGAL / POLITICS">
-                       <span class="icon"><i class="flati flaticon-balance flati-1x"></i></span>
-                  <span>Justice Row / Legal / Politics</span>
-                 
-                  </a>
-                                    </div>
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/nonprofit/" data-toggle="tooltip" data-placement="top" title="" data-original-title="NON PROFIT CDC`S">
-                      <span class="icon"><i class="flati flaticon-building flati-1x"></i></span>
-                    <span>Non Profit CDC's</span>
-                  
-                  </a>
-                                    </div>
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/international/" data-toggle="tooltip" data-placement="top" title="" data-original-title="INTERNATIONAL / UNIVERSE">
-                     <span class="icon"> <i class="flati flaticon-planet-earth flati-1x"></i></span>
-                    <span>International / Universe</span>
-                  
-                  </a>
-                                    </div>
-
-                                    <div class="flex-even hi1">
-                                        <a href="https://www.kingstreets.com/education" data-toggle="tooltip" data-placement="top" title="" data-original-title="EDUCATION / SCHOOLS / TRAINING / YOUTH / ENTERTAINMENT">
-                      <span class="icon"><i class="flati flaticon-presentation flati-1x"></i></span>
-                    <span>Education / Schools / Training / Youth / Entertainment</span>
-                  
-                  </a>
-                                    </div>
-
-                                </div>
-                                <div class="d-md-flex portals portals-2" >
-                                    <div class="flex-even hii">
-                                        <a href="https://www.kingstreets.com/community/" data-toggle="tooltip" data-placement="top" title="" data-original-title="COMMUNITY THINK TANK / INCUBATOR">
-                       <span class="icon"><i class="flati flaticon-community flati-1x"></i></span>
-                        <span>Community Think Tank / Incubator</span>
-                 
-                  </a>
-                                    </div>
-                                    <div class="flex-even hii" style="width:40px; overflow:hidden">
-                                        <a href="https://www.kingstreets.com/homepersonal/" data-toggle="tooltip" data-placement="top" title="" data-original-title="HOME / PERSONAL / DEVELOPMENT / INVESTMENT">
-                      <span class="icon"><i class="flati flaticon-target flati-1x"></i></span>
-                    <span>Home / Personal / Developement / Investment</span>
-                  </a>
-                                    </div>
-                                    <div class="flex-even hii" style="width:45px; overflow:hidden">
-                                        <a href="https://www.kingstreets.com/supportcenter/" data-toggle="tooltip" data-placement="top" title="" data-original-title="SUPPORT CENTER / BUSINESS / FINANCES / NEWS / WORK / MANAGEMENT">
-                      <span class="icon"><i class="flati flaticon-support flati-1x"></i></span>
-                    <span>Support Center / Business / Finances / News / Work</span>
-                  
-                  </a>
-                                    </div>
-                                    <div class="flex-even hii">
-                                        <a href="https://www.kingstreets.com/church/" data-toggle="tooltip" data-placement="top" title="" data-original-title="CHURCH / SOUL / SPIRTUAL">
-                      <span class="icon"><i class="flati flaticon-church flati-1x"></i></span>
-                        <span>Church / Soul / Spiritual</span>
-                  </a>
-                                    </div>
-
-                                    <div class="flex-even hii">
-                                        <a href="https://www.kingstreets.com/health" data-toggle="tooltip" data-placement="top" title="" data-original-title="HEALTH / MEDICAL">
-                      <span class="icon"><i class="flati flaticon-heartbeat flati-1x"></i></span>
-                    <span>Health / Medical</span>
-                  
-                  </a>
-                                    </div>
-
-                                </div>
-					
+  <h2>Create Your 1-Year Plan</h2>
+<form id="eventForm">
+  <label for="eventTitle">Title:</label>
+  <input type="text" id="eventTitle" name="eventTitle" placeholder="Enter a title for your plan" required>
+  <label for="eventDate">Date:</label>
+  <input type="date" id="eventDate" name="eventDate" required>
+  <label for="description">Description:</label>
+   <textarea id="description" name="description" placeholder="Enter a description for your plan" required></textarea>
+<button type="submit">Add</button>
+</form>
 </div>
 
 
-</div>
-
-
-
-                    
-					
-					
-					
-					
-					
-                            </div>
-                            <div class="kingtv">
-							<!-- kings tv -->
-                            <h2 class="subtitle mb-0"><a href="https://www.kingstreets.com/kings-tv/" target="new">King's TV</a></h2>
-
-
-
-
-                            <div class="row">
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/39ILoDWK-P4"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/edutainment/" class="btn btn-primary btn-sm">Edutainment</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/RjzC-8-P8DY"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/edutainment/" class="btn btn-primary btn-sm">Edutainment</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/Pv4xWJHva3g"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/fraternities/" class="btn btn-primary btn-sm">Fraternities</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/FZwbO1ANKIs"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/fraternities/" class="btn btn-primary btn-sm">Fraternities</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/xzvklmoHO3M"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/sororities/" class="btn btn-primary btn-sm">Sororities</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-                                <div class="col-md-4">
-                                    <div class="tv-box mt-4">
-
-
-                                        <iframe width="100%" height="190px" class="responsive-iframe" src="https://www.youtube.com/embed/4KcgPUvZw58"></iframe>
-
-
-                                        <div class="tax">
-
-                                            <p class="beers draught">
-                                                <a href="https://www.kingstreets.com/naics/sororities/" class="btn btn-primary btn-sm">Sororities</a> </p>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-
-
-
-                                <div class="col-md-12">
-                                    <a href="http://www.kingstreets.com/kings-tv/" class="btn btn-warning">More</a>
-                                </div>
-
-
-
-
-                            </div></div>
-                            <!-- end kings tv -->
-                        </div>
-                       
-					   </div>
-                </div>
+<center><h2 style="font-size:22px;
+  color:black;
+  margin-bottom:20px; margin-top:40px;">You can track your plans here</h2></center>
+<section class="timeline-wrapper"></section>
+
+<div id="calendar"></div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
+<style>
+.timeline-wrapper{
+margin:90px auto;
+width:380px;
+border-left:2px solid #ccc;
+padding:0 20px 0 30px;
+}
+.timeline-wrapper .timeline-div{
+	background:#fff;
+	padding:10px 25px;
+	font-size:16px;
+	border:1px solid #ccc;
+	line-height:1.7;
+	position:relative;
+	height:110px;
+	margin-bottom:20px;
+	box-shadow:0 20px 25px -15px rgba(0,0,0,0.3);
+	
+	
+}
+.timeline-wrapper .timeline-div:before{
+	content: '';
+	display:block;
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	background-color:#000;
+	border:3px solid #ddd;
+	position:absolute;
+	top:10px;
+	left:-39px;
+}
+.timeline-wrapper .timeline-div:after{
+	content: '';
+	width:0;
+	height:0;
+	border-style:solid;
+	border-color:transparent #ddd transparent transparent;
+	border-width:8px;
+	position:absolute;
+	left:-17px;
+	top:10px;
+}
+
+.timeline-wrapper .timeline-div p{
+	margin:0;
+	font-family:poppins;
+	text-transform:capitalize;
+	font-style:italic;
+}
+.timeline-div-para{
+	font-weight:700;
+}
+
+</style>
+
+<style>
+  #calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+.plan-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.plan-container h2{
+  font-size:24px;
+  color:black;
+  margin-bottom:20px;
+}
+
+.calendar {
+  /* styling for calendar view */
+}
+
+.plan-form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight:600;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder,
+input[type="date"]::placeholder {
+  font-weight:300;
+  }
+
+button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 90px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}.calendar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+</style>
+
+<script>
+  $(document).ready(function() {
+    // initialize the calendar
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      allDayDefault: true,
+      events: JSON.parse(localStorage.getItem('events') || '[]')
+    });
+
+    $(document).on('click', '.fc-button', function() {
+      localStorage.setItem('events', JSON.stringify($('#calendar').fullCalendar('clientEvents')));
+    });
+
+    const form = $('#eventForm');
+
+    form.submit(function(event) {
+      event.preventDefault();
+
+      // get form values
+      const title = $('#eventTitle').val();
+      const description = $('#description').val();
+      const date = moment($('#eventDate').val()).format('YYYY-MM-DD'); // convert to desired format
+
+      // create new event object
+      const newEvent = {
+        title: title,
+        start: moment(date).format('YYYY-MM-DD'),
+		description: description,
+        allDay: true
+      };
+
+      // add new event to calendar
+      $('#calendar').fullCalendar('renderEvent', newEvent);
+
+      // add new event to local storage
+      const events = JSON.parse(localStorage.getItem('events') || '[]');
+      events.push(newEvent);
+      localStorage.setItem('events', JSON.stringify(events));
+ location.reload();
+      // clear form
+      $('#eventTitle').val('');
+      $('#eventDate').val('');
+      $('#description').val('');
+	
+    });
+  });
+  
+  
+  
+  const events2 = JSON.parse(localStorage.getItem('events'));
+const timelineSection = $(".timeline-wrapper");
+
+function showTodo() {
+    let liTag2 = "";
+    if(events2) {
+        events2.forEach((event, id) => {            
+            liTag2 += `
+                <div class="timeline-div">
+                    <p class="timeline-div-para" style="font-weight:800; color:black;">${event.start} </p>
+                    <strong><p style="color:#3C87FF">${event.title}</p></strong>
+                    <p style="color:#333">${event.description}</p>
+                </div>`;
+        });
+    }
+    timelineSection.html(liTag2);
+}
+
+showTodo();
+
+  
+  
+  
+</script>
+
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			</div></div></div>
+				
+				<script>
+			
+			
+			
+			
+			
+
+</script>
+				
+				
                 <!-- end content wrapper -->
 
                 <!-- footer -->
