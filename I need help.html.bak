@@ -686,8 +686,6 @@ async function fetchExperiences() {
   } catch (error) {
     console.log(error);
   }
-  replyMessage.value="";
-  location.reload();
 }
  
 
