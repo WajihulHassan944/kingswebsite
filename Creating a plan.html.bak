@@ -3,14 +3,10 @@
 
 <head>
     <!-- Required meta tags -->
-					
+	
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+				
 		
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livebloggerofficial/Custom-List@main/style.css" />
-
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">		
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 	
@@ -26,7 +22,7 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Kingstreets &#8211; Edutainment,Culture and Lifestyle</title>
+    <title>Kingstreets &#8211; Creating a plan</title>
     <style>
         #wpadminbar #wp-admin-bar-vtrts_free_top_button .ab-icon:before {
             content: "\f185";
@@ -480,264 +476,265 @@
 							</div> -->
                 </nav>
                 <!-- end navbar -->
-	
+
+            	
+				
 				<!-- content wrapper -->
-                
+
+			   
 				<div class="content-wrapper" >
                     <div class="row" >
                         <div class="col-md-12" >
-              			
-<style>/* FullCalendar styles */
-#calendar {
-  max-width: 700px;
-  margin: 30px auto;
+            
+			
+
+<div class="plan-container">
+
+  <h2>Create Your 1-Year Plan</h2>
+  <p style="margin-top:10px; color:#777;">Your plans are public. People can benefit from your planning skills</p>
+<form id="eventForm">
+  <label for="eventTitle">Title:</label>
+  <input type="text" id="eventTitle" name="eventTitle" placeholder="Enter a title for your plan" required>
+  <label for="eventDate">Date:</label>
+  <input type="date" id="eventDate" name="eventDate" required>
+  <label for="description">Description:</label>
+   <textarea id="description" name="description" placeholder="Enter a description for your plan" required></textarea>
+<button type="submit">Add</button>
+</form>
+</div>
+<a href="calender.html">Want a private planning , click here</a>
+<center><h2 style="font-size:22px;
+  color:black;
+  margin-bottom:20px; margin-top:40px;">You can track your plans here</h2></center>
+<section class="timeline-wrapper"></section>
+
+<div id="calendar"></div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
+<style>
+.timeline-wrapper{
+margin:90px auto;
+width:380px;
+border-left:2px solid #ccc;
+padding:0 20px 0 30px;
+}
+.timeline-wrapper .timeline-div{
+	background:#fff;
+	padding:10px 25px;
+	font-size:16px;
+	border:1px solid #ccc;
+	line-height:1.7;
+	position:relative;
+	height:110px;
+	margin-bottom:20px;
+	box-shadow:0 20px 25px -15px rgba(0,0,0,0.3);
+	
+	
+}
+.timeline-wrapper .timeline-div:before{
+	content: '';
+	display:block;
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	background-color:#000;
+	border:3px solid #ddd;
+	position:absolute;
+	top:10px;
+	left:-39px;
+}
+.timeline-wrapper .timeline-div:after{
+	content: '';
+	width:0;
+	height:0;
+	border-style:solid;
+	border-color:transparent #ddd transparent transparent;
+	border-width:8px;
+	position:absolute;
+	left:-17px;
+	top:10px;
 }
 
-/* Style the content section */
-#content2 {
-  display: flex;
-  width:100%;
-  margin-bottom: 20px;
+.timeline-wrapper .timeline-div p{
+	margin:0;
+	font-family:poppins;
+	text-transform:capitalize;
+	font-style:italic;
+}
+.timeline-div-para{
+	font-weight:700;
 }
 
-.card {
-	width:100%;
-  padding: 40px 20px;
-  border-radius: 5px;
-  text-align: center;
+</style>
+
+<style>
+  #calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
   
+.plan-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.plan-container h2{
+  font-size:24px;
+  color:black;
+  margin-bottom:20px;
 }
 
-.card h2 {
-  margin-top: 0;
+.calendar {
+  /* styling for calendar view */
 }
-li{
-margin-bottom:40px;
+
+.plan-form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight:600;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder,
+input[type="date"]::placeholder {
+  font-weight:300;
+  }
+
+button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 90px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}.calendar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
 }
 </style>
 
- <div id="content2">
-      <div class="card">
-        <h2>Edutainment, Culture and Lifestyle</h2>
-        <p style="color:#3C87FF">Discover and share/celebrate your experiences with others.</p>
-		
-		<div id="userExperiences" class="list-container">
-      <ol></ol>
-    </div>
-      </div>
-	  
-	 
-    </div>
-	
-	
-	<div id="wrapOfForm" style="margin-left:10%">
-	<div id="main5">
-<div id="first5">
-
-    <form id="experienceForm">
-    <h2 style="margin-top:10px">Add yours!</h2>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
-	<label for="date">Date</label>
-    <input type="date" id="date" name="date" required style="margin-bottom:25px;">
-    <label for="category">Category</label>
-    <select id="category" name="category" required>
-      <option value="">Choose a category</option>
-      <option value="Culture">Culture</option>
-      <option value="Lifestyle">Lifestyle</option>
-      <option value="Education">Education</option>
-    </select>
-	<br><br>
-    <label for="location">Location</label>
-    <input type="text" id="location" name="location" required>
-	
-	 <label for="title">Description</label>
-    <input type="text" id="title" name="title" required>
-   
-    <input type="submit" value="Share" style="margin-top:20px">
-  </form>
-  </div></div></div>
-	
-  <style>
-  
-/* Below line is used for online Google font */
-@import "http://fonts.googleapis.com/css?family=Ubuntu";
-body{
-font-family:'Ubuntu',sans-serif
-}
-#wrapOfForm{
-width:100%;
-display:flex;
-justify-content:center;
-align-items:center;
-}
-#main5{
-width:710px;
-height:620px;
-margin:30px auto
-}
-#first5{
-width:510px;
-height:610px;
-box-shadow:0 0 0 1px rgba(14,41,57,0.12),0 2px 5px rgba(14,41,57,0.44),inset 0 -1px 2px rgba(14,41,57,0.15);
-float:left;
-padding:10px 50px 0;
-background:linear-gradient(#fff,#f2f6f9)
-}
-hr{
-border:0;
-border-top:1px solid #ccc;
-margin-bottom:30px
-}
-#main5 #first5 #experienceForm label{
-font-size:17px
-}
-#main5 #first5 #experienceForm input{
-width:400px;
-padding:10px;
-margin-bottom:10px;
-border-radius:5px;
-border:1px solid #cbcbcb;
-box-shadow:inset 0 1px 2px rgba(0,0,0,0.18);
-font-size:16px
-}
-#main5 #first5 #experienceForm textarea{
-width:400px;
-height:100px;
-padding:10px;
-margin-bottom:10px;
-border-radius:5px;
-border:1px solid #cbcbcb;
-box-shadow:inset 0 1px 2px rgba(0,0,0,0.18);
-font-size:16px
-}
-#main5 #first5 #experienceForm input[type=submit]{
-background:linear-gradient(to bottom,#22abe9 5%,#36caf0 100%);
-box-shadow:inset 0 1px 0 0 #7bdcf4;
-border:1px solid #0F799E;
-color:#fff;
-font-size:19px;
-font-weight:700;
-cursor:pointer;
-text-shadow:0 1px 0 #13506D
-}
-#main5 #first5 #experienceForm input[type=submit]:hover{
-background:linear-gradient(to bottom,#36caf0 5%,#22abe9 100%)
-}
-
-  </style>
-    <script>
-	
-const form = document.querySelector('#experienceForm');
-form.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  
-  const name = document.getElementById("name").value;
-  const content = document.getElementById("title").value;
-  const date = document.getElementById("date").value;
-  const category = document.getElementById("category").value;
-  const location = document.getElementById("location").value;
- 
-  
-  try {
-    const response = await fetch('https://backend-for-plans.onrender.com/plans2', {
-      method: 'POST',
-      headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      title: name,
-	  content: content,
-	  date: date,
-      location: location,
-      category: category,
-    }),
-	
- 	});
-	
-    alert('Your Experience is shared');
-  } catch (error) {
-    alert("Internal server error");
-  }
-  
-  
-location.reload();
-  
-});
-
-
-
-const calendarList = document.querySelector('#userExperiences ol');
-
-async function fetchExperiences() {
-
-  try {
-    const response = await fetch('https://backend-for-plans.onrender.com/plans2');
-    const data = await response.json();
-    data.forEach(experience => {
-	
-      const {title, content,date, location, category } = experience;
-	  
-	  
-	  const date2 = new Date(date);
-     const formattedDate = date2.toLocaleDateString('en-US');
-	  const eventItem = document.createElement('li');
-	  eventItem.innerHTML = ` <strong >${title}</strong> - ${location} - ${category} - <strong style="font-weight:800">${formattedDate}</strong> - ${content} <hr>`;
-	  calendarList.appendChild(eventItem);
-  
-	  
-	  
+<script>
+  $(document).ready(function() {
+    // initialize the calendar
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      allDayDefault: true,
+      events: JSON.parse(localStorage.getItem('events') || '[]')
     });
-  } catch (error) {
-    alert(error);
-  }
+
+    $(document).on('click', '.fc-button', function() {
+      localStorage.setItem('events', JSON.stringify($('#calendar').fullCalendar('clientEvents')));
+    });
+
+    const form = $('#eventForm');
+
+    form.submit(function(event) {
+      event.preventDefault();
+
+      // get form values
+      const title = $('#eventTitle').val();
+      const description = $('#description').val();
+      const date = moment($('#eventDate').val()).format('YYYY-MM-DD'); // convert to desired format
+
+      // create new event object
+      const newEvent = {
+        title: title,
+        start: moment(date).format('YYYY-MM-DD'),
+		description: description,
+        allDay: true
+      };
+
+      // add new event to calendar
+      $('#calendar').fullCalendar('renderEvent', newEvent);
+
+      // add new event to local storage
+      const events = JSON.parse(localStorage.getItem('events') || '[]');
+      events.push(newEvent);
+      localStorage.setItem('events', JSON.stringify(events));
+ location.reload();
+      // clear form
+      $('#eventTitle').val('');
+      $('#eventDate').val('');
+      $('#description').val('');
+	
+    });
+  });
+  
+  
+  
+  const events2 = JSON.parse(localStorage.getItem('events'));
+const timelineSection = $(".timeline-wrapper");
+
+function showTodo() {
+    let liTag2 = "";
+    if(events2) {
+        events2.forEach((event, id) => {            
+            liTag2 += `
+                <div class="timeline-div">
+                    <p class="timeline-div-para" style="font-weight:800; color:black;">${event.start} </p>
+                    <strong><p style="color:#3C87FF">${event.title}</p></strong>
+                    <p style="color:#333">${event.description}</p>
+                </div>`;
+        });
+    }
+    timelineSection.html(liTag2);
 }
 
-fetchExperiences();
+showTodo();
 
-    </script>
-  
-    <div id="calendar"></div>
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
-  <!-- Moment.js library -->
- <script>
-$(document).ready(function() {
-  // initialize the calendar
-  $('#calendar').fullCalendar({
-    header: {
-      left: 'prev,next today',
-      center: 'title',
-      right: 'month,agendaWeek,agendaDay'
-    },
-	allDayDefault: true,
-    events: []
-  });
-
-  // get events from API and add them to calendar
-  async function fetchEvents() {
-    try {
-      const response = await fetch('https://backend-for-plans.onrender.com/plans2');
-      const events = await response.json();
-
-      // add events to calendar
-      $('#calendar').fullCalendar('addEventSource', events);
-      $('#calendar').fullCalendar('render');
-    } catch (error) {
-      console.error(error);
-    }
-  }
-
-  fetchEvents();
-  
-  
   
   
   
 </script>
-	</div></div></div>
+
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			</div></div></div>
+				
+				<script>
+			
+			
+			
+			
+			
+
+</script>
 				
 				
                 <!-- end content wrapper -->
