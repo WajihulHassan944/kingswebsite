@@ -859,6 +859,7 @@ const formattedDate = date.toLocaleDateString('en-US');
 	locationValue.value="";
 	
 	
+location.reload();
 });
 
 
@@ -890,6 +891,7 @@ form1.addEventListener("submit", async (event) => {
         communitiesContainer.appendChild(card);
 		
 		
+location.reload();
       });
     });
 });
@@ -931,6 +933,7 @@ form2.addEventListener("submit", async (event) => {
         eventsContainer.appendChild(card);
 		
 		
+location.reload();
       });
     });
 });
