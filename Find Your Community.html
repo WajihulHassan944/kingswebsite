@@ -20,7 +20,7 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Kingstreets &#8211; The Way Home</title>
+    <title>Kingstreets &#8211; Find your community</title>
     <style>
         #wpadminbar #wp-admin-bar-vtrts_free_top_button .ab-icon:before {
             content: "\f185";
@@ -402,10 +402,10 @@
                         </div>
                         <div class="credentials flex-fill">
 
-                            <a href="#" alt="Login" class="btn btn-warning btn-sm" id="login">Login</a>
+                            <a href="https://www.kingstreets.com/wp-login.php?redirect_to=https%3A%2F%2Fwww.kingstreets.com%2F" alt="Login" class="btn btn-warning btn-sm" id="login">Login</a>
 
 
-                            <a href="#" class="btn btn-primary btn-sm " id="register">Register</a>
+                            <a href="http://www.kingstreets.com/create-an-account/" class="btn btn-primary btn-sm " id="register">Register</a>
                         </div>
                     </div>
                 </header>
@@ -857,6 +857,9 @@ const formattedDate = date.toLocaleDateString('en-US');
 	date1.value="";
 	location.value="";
 	locationValue.value="";
+	
+	
+location.reload();
 });
 
 
@@ -886,6 +889,9 @@ form1.addEventListener("submit", async (event) => {
         card.appendChild(interest);
         card.appendChild(description);
         communitiesContainer.appendChild(card);
+		
+		
+location.reload();
       });
     });
 });
@@ -925,6 +931,9 @@ form2.addEventListener("submit", async (event) => {
         card.appendChild(locationValue);
         card.appendChild(description);
         eventsContainer.appendChild(card);
+		
+		
+location.reload();
       });
     });
 });
@@ -959,6 +968,8 @@ showAllcommunities.addEventListener("click", async () => {
 	div.appendChild(p);
 	div.className = 'card';
 	communitiess.appendChild(div);
+	
+	
     
   }); 
 };
@@ -1046,8 +1057,9 @@ async function eventsToOccur(){
   .catch(error => alert(error));
 }
 
+window.onload = function() {
 	eventsToOccur();
-
+}
 </script>
 
  <style>
