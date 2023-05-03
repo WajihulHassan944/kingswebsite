@@ -3,13 +3,6 @@
 
 <head>
     <!-- Required meta tags -->
-					
-		
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">		
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-	
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
 			
 
     <meta charset="utf-8">
@@ -20,7 +13,7 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Kingstreets &#8211; I Need Help</title>
+    <title>Kingstreets &#8211; I can Help</title>
     <style>
         #wpadminbar #wp-admin-bar-vtrts_free_top_button .ab-icon:before {
             content: "\f185";
@@ -475,329 +468,306 @@
                 </nav>
                 <!-- end navbar -->
 
-            	
+              
 				
 				<!-- content wrapper -->
                 
 				
-<div class="content-wrapper" style="font-family: Arial, sans-serif;
-    background-color: #f4f4f4; margin:0;">
-    <div class="row">
-	<div class="col-md-12" >
-		
-
-<style>
-#helpForm h1 {
-    text-align: center;
+<div class="content-wrapper">
+    <div class="row" >
+	<div class="col-md-12"><style>
+#divContainer h1{
+	text-align: center;
+	margin-top: 50px;
 }
 
-#helpForm #helpForm1 {
-    width: 50%;
-    margin: auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+#divContainer form {
+	margin: 30px auto;
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
 }
 
-#helpForm #helpForm1 label {
-    display: inline-block;
-    margin-bottom: 5px;
-    font-weight: bold;
+#divContainer form div {
+	margin-bottom: 10px;
+	justify-content:space-between;
 }
 
-#helpForm #helpForm1 input[type="text"],
-#helpForm #helpForm1 input[type="email"],
-#helpForm #helpForm1 textarea {
-    width: 90%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+#divContainer label {
+	margin-right:20px;
+	font-weight:700;
 }
 
-#helpForm #helpForm1 select {
-    width: 93%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 3px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+#divContainer input[type="text"],#divContainer input[type="email"],
+#divContainer textarea {
+	padding: 5px;
+	border-radius: 0px;
+	border: none;
+	border-bottom:2px solid #ccc;
+	width:100%;
 }
 
-#helpForm #helpForm1 textarea {
-    height: 100px;
+#divContainer button[type="submit"] {
+	padding: 10px;
+	background-color: #3C87FF;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+ #divContainer select {
+        font-size: 16px;
+        padding: 7px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+		width:100%;
+    }
+
+    /* Style the options inside the select element */
+   #divContainer  option {
+        font-size: 16px;
+        padding: 10px;
+    }
+#divContainer ul {
+	margin: 30px auto;
+	list-style: none;
+	padding: 20px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+	width:100%;
 }
 
-#helpForm #helpForm1 input[type="submit"],
-#helpForm #helpForm1 input[type="reset"] {
-    background-color: #4CAF50;
-    color: #fff;
-    padding: 10px 80px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
+#divContainer li {
+	margin:10px;
+	border: 1px solid #ccc;
+	padding: 35px 30px;
+	border-radius: 3px;
+	background: linear-gradient(to top, #141e30, #243b55);
+	color:#fff;
+    border-radius: 10px;
+	max-width:325px;
+	
 }
-
-#helpForm #helpForm1 input[type="submit"]:hover,
-#helpForm #helpForm1 input[type="reset"]:hover {
-    background-color: #3e8e41;
+#divContainer li h1{
+	text-align:center;
+	margin:0;
+	font-weight:600;
+	font-size:21px;
+}
+#divContainer li h2{
+	text-align:center;
+	margin:0;
+	font-weight:400;
+	font-size:18px;
+}
+#divContainer li:hover {
+          transform: scale(1.02);
+        }
+#divContainer .helpers-container{
+	width:100%;
+	padding:10px;
 }
 </style>
-
-<div id="helpForm">
-	<h1 style="color:black; font-weight:500; margin:20px auto; font-size:20px;">Help Request Center</h1>
-	<form action="#" method="post" id="helpForm1">
-		<label for="name">Name:</label><br>
-		<input type="text" id="name" name="name" required><br>
-
-		<label for="email">Email:</label><br>
-		<input type="email" id="email" name="email" required><br>
-
-		<label for="topic">Topic:</label><br><br>
-		<select id="topic" name="topic">
-			<option value="">--Select Topic--</option>
-			<option value="Personal Life">Personal Life</option>
-			<option value="Professional Life">Professional Life</option>
-			<option value="Organization">Organization</option>
-			<option value="Others">Others</option>
-		</select><br>
-
-		<label for="location">Location:</label><br>
-		<input type="text" id="location" name="location"><br>
-
-		<label for="situation">Situation:</label><br>
-		<textarea id="situation" name="situation" rows="5"></textarea><br>
-
-		<center><input type="submit" value="Submit"></center>
-	</form></div>
+	<div id="divContainer">
+	<h1 style="color:black; font-weight:500; font-size:23px;">Helpers Directory</h1>
+	<p>Create Your Helper Profile</p>
+	<form>
+		<div>
+			<label for="name" >Name:</label>
+			<input type="text" id="name" required>
+		</div>
+		<div>
+			<label for="email">Email:</label>
+			<input type="email" id="email" required>
+		</div>
+		
+		<div>
+			<label for="typeOfHelp">Type of Help:</label>
+			<input type="text" id="typeOfHelp" placeholder="describe type of help you provide" required>
+		</div>
+		<div>
+			<label for="categoriestype">Help Category Type:</label>
+    <select id="categoriestype" required>
+        <option>Services</option>
+		<option>Products</option>
+		<option>Resources</option>
+        
+    </select>
+		</div>
+		
+		
+		<div>
+			<label for="categories">Category value:</label><br>
+    <select id="categories" required>
+        <option>Select Relevant category type value</option>
+        <optgroup label="Services">
+            <option>Healthcare</option>
+            <option>Legal</option>
+            <option>Financial</option>
+            <option>Education</option>
+            <option>Counseling</option>
+        </optgroup>
+        <optgroup label="Products">
+            <option>Food and Supplies</option>
+            <option>Technology</option>
+            <option>Clothing</option>
+            <option>Housing</option>
+        </optgroup>
+        <optgroup label="Resources">
+            <option>Community Programs</option>
+            <option>Volunteer Opportunities</option>
+            <option>Mental Health Support</option>
+            <option>Job Placement Services</option>
+            <option>Transportation</option>
+        </optgroup>
+    </select>
+		</div>
+		
+		<div>
+  <label for="location-type">Location Type:</label>
+  <select id="location-type" required>
+    <option>--Please select--</option>
+    <option>By country</option>
+    <option>By state</option>
+    <option>By zip code</option>
+    <option>By town</option>
+  </select>
+</div>
+		
+		
+		<div>
+			<label for="location">Location:</label>
+			<input type="text" id="location" required placeholder="Please type relevant location value">
+		</div>
+		<div>
+			<label for="schedule">Schedule:</label>
+			<input type="text" id="schedule" required>
+		</div>
+		<div>
+			<label for="comments">Comments:</label>
+			<textarea id="comments"></textarea>
+		</div>
+		<button type="submit">Add Helper</button>
+	</form>
 	
-	<div id="data-container"></div>
-	
-	<div id="repliesdivv"></div>
+	<div class="helpers-container">
+	<center><h2 style="color:black; font-weight:500; ">Helpers</h2></center>
+	<ul id="helpers-list"></ul>
+</div>
+
+</div>
 	<script>
-const form = document.querySelector("#helpForm1");
-const nameInput = document.querySelector("#name");
-const emailInput = document.querySelector("#email");
-const topicInput = document.querySelector("#topic");
-const locationInput = document.querySelector("#location");
-const situationInput = document.querySelector("#situation");
-
-form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-
-    const requestData = {
-        name: nameInput.value,
-        email: emailInput.value,
-        topic: topicInput.value,
-        location: locationInput.value,
-        situation: situationInput.value,
-		
-		
-    };
-		
-    try {
-        const response = await fetch("https://backend-for-plans.onrender.com/plans", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(requestData),
-        });
-        const data = await response.json();
-        console.log("Request successful", data);
-		
-		
-    } catch (error) {
-        console.error("Request failed", error);
-    }
 	
-	nameInput.value="";
-        emailInput.value="";
-        topicInput.value="";
-        locationInput.value="";
-        situationInput.value="";
-		location.reload();
+	// Handle form submission
+const form = document.querySelector('form');
+form.addEventListener('submit', async (event) => {
+	event.preventDefault();
+	
+	// Get form data
+	const typeOfHelp = document.getElementById('typeOfHelp').value;
+	const categories = document.getElementById('categories').value;
+	const location = document.getElementById('location').value;
+	const schedule = document.getElementById('schedule').value;
+	const comments = document.getElementById('comments').value;
+	const categoriestype = document.getElementById('categoriestype').value;
+	const locationtype = document.getElementById('location-type').value;
+	const name = document.getElementById('name').value;
+	const email = document.getElementById('email').value;
+	
+	// Create helper object
+	const helper = {
+		typeOfHelp,
+		categories,
+		location,
+		schedule,
+		comments,
+		categoriestype,
+		locationtype,
+		name,
+		email,
+	};
+	
+	// Add helper to database
+	try {
+		const response = await fetch('https://backend-for-plans.onrender.com/api/helpers', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(helper)
+		});
+		
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		if (response.ok) {
+			alert("Ok hogya");
+		}
+		
+		const data = await response.json();
+		console.log(data);
+		// Clear form inputs
+		form.reset();
+	} catch (error) {
+		console.error(error);
+		alert('Failed to add helper. Please try again.');
+	}
 });
 
-const con = document.getElementById("data-container");
-
-async function fetchExperiences() {
-
-  try {
-    const response = await fetch('https://backend-for-plans.onrender.com/plans');
-    const data = await response.json();
-    data.forEach(experience => {
-      const { name, email , topic , location , situation } = experience;
-	  
-      const card = document.createElement('div');
-      card.className = 'cardleft';
-      card.innerHTML += `<h1>${name}</h1> <div><p>${email} - ${topic} - ${location}</p></div> <p id="lastp">" ${situation}"</p>
-        <button class="reply-button">Reply</button>
-        <div class="reply-form-wrapper" style="background: #f3efe7; padding:20px; margin:10px; width:fit-content; display:none;">
-          <form method="post" class="reply-form">
-            <textarea placeholder="  Message" class="reply-message" rows='8' style="font-family: 'Lato', sans-serif; width: 98%; margin-bottom: 1em; font-size: .9em; color: #cfcece; font-weight: 300; padding: .5em 1%; border: none; color: #555555; font-weight: 300;"></textarea>
-            <input type="submit" value="Send" style="cursor: pointer; margin: 0; padding: .5em 2em; background: #636363; border: none; color: #fff; font-size: 1em; font-weight: 400;">
-          </form>
-        </div>`;
-      con.appendChild(card);
-
-      const replyButton = card.querySelector('.reply-button');
-      const replyFormWrapper = card.querySelector('.reply-form-wrapper');
-
-      replyButton.addEventListener('click', () => {
-        replyFormWrapper.style.display = 'block';
-      });
-
-      const replyForm = card.querySelector('.reply-form');
-
-		replyForm.addEventListener('submit', async (event) => {
-        event.preventDefault();
-        const replyMessage = card.querySelector('.reply-message').value;
-        const requestData2 = {
-        name: name,
-        email: email,
-        topic: topic,
-        location: location,
-        situation: situation,
-		message: replyMessage,
+// Get helpers from database
+async function getHelpers() {
+	try {
+		const response = await fetch('https://backend-for-plans.onrender.com/api/helpers');
 		
-    };
-	
-        const response = await fetch("https://backend-for-plans.onrender.com/plans3", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(requestData2),
-        });
-        if(response.ok){
-		alert("success");
-   }    if(!response.ok){
-		alert("Bad");
-   }
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
 		
-      });
-    });
-  } catch (error) {
-    console.log(error);
-  }
-  replyMessage.value="";
-  location.reload();
-}
- 
-
-
-const repliesdivv = document.getElementById("repliesdivv");
-async function fetchExperiences5() {
-
-  try {
-    const response = await fetch('https://backend-for-plans.onrender.com/plans3');
-    const data = await response.json();
-    data.forEach(experience => {
-	
-       const { name, email , topic , location , situation , message} = experience;
-	 
-	  
-		const newrepliesdivv = document.createElement('div');
-		newrepliesdivv.innerHTML = `Reply to <p>${name}</p>${email} - ${topic} - ${location} <br>${message}`;
-		newrepliesdivv.className="newreplies";
-		repliesdivv.appendChild(newrepliesdivv);
-	  
-	  
-	  
-    });
-  } catch (error) {
-    alert(error);
-  }
+		const helpers = await response.json();
+		const helpersList = document.getElementById('helpers-list');
+		
+		helpers.forEach(helper => {
+			const li = document.createElement('li');
+			li.innerHTML = `<h1>${helper.name}</h1> <br> <h2 style="margin-top:-13px">${helper.email}</h2> <br><hr style="height:1px;margin-top:-10px; background:#fff;">
+				<p><strong style="margin-right:15px;" >Type of help:</strong> ${helper.typeOfHelp}</p>
+				<p><strong style="margin-right:25px;">Categories:</strong> ${helper.categoriestype} - ${helper.categories}</p>
+				<p><strong style="margin-right:41px;">Location:</strong> ${helper.locationtype} - ${helper.location}</p>
+				<p><strong style="margin-right:37px;">Schedule:</strong> ${helper.schedule}</p>
+				<p><strong style="margin-right:20px;">Description: </strong> ${helper.comments}</p>
+				
+			`;
+			helpersList.appendChild(li);
+		});
+	} catch (error) {
+		console.error(error);
+		alert('Failed to get helpers. Please try again.');
+	}
 }
 
 
 window.onload = function() {
-  fetchExperiences();
-  fetchExperiences5()
-};
-
-
-
-
-
-
+getHelpers();
+}
 </script>
 
-<style>
-#repliesdivv{
-	margin:40px auto;
-  width:100%;
-  max-width:600px;
-  background:#fff;
-  padding:30px 20px;
-  max-height:150vh;
-  overflow:auto;
-}
-.newreplies{
-	padding-left:8px;
-	border-left:3px solid #3C87FF;
-	margin-bottom:30px;
-}
-#data-container{
-	margin:40px auto;
-  display: flex;
-  flex-direction:column;
-  justify-content:left;
-  align-items:center;
-  width:100%;
-  max-height:150vh;
-  overflow:auto;
-}
-#data-container .cardleft{
-	background:#fff;
-	padding:20px 25px;
-	border:1px solid #ccc;
-	line-height:1;
-	margin:15px;
-	box-shadow:0 5px 15px rgba(0,0,0,0.2);
-	text-align:center;
-	margin-bottom:30px;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	flex-direction:column;
-	max-width:800px;
-	
-}#data-container .cardleft div{
-display:flex;
-}
-.cardleft h1 {
-  font-family: Arial, sans-serif;
-  font-size: 17px;
-  color:#3C87FF;
-}
-#data-container .cardleft button{
-	margin-top:10px;
-	padding:5px 20px;
-	background:#3C87FF;
-	color:#fff;
-	border:none;
-	outline:none;
-}
-
-.cardleft #lastp{
-	color:black;
-	font-style:italic;
-	font-size:17px;
-	font-weight:700;
-}</style>
-		</div>
-	</div>	</div>
-	
+	</div>
+	</div>
+	</div>
 
 
 				
 				
 				
-                <!-- end content wrapper -->
+				
+				
+				
+				
+				
+				
+				<!-- end content wrapper -->
 
                 <!-- footer -->
                 <footer id="footer">

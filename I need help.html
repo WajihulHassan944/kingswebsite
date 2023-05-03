@@ -480,22 +480,19 @@
 				<!-- content wrapper -->
                 
 				
-<div class="content-wrapper">
+<div class="content-wrapper" style="font-family: Arial, sans-serif;
+    background-color: #f4f4f4; margin:0;">
     <div class="row">
-	<div class="col-md-11">
+	<div class="col-md-12" >
 		
 
-<style>body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
+<style>
 #helpForm h1 {
     text-align: center;
 }
 
 #helpForm #helpForm1 {
-    width: 40%;
+    width: 50%;
     margin: auto;
     background-color: #fff;
     padding: 20px;
@@ -550,12 +547,12 @@
 </style>
 
 <div id="helpForm">
-	<h1>Help Request Center</h1>
+	<h1 style="color:black; font-weight:500; margin:20px auto; font-size:20px;">Help Request Center</h1>
 	<form action="#" method="post" id="helpForm1">
-		<label for="name">Name:</label>
+		<label for="name">Name:</label><br>
 		<input type="text" id="name" name="name" required><br>
 
-		<label for="email">Email:</label>
+		<label for="email">Email:</label><br>
 		<input type="email" id="email" name="email" required><br>
 
 		<label for="topic">Topic:</label><br><br>
@@ -567,10 +564,10 @@
 			<option value="Others">Others</option>
 		</select><br>
 
-		<label for="location">Location:</label>
+		<label for="location">Location:</label><br>
 		<input type="text" id="location" name="location"><br>
 
-		<label for="situation">Situation:</label>
+		<label for="situation">Situation:</label><br>
 		<textarea id="situation" name="situation" rows="5"></textarea><br>
 
 		<center><input type="submit" value="Submit"></center>
@@ -703,7 +700,10 @@ async function fetchExperiences5() {
        const { name, email , topic , location , situation , message} = experience;
 	 
 	  
-		repliesdivv.innerHTML += `Reply to <h1>${name}</h1> - ${email} - ${topic} - ${location} <br>${message}`;
+		const newrepliesdivv = document.createElement('div');
+		newrepliesdivv.innerHTML = `Reply to <p>${name}</p>${email} - ${topic} - ${location} <br>${message}`;
+		newrepliesdivv.className="newreplies";
+		repliesdivv.appendChild(newrepliesdivv);
 	  
 	  
 	  
@@ -727,7 +727,20 @@ window.onload = function() {
 </script>
 
 <style>
-
+#repliesdivv{
+	margin:40px auto;
+  width:100%;
+  max-width:600px;
+  background:#fff;
+  padding:30px 20px 0px 20px;
+  max-height:150vh;
+  overflow:auto;
+}
+.newreplies{
+	padding-left:8px;
+	border-left:3px solid #3C87FF;
+	margin-bottom:30px;
+}
 #data-container{
 	margin:40px auto;
   display: flex;
@@ -735,6 +748,8 @@ window.onload = function() {
   justify-content:left;
   align-items:center;
   width:100%;
+  max-height:150vh;
+  overflow:auto;
 }
 #data-container .cardleft{
 	background:#fff;

@@ -3,13 +3,6 @@
 
 <head>
     <!-- Required meta tags -->
-					
-		
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">		
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-	
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
 			
 
     <meta charset="utf-8">
@@ -482,105 +475,284 @@
 				
 <div class="content-wrapper">
     <div class="row" >
-	<div class="col-md-11">
-		<div class="row mt-4">
-				<div class="col-md-12">
-					 <!-- Breadcrumb NavXT 6.6.0 -->
-<span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingstreets." href="https://www.kingstreets.com" class="home" ><span property="name">Kingstreets</span></a><meta property="position" content="1"></span> &gt; <span property="itemListElement" typeof="ListItem"><span property="name" class="archive post-icanhelp-archive current-item">I can Help</span><meta property="url" content="https://www.kingstreets.com/icanhelp/"><meta property="position" content="2"></span>					<h1 class="title mb-2">I can Help</h1>
-					
-					<a href="https://www.kingstreets.com/i-can-help-form/" class="btn btn-primary">Submit I can Help !</a>
-				</div>
-			</div>
+	<div class="col-md-12"><style>
+#divContainer h1{
+	text-align: center;
+	margin-top: 50px;
+}
 
-							<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2022/02/22-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
+#divContainer form {
+	margin: 30px auto;
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+}
 
-					 <div class="col-md-7">
-						<h3>American Campus Communities – Where Students Love Living.®</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/icanhelp/american-campus-communities-where-students-love-living/" class="btn btn-success">Read More</a>   
-					</div>
-					
-				</div>
-					   
+#divContainer form div {
+	margin-bottom: 10px;
+	justify-content:space-between;
+}
 
-								<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2022/02/21-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
+#divContainer label {
+	margin-right:20px;
+	font-weight:700;
+}
 
-					 <div class="col-md-7">
-						<h3>Genealogists help African Americans trace lineage past enslavement</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/icanhelp/genealogists-help-african-americans-trace-lineage-past-enslavement/" class="btn btn-success">Read More</a>   
-					</div>
-					
-				</div>
-					   
+#divContainer input[type="text"],#divContainer input[type="email"],
+#divContainer textarea {
+	padding: 5px;
+	border-radius: 0px;
+	border: none;
+	border-bottom:2px solid #ccc;
+	width:100%;
+}
 
-								<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2021/10/1-55-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
+#divContainer button[type="submit"] {
+	padding: 10px;
+	background-color: #3C87FF;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+ #divContainer select {
+        font-size: 16px;
+        padding: 7px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+		width:100%;
+    }
 
-					 <div class="col-md-7">
-						<h3>Akon on Why African Americans Should Invest in Africa</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/icanhelp/akon-on-why-african-americans-should-invest-in-africa/" class="btn btn-success">Read More</a>   
-					</div>
-					
-				</div>
-					   
+    /* Style the options inside the select element */
+   #divContainer  option {
+        font-size: 16px;
+        padding: 10px;
+    }
+#divContainer ul {
+	margin: 30px auto;
+	list-style: none;
+	padding: 20px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
+	align-items:center;
+	width:100%;
+}
 
-								<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2021/10/1-54-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
+#divContainer li {
+	margin:10px;
+	border: 1px solid #ccc;
+	padding: 35px 30px;
+	border-radius: 3px;
+	background: linear-gradient(to top, #141e30, #243b55);
+	color:#fff;
+    border-radius: 10px;
+	max-width:325px;
+	
+}
+#divContainer li h1{
+	text-align:center;
+	margin:0;
+	font-weight:600;
+	font-size:21px;
+}
+#divContainer li h2{
+	text-align:center;
+	margin:0;
+	font-weight:400;
+	font-size:18px;
+}
+#divContainer li:hover {
+          transform: scale(1.02);
+        }
+#divContainer .helpers-container{
+	width:100%;
+	padding:10px;
+}
+</style>
+	<div id="divContainer">
+	<h1 style="color:black; font-weight:500; font-size:23px;">Helpers Directory</h1>
+	<center><p>Create Your Helper Profile</p></center>
+	<form>
+		<div>
+			<label for="name" >Name:</label>
+			<input type="text" id="name" required>
+		</div>
+		<div>
+			<label for="email">Email:</label>
+			<input type="email" id="email" required>
+		</div>
+		
+		<div>
+			<label for="typeOfHelp">Type of Help:</label>
+			<input type="text" id="typeOfHelp" placeholder="describe type of help you provide" required>
+		</div>
+		<div>
+			<label for="categoriestype">Help Category Type:</label>
+    <select id="categoriestype" required>
+        <option>Services</option>
+		<option>Products</option>
+		<option>Resources</option>
+        
+    </select>
+		</div>
+		
+		
+		<div>
+			<label for="categories">Category value:</label><br>
+    <select id="categories" required>
+        <option>Select Relevant category type value</option>
+        <optgroup label="Services">
+            <option>Healthcare</option>
+            <option>Legal</option>
+            <option>Financial</option>
+            <option>Education</option>
+            <option>Counseling</option>
+        </optgroup>
+        <optgroup label="Products">
+            <option>Food and Supplies</option>
+            <option>Technology</option>
+            <option>Clothing</option>
+            <option>Housing</option>
+        </optgroup>
+        <optgroup label="Resources">
+            <option>Community Programs</option>
+            <option>Volunteer Opportunities</option>
+            <option>Mental Health Support</option>
+            <option>Job Placement Services</option>
+            <option>Transportation</option>
+        </optgroup>
+    </select>
+		</div>
+		
+		<div>
+  <label for="location-type">Location Type:</label>
+  <select id="location-type" required>
+    <option>--Please select--</option>
+    <option>By country</option>
+    <option>By state</option>
+    <option>By zip code</option>
+    <option>By town</option>
+  </select>
+</div>
+		
+		
+		<div>
+			<label for="location">Location:</label>
+			<input type="text" id="location" required placeholder="Please type relevant location value">
+		</div>
+		<div>
+			<label for="schedule">Schedule:</label>
+			<input type="text" id="schedule" required>
+		</div>
+		<div>
+			<label for="comments">Comments:</label>
+			<textarea id="comments"></textarea>
+		</div>
+		<button type="submit">Add Helper</button>
+	</form>
+	
+	<div class="helpers-container">
+	<center><h2 style="color:black; font-weight:500; ">Helpers</h2></center>
+	<ul id="helpers-list"></ul>
+</div>
 
-					 <div class="col-md-7">
-						<h3>Documentary explores African immigrants vs. African-Americans</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/icanhelp/documentary-explores-african-immigrants-vs-african-americans/" class="btn btn-success">Read More</a>   
-					</div>
-					
-				</div>
-					   
+</div>
+	<script>
+	
+	// Handle form submission
+const form = document.querySelector('form');
+form.addEventListener('submit', async (event) => {
+	event.preventDefault();
+	
+	// Get form data
+	const typeOfHelp = document.getElementById('typeOfHelp').value;
+	const categories = document.getElementById('categories').value;
+	const location = document.getElementById('location').value;
+	const schedule = document.getElementById('schedule').value;
+	const comments = document.getElementById('comments').value;
+	const categoriestype = document.getElementById('categoriestype').value;
+	const locationtype = document.getElementById('location-type').value;
+	const name = document.getElementById('name').value;
+	const email = document.getElementById('email').value;
+	
+	// Create helper object
+	const helper = {
+		typeOfHelp,
+		categories,
+		location,
+		schedule,
+		comments,
+		categoriestype,
+		locationtype,
+		name,
+		email,
+	};
+	
+	// Add helper to database
+	try {
+		const response = await fetch('https://backend-for-plans.onrender.com/api/helpers', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(helper)
+		});
+		
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		if (response.ok) {
+			alert("Ok hogya");
+		}
+		
+		const data = await response.json();
+		console.log(data);
+		// Clear form inputs
+		form.reset();
+	} catch (error) {
+		console.error(error);
+		alert('Failed to add helper. Please try again.');
+	}
+});
 
-								<div class="row p-box">
-				   
-					
-					<div class="col-md-5">
-						<img width="350" height="260" src="https://www.kingstreets.com/wp-content/uploads/2021/10/1-53-350x260.png" class="img-fluid wp-post-image" alt="" loading="lazy" sizes="(max-width: 34.9rem) calc(100vw - 2rem), (max-width: 53rem) calc(8 * (100vw / 12)), (min-width: 53rem) calc(6 * (100vw / 12)), 100vw" />					</div>
-
-					 <div class="col-md-7">
-						<h3>Homecoming, The Identity of an African American in Africa | Ashley Milton | TEDxTudu</h3>
-						<div class='post-content'></div> 
-						<a href="https://www.kingstreets.com/icanhelp/homecoming-the-identity-of-an-african-american-in-africa-ashley-milton-tedxtudu/" class="btn btn-success">Read More</a>   
-					</div>
-					
-				</div>
-					   
-
-							
-			<div class="col-md-12">
-					
-					 
+// Get helpers from database
+async function getHelpers() {
+	try {
+		const response = await fetch('https://backend-for-plans.onrender.com/api/helpers');
+		
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		
+		const helpers = await response.json();
+		const helpersList = document.getElementById('helpers-list');
+		
+		helpers.forEach(helper => {
+			const li = document.createElement('li');
+			li.innerHTML = `<h1>${helper.name}</h1> <br> <h2 style="margin-top:-13px">${helper.email}</h2> <br><hr style="height:1px;margin-top:-10px; background:#fff;">
+				<p><strong style="margin-right:15px;" >Type of help:</strong> ${helper.typeOfHelp}</p>
+				<p><strong style="margin-right:25px;">Categories:</strong> ${helper.categoriestype} - ${helper.categories}</p>
+				<p><strong style="margin-right:41px;">Location:</strong> ${helper.locationtype} - ${helper.location}</p>
+				<p><strong style="margin-right:37px;">Schedule:</strong> ${helper.schedule}</p>
+				<p><strong style="margin-right:20px;">Description: </strong> ${helper.comments}</p>
 				
-	<nav class="navigation pagination" role="navigation" aria-label="Pages">
-		<h2 class="screen-reader-text">Pages</h2>
-		<div class="nav-links"><span aria-current="page" class="page-numbers current">1</span>
-<a class="page-numbers" href="https://www.kingstreets.com/icanhelp/page/2/">2</a>
-<a class="page-numbers" href="https://www.kingstreets.com/icanhelp/page/3/">3</a>
-<span class="page-numbers dots">&hellip;</span>
-<a class="page-numbers" href="https://www.kingstreets.com/icanhelp/page/5/">5</a>
-<a class="next page-numbers" href="https://www.kingstreets.com/icanhelp/page/2/">Next</a></div>
-	</nav>					</div>
+			`;
+			helpersList.appendChild(li);
+		});
+	} catch (error) {
+		console.error(error);
+		alert('Failed to get helpers. Please try again.');
+	}
+}
+
+
+window.onload = function() {
+getHelpers();
+}
+</script>
+
 	</div>
 	</div>
 	</div>
