@@ -486,14 +486,14 @@
                     <div class="row" >
                         <div class="col-md-12" >
 			
- <div class="nav-toggle-btn2" onclick="showmymenu()">
+ <div class="nav-toggle-btn2" id="myButton">
         <i class="fa fa-bars"></i>
       </div>
 			<div class="navbar-wrapper5">
 			
 			
 
-			<div class="navbar1" id="navbar1">
+			<div class="navbar1" id="navbar1" style="display:none;">
         <ul class="navbar-list">
 
           <li>
@@ -560,7 +560,6 @@
 	justify-content:center;
 	align-items:center;
 	flex-direction:column;
-	display:none;
 	border:1px solid #333;
 	padding:20px;
 	margin-left:14.5%;
@@ -592,7 +591,12 @@ margin-bottom:10px;
 }
 </style>
 <script>
+ var myButton = document.getElementById("myButton");
 
+  // Add the event listener to the button element
+  myButton.addEventListener("click", function() {
+    showmymenu();
+  });
   var x = document.getElementById("navbar1");
 function showmymenu(){
   if (x.style.display === "none") {
