@@ -3,9 +3,10 @@
 
 <head>
     <!-- Required meta tags -->
+	
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-			
-		
+
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">		
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 	
@@ -21,7 +22,7 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Kingstreets &#8211; Share My Experience</title>
+    <title>Kingstreets &#8211; Creating a plan</title>
     <style>
         #wpadminbar #wp-admin-bar-vtrts_free_top_button .ab-icon:before {
             content: "\f185";
@@ -420,10 +421,6 @@
 
                     <div id="navbarSupportedContent" class="collapse navbar-collapse">
                         <ul id="menu-primary-menu" class="navbar-nav mr-auto" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-						<li>
- <div class="nav-toggle-btn2" onclick="showmymenu()">
-        <i class="fa fa-bars"></i>
-      </div></li>
                             <li id="menu-item-276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-14 current_page_item active menu-item-276 nav-item"><a itemprop="url" href="https://www.kingstreets.com/" class="nav-link" aria-current="page"><span itemprop="name">Home</span></a></li>
                             <li id="menu-item-277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277 nav-item"><a itemprop="url" href="https://www.kingstreets.com/about-us/" class="nav-link"><span itemprop="name">About us</span></a></li>
                             <li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295 nav-item"><a itemprop="url" href="https://www.kingstreets.com/services/" class="nav-link"><span itemprop="name">Services</span></a></li>
@@ -434,21 +431,7 @@
                         </ul>
                     </div>
 
-           <style>
-.nav-toggle-btn2{
-margin-top:3.5px;
-margin-right:10px;
-	max-width:40px;
-	padding:2px 10px;
-	background:#transparent;
-	color:#fff;
-	font-size:18px;
-	margin-left:14.5%;
-	font-weight:200;
-	cursor:pointer;
-}
-</style> 
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 								
 
@@ -497,76 +480,20 @@ margin-right:10px;
             	
 				
 				<!-- content wrapper -->
-     <style>
-.navbar-wrapper5{
-	width:100%;
-	position:relative;
-	display:flex;
-	
-}
-.navbar1{
-	width:720px;
-	height:315px;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	flex-direction:column;
-	display:none;
-	border:1px solid #333;
-	padding:20px 0;
-	margin-left:14.5%;
-	background:#FAFAFA;
-	position:relative;
-}
-.navbar1:hover{
-	border:1.5px solid #333;
-}
-#crosssymbol{
-	position:absolute;
-	top:0;
-	right:5%;
-	font-weight:600;
-	cursor:pointer;
-}
-#crosssymbol:hover{
-	color:tomato;
-}
-.navbar-list{
-display:flex;
-list-style:none;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-}
-.navbar-link {
-color:black;
-  font-family: 'Poppins', sans-serif;;
-  font-size: 17px;
-  font-weight:200; 
-}
-.navbar-list .active{
-color:slateblue;
-font-weight:700;
-}
-.navbar-list li a{
-	text-decoration:none;
-}
-.navbar-list li{
-margin-bottom:10px;
-}
-</style>           
-	<script>function exp(){
-	const card = document.querySelector(".card");
-	card.style.display = "flex";
-}
-</script>			
-<div class="content-wrapper">
 
+			   
+				<div class="content-wrapper" >
+                    <div class="row" >
+                        <div class="col-md-12" >
+			
+ <div class="nav-toggle-btn2" onclick="showmymenu()">
+        <i class="fa fa-bars"></i>
+      </div>
+			<div class="navbar-wrapper5">
+			
+			
 
-
-<div class="navbar-wrapper5">
-	<div class="navbar1" id="navbar1">
-	<h1 id="crosssymbol" onclick="showmymenu()"><i class="fa fa-times" aria-hidden="true"></i></h1>
+			<div class="navbar1" id="navbar1">
         <ul class="navbar-list">
 
           <li>
@@ -582,7 +509,7 @@ margin-bottom:10px;
           </li>
 
           <li>
-            <a href="Share my experiences.html" class="navbar-link active">Share My Experiences</a>
+            <a href="Share my experiences.html" class="navbar-link">Share My Experiences</a>
           </li>
 
           <li>
@@ -590,7 +517,7 @@ margin-bottom:10px;
           </li>
 
           <li>
-            <a href="Creating a plan.html" class="navbar-link ">Creating a Plan</a>
+            <a href="Creating a plan.html" class="navbar-link active">Creating a Plan</a>
           </li>
 
           <li>
@@ -603,104 +530,66 @@ margin-bottom:10px;
 
         </ul>
       </div></div>
-	  <div class="row">
-	<div class="col-md-12">
-		<div class="row mt-4">
-				<div class="col-md-12">
-					
-					<center><a style="margin-bottom:30px" onclick="exp()" class="btn btn-primary">Share Your Experience ! </a></center>
-				</div>
-			</div><center><h1 style="font-size:17px; font-weight:500;">Your experiences are public. A greater community benefit from it!</h1></center>
-
-
-		<div class="card" style="display:none">
 <style>
-.container h1{
-	color:black;
-	font-size:18px;
-	font-weight:500;
-	border:none;
-	
-	display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px 0;
+.nav-toggle-btn2{
+	max-width:40px;
+	padding:2px 10px;
+	background:#fff;
+	color:#333;
+	font-size:22px;
+	margin-left:14.5%;
+	font-weight:400;
+	border:1px solid #333;
+	cursor:pointer;
 }
-#myform{
-margin:20px 0;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-width:100%;
-}
-.input-group{
-	margin:10px 0;
-	display:flex;
-	justify-content:space-between;
-	align-items:center;
-	text-align:center;
-	width:260px;
-}
-.input-group label{
-	color:#3C87FF;
-	font-size:18px;
-	font-weight:600;
-	margin-top:5px;
-}
-.input-group input , .input-group textarea{
-padding:5px;
-border:none;
-border-bottom:2px solid #3C87FF;
-margin-top:-5px;
-}
-#myform button{
-	padding:8px 90px;
-	background:#3C87FF;
+.nav-toggle-btn2:hover{
+	background:#333;
 	color:#fff;
-	margin-top:40px;
-	margin-bottom:40px;
+}
+
+.navbar-wrapper5{
+	width:100%;
+	position:relative;
+	display:flex;
+	
+}
+.navbar1{
+	width:400px;
+	height:315px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	display:none;
+	border:1px solid #333;
+	padding:20px;
+	margin-left:14.5%;
+}
+.navbar-list{
+display:flex;
+list-style:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+.navbar-link {
+color:black;
+  font-family: 'Poppins', sans-serif;;
+  font-size: 17px;
+  transition: 0.75s cubic-bezier(0.68, -0.55, 0.27, 2);
+  font-weight:200; 
+}
+.navbar-list .active{
+color:#3C87FF;
+font-weight:500;
+}
+.navbar-list li a{
+	text-decoration:none;
+}
+.navbar-list li{
+margin-bottom:10px;
 }
 </style>
- <div class="container">
-      <h1 style="margin-top:40px;">Your experience will greatly help other users.</h1>
-      <form id="myform">
-	  <div class="input-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
-</div>
-<div class="input-group">
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" required />
-</div>
-<div class="input-group">
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location" />
-</div>
-<div class="input-group">
-        <label for="category">Category</label>
-        <input type="text" id="category" name="category" />
-</div>
-
-<div class="input-group">
-        <label for="content">Content</label>
-        <textarea id="content" name="content"></textarea>
-</div>
-
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-</div>
-
-		<div id="data-container"></div>					
-				
-	</div>
-	</div>
-	</div>
-	
 <script>
 
   var x = document.getElementById("navbar1");
@@ -713,114 +602,260 @@ function showmymenu(){
 }
 </script>
 
-<script>
-const form = document.querySelector('#myform');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  const title = document.getElementById("title").value;
-  const content = document.getElementById("content").value;
-  const location = document.getElementById("location").value;
-  const category = document.getElementById("category").value;
 
 
-  
-  try {
-    const response = await fetch('https://backend-for-experiences.onrender.com/experiences', {
-      method: 'POST',
-      headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: name,
-	  title: title,
-      content: content,
-      location: location,
-      category: category,
-    }),
-	
- 	});
-    const data = await response.json();
-    alert('Your Experience is shared');
-  } catch (error) {
-    alert("Internal server error");
-  }
-  
-  document.getElementById("name").value = "";
-  document.getElementById("title").value = "";
-  document.getElementById("content").value = "";
-  document.getElementById("location").value = "";
-  document.getElementById("category").value = "";
-  
-});
 
 
-const con = document.getElementById("data-container");
 
-async function fetchExperiences() {
+<div class="plan-container">
 
-  try {
-    const response = await fetch('https://backend-for-experiences.onrender.com/experiences');
-    const data = await response.json();
-    data.forEach(experience => {
-	
-      const { name, title, content, location, category } = experience;
-	  
-	  const card = document.createElement('div');
-        card.className = 'card';
-		card.innerHTML += `<h3><strong>${name}</strong> shared the experience <strong>${title}</strong> about ${location} (${category})</h3> <span>" ${content}"</span>`;
-        con.appendChild(card);
-      
-	  
-	  
-	  
-    });
-  } catch (error) {
-    alert(error);
-  }
-}
-window.onload = function() {
-fetchExperiences();}
-</script>
+  <h2>Create Your 1-Year Plan</h2>
+<form id="eventForm">
+  <label for="eventTitle">Title:</label>
+  <input type="text" id="eventTitle" name="eventTitle" placeholder="Enter a title for your plan" required>
+  <label for="eventDate">Date:</label>
+  <input type="date" id="eventDate" name="eventDate" required>
+  <label for="description">Description:</label>
+   <textarea id="description" name="description" placeholder="Enter a description for your plan" required></textarea>
+<button type="submit">Add</button>
+</form>
+</div>
+<center><h2 style="font-size:22px;
+  color:black;
+  margin-bottom:20px; margin-top:40px;">You can track your plans here</h2></center>
+<section class="timeline-wrapper"></section>
+
+<div id="calendar"></div>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+
 <style>
-#data-container{
-	margin:40px 0;
-  display: flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  width:100%;
+.timeline-wrapper{
+margin:90px auto;
+width:380px;
+border-left:2px solid #ccc;
+padding:0 20px 0 30px;
 }
-#data-container .card{
+.timeline-wrapper .timeline-div{
 	background:#fff;
-	padding:20px 25px;
+	padding:10px 25px;
+	font-size:16px;
 	border:1px solid #ccc;
 	line-height:1.7;
-	margin:15px;
+	position:relative;
+	height:110px;
+	margin-bottom:20px;
 	box-shadow:0 20px 25px -15px rgba(0,0,0,0.3);
-	text-align:center;
-	width:800px;
-	margin-bottom:30px;
 	
 	
 }
-.card strong{
+.timeline-wrapper .timeline-div:before{
+	content: '';
+	display:block;
+	width:15px;
+	height:15px;
+	border-radius:50%;
+	background-color:#000;
+	border:3px solid #ddd;
+	position:absolute;
+	top:10px;
+	left:-39px;
+}
+.timeline-wrapper .timeline-div:after{
+	content: '';
+	width:0;
+	height:0;
+	border-style:solid;
+	border-color:transparent #ddd transparent transparent;
+	border-width:8px;
+	position:absolute;
+	left:-17px;
+	top:10px;
+}
+
+.timeline-wrapper .timeline-div p{
+	margin:0;
+	font-family:poppins;
 	text-transform:capitalize;
-}
-.card h3 {
-  font-family: Arial, sans-serif;
-  font-size: 17px;
-  color:#3C87FF;
-}
-.card span{
-	color:black;
 	font-style:italic;
-	font-size:17px;
+}
+.timeline-div-para{
 	font-weight:700;
 }
 
 </style>
+
+<style>
+  #calendar {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+.plan-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.plan-container h2{
+  font-size:24px;
+  color:black;
+  margin-bottom:20px;
+}
+
+.calendar {
+  /* styling for calendar view */
+}
+
+.plan-form {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight:600;
+}
+
+input[type="text"],
+textarea,
+input[type="date"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]::placeholder,
+textarea::placeholder,
+input[type="date"]::placeholder {
+  font-weight:300;
+  }
+
+button {
+  display: block;
+  margin-top: 10px;
+  padding: 10px 90px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #555;
+}.calendar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+</style>
+
+<script>
+  $(document).ready(function() {
+    // initialize the calendar
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev,next today',
+        center: 'title',
+        right: 'month,agendaWeek,agendaDay'
+      },
+      allDayDefault: true,
+      events: JSON.parse(localStorage.getItem('events') || '[]')
+    });
+
+    $(document).on('click', '.fc-button', function() {
+      localStorage.setItem('events', JSON.stringify($('#calendar').fullCalendar('clientEvents')));
+    });
+
+    const form = $('#eventForm');
+
+    form.submit(function(event) {
+      event.preventDefault();
+
+      // get form values
+      const title = $('#eventTitle').val();
+      const description = $('#description').val();
+      const date = moment($('#eventDate').val()).format('YYYY-MM-DD'); // convert to desired format
+
+      // create new event object
+      const newEvent = {
+        title: title,
+        start: moment(date).format('YYYY-MM-DD'),
+		description: description,
+        allDay: true
+      };
+
+      // add new event to calendar
+      $('#calendar').fullCalendar('renderEvent', newEvent);
+
+      // add new event to local storage
+      const events = JSON.parse(localStorage.getItem('events') || '[]');
+      events.push(newEvent);
+      localStorage.setItem('events', JSON.stringify(events));
+ location.reload();
+      // clear form
+      $('#eventTitle').val('');
+      $('#eventDate').val('');
+      $('#description').val('');
+	
+    });
+  });
+  
+  
+  
+  const events2 = JSON.parse(localStorage.getItem('events'));
+const timelineSection = $(".timeline-wrapper");
+
+function showTodo() {
+    let liTag2 = "";
+    if(events2) {
+        events2.forEach((event, id) => {            
+            liTag2 += `
+                <div class="timeline-div">
+                    <p class="timeline-div-para" style="font-weight:800; color:black;">${event.start} </p>
+                    <strong><p style="color:#3C87FF">${event.title}</p></strong>
+                    <p style="color:#333">${event.description}</p>
+                </div>`;
+        });
+    }
+    timelineSection.html(liTag2);
+}
+
+window.onload = function() {
+
+showTodo();
+}
+  
+  
+  
+</script>
+
+				
+			
+			
+			
+			
+			
+			
+			
+			
+			</div></div></div>
+				
+				<script>
+			
+			
+			
+			
+			
+
+</script>
+				
+				
                 <!-- end content wrapper -->
 
                 <!-- footer -->
@@ -866,7 +901,6 @@ fetchExperiences();}
                             <h4 class="widget-title">Quick Links</h4>
                             <div class="menu-quick-links-container">
                                 <ul id="menu-quick-links" class="menu" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-								
                                     <li id="menu-item-517" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-517"><a href="https://www.kingstreets.com/about-us/">About us</a></li>
                                     <li id="menu-item-518" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-518"><a href="https://www.kingstreets.com/contact-us/">Contact us</a></li>
                                     <li id="menu-item-519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="https://www.kingstreets.com/kings-tv/">King&#8217;s TV</a></li>

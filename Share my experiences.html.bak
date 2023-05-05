@@ -566,7 +566,7 @@ margin-bottom:10px;
 
 <div class="navbar-wrapper5">
 	<div class="navbar1" id="navbar1">
-	<h1 id="crosssymbol" onclick="showmymenu()"><i class="fa fa-times" aria-hidden="true"></i></h1>
+	<h1 id="crosssymbol" onclick="showmymenu()">X</h1>
         <ul class="navbar-list">
 
           <li>
