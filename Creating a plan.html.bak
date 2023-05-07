@@ -421,6 +421,8 @@
 
                     <div id="navbarSupportedContent" class="collapse navbar-collapse">
                         <ul id="menu-primary-menu" class="navbar-nav mr-auto" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+						<li>
+ <div class="nav-toggle-btn2" onclick="showmymenu()"><i class="fa fa-bars"></i></div></li>
                             <li id="menu-item-276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-14 current_page_item active menu-item-276 nav-item"><a itemprop="url" href="https://www.kingstreets.com/" class="nav-link" aria-current="page"><span itemprop="name">Home</span></a></li>
                             <li id="menu-item-277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277 nav-item"><a itemprop="url" href="https://www.kingstreets.com/about-us/" class="nav-link"><span itemprop="name">About us</span></a></li>
                             <li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295 nav-item"><a itemprop="url" href="https://www.kingstreets.com/services/" class="nav-link"><span itemprop="name">Services</span></a></li>
@@ -430,7 +432,20 @@
                             <li id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291 nav-item"><a itemprop="url" href="https://www.kingstreets.com/contact-us/" class="nav-link"><span itemprop="name">Contact us</span></a></li>
                         </ul>
                     </div>
-
+  <style>
+.nav-toggle-btn2{
+margin-top:3.5px;
+margin-right:10px;
+	max-width:40px;
+	padding:2px 10px;
+	background:#transparent;
+	color:#fff;
+	font-size:18px;
+	margin-left:14.5%;
+	font-weight:200;
+	cursor:pointer;
+}
+</style> 
                     <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 								
@@ -475,25 +490,132 @@
 								</form>
 							</div> -->
                 </nav>
-                <!-- end navbar -->
+				 <style>
+.navbar-wrapper5{
+	width:100%;
+	position:relative;
+	display:flex;
+	
+}
+.navbar1{
+	width:720px;
+	height:315px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	display:none;
+	border:1px solid #333;
+	padding:20px 0;
+	margin-left:14.5%;
+	background:#FAFAFA;
+	position:relative;
+}
+.navbar1:hover{
+	border:1.5px solid #333;
+}
+#crosssymbol{
+	position:absolute;
+	top:4%;
+	font-size:17px;
+	right:5%;
+	font-weight:600;
+	cursor:pointer;
+}
+#crosssymbol:hover{
+	color:tomato;
+}
+.navbar-list{
+display:flex;
+list-style:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+.navbar-link {
+color:black;
+  font-family: 'Poppins', sans-serif;;
+  font-size: 17px;
+  font-weight:200; 
+}
+.navbar-list .active{
+color:slateblue;
+font-weight:700;
+}
+.navbar-list li a{
+	text-decoration:none;
+}
+.navbar-list li{
+margin-bottom:10px;
+}
+</style>
+ 
+ <!-- end navbar -->
+ 
+<style>
+.myfixednavbar-wrapper{
+	width:100%;
+}
+.myfixednavbar{
+	width:100%;
+	text-align:center;
+}
+.myfixednavbar .linksofnavbar{
+	margin-right:13px;
+	color:#333;
+}
+.active2{
+	font-weight:600;
+	padding-bottom:4px;
+	border-bottom:1px solid #777;
+}
 
+.myfixednavbar .linksofnavbar:hover{
+	color:black;
+	font-weight:600;
+	padding-bottom:4px;
+	border-bottom:1px solid #777;
+
+}
+.myfixednavbar a{
+	text-decoration:none;
+}
+select{
+	width:100%;
+	padding:8px;
+	margin-bottom:10px;
+}
+select:hover{
+	cursor:pointer;
+}
+</style>
             	
 				
 				<!-- content wrapper -->
 
 			   
 				<div class="content-wrapper" >
-                    <div class="row" >
-                        <div class="col-md-12" >
-			
- <div class="nav-toggle-btn2" id="myButton">
-        <i class="fa fa-bars"></i>
-      </div>
-			<div class="navbar-wrapper5">
-			
-			
-
-			<div class="navbar1" id="navbar1">
+				
+				
+<center>	  
+<div class="myfixednavbar-wrapper">
+	<div class="myfixednavbar">
+		<p><a href="Who am i.html" class="linksofnavbar">Who Am I</a>
+		<a href="Find Your Community.html" class="linksofnavbar">Find Your Community</a>
+		<a href="I can help.html" class="linksofnavbar">I Can Help</a>
+		 <a href="Share my experiences.html" class="linksofnavbar">Share Experiences</a>
+		<a href="Edutainment, Culture and Lifestyle.html" class="linksofnavbar">Edutainment,Culture, & Lifestyle</a>
+		<a href="Creating a plan.html" class="linksofnavbar active2" style="color:black;">Creating a Plan</a> 
+		<a href="I need help.html" class="linksofnavbar">I Need Help</a>
+		<a href="#" class="linksofnavbar">Mentoring Portals</a></p>
+	</div>
+</div>
+</center>				
+				
+				
+<div class="navbar-wrapper5">
+	<div class="navbar1" id="navbar1" style="display:none;">
+	<h1 id="crosssymbol" onclick="showmymenu()"><i class="fa fa-times" aria-hidden="true"></i></h1>
         <ul class="navbar-list">
 
           <li>
@@ -530,74 +652,9 @@
 
         </ul>
       </div></div>
-<style>
-.nav-toggle-btn2{
-	max-width:40px;
-	padding:2px 10px;
-	background:#fff;
-	color:#333;
-	font-size:22px;
-	margin-left:14.5%;
-	font-weight:400;
-	border:1px solid #333;
-	cursor:pointer;
-}
-.nav-toggle-btn2:hover{
-	background:#333;
-	color:#fff;
-}
 
-.navbar-wrapper5{
-	width:100%;
-	position:relative;
-	display:flex;
-	
-}
-.navbar1{
-	width:400px;
-	height:315px;
-	display:flex;
-	justify-content:center;
-	align-items:center;
-	flex-direction:column;
-	display:none;
-	border:1px solid #333;
-	padding:20px;
-	margin-left:14.5%;
-	background:#FAFAFA;
-}
-.navbar-list{
-display:flex;
-list-style:none;
-justify-content:center;
-align-items:center;
-flex-direction:column;
-}
-.navbar-link {
-color:black;
-  font-family: 'Poppins', sans-serif;;
-  font-size: 17px;
-  transition: 0.75s cubic-bezier(0.68, -0.55, 0.27, 2);
-  font-weight:200; 
-}
-.navbar-list .active{
-color:#3C87FF;
-font-weight:500;
-}
-.navbar-list li a{
-	text-decoration:none;
-}
-.navbar-list li{
-margin-bottom:10px;
-}
-</style>
 <script>
- var myButton = document.getElementById("myButton");
 
-  // Add the event listener to the button element
-  myButton.addEventListener("click", function() {
-    showmymenu();
-  });
   var x = document.getElementById("navbar1");
 function showmymenu(){
   if (x.style.display === "none") {
@@ -608,21 +665,48 @@ function showmymenu(){
 }
 </script>
 
-
-
+                    <div class="row" >
+                        <div class="col-md-12" >
+			
 
 
 
 <div class="plan-container">
 
-  <h2>Create Your 1-Year Plan</h2>
+  <h2>Create Your Plan</h2>
 <form id="eventForm">
+<label for="audience">You are? </label>
+  <select id="audience" name="audience">
+    <option value="adult">w.r.t your age</option>
+    <option value="adult">Adult</option>
+    <option value="young adult">Young Adult</option>
+    <option value="teen">Teen</option>
+    <option value="preteen">Preteen</option>
+    <option value="senior">Senior</option>
+    <option value="veteran">Veteran</option>
+    <option value="business">Business</option>
+    <option value="organization">Organization</option>
+    <option value="misc">Misc.</option>
+  </select>
   <label for="eventTitle">Title:</label>
   <input type="text" id="eventTitle" name="eventTitle" placeholder="Enter a title for your plan" required>
-  <label for="eventDate">Date:</label>
+  <label for="eventDate">Start:</label>
   <input type="date" id="eventDate" name="eventDate" required>
+  <label for="eventendDate">End:</label>
+  <input type="date" id="eventendDate" name="eventendDate">
   <label for="description">Description:</label>
-   <textarea id="description" name="description" placeholder="Enter a description for your plan" required></textarea>
+   <textarea id="description" name="description" placeholder="Enter a description for your plan" ></textarea>
+   
+  <label for="priority">Priority:</label>
+		<select id="priority" name="priority">
+		<option>Select priority for your plan</option>
+		<option value="low">Low</option>
+		<option value="high">High</option>
+		</select>
+		
+  <label for="obstacles">Obstacles:</label>
+  <textarea id="obstacles" name="obstacles" placeholder="Enter any obstacles for your plan"></textarea>
+  
 <button type="submit">Add</button>
 </form>
 </div>
@@ -631,8 +715,7 @@ function showmymenu(){
   margin-bottom:20px; margin-top:40px;">You can track your plans here</h2></center>
 <section class="timeline-wrapper"></section>
 
-<div id="calendar"></div>
-
+<div id="calendar" style="position:relative"></div>
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
@@ -640,6 +723,7 @@ function showmymenu(){
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
 
 <style>
+
 .timeline-wrapper{
 margin:90px auto;
 width:380px;
@@ -759,61 +843,107 @@ button:hover {
   flex-direction: column;
   margin-top: 20px;
 }
+.event-popup{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+padding:30px;
+background:#636363;
+z-index:999;
+color:#fff;
+}
+.event-popup .fa:hover{
+	color:red;
+}
+.fc-event:hover {
+  cursor: pointer;
+}
 </style>
-
 <script>
   $(document).ready(function() {
-    // initialize the calendar
-    $('#calendar').fullCalendar({
-      header: {
-        left: 'prev,next today',
-        center: 'title',
-        right: 'month,agendaWeek,agendaDay'
-      },
-      allDayDefault: true,
-      events: JSON.parse(localStorage.getItem('events') || '[]')
-    });
-
-    $(document).on('click', '.fc-button', function() {
-      localStorage.setItem('events', JSON.stringify($('#calendar').fullCalendar('clientEvents')));
-    });
-
-    const form = $('#eventForm');
-
-    form.submit(function(event) {
-      event.preventDefault();
-
-      // get form values
-      const title = $('#eventTitle').val();
-      const description = $('#description').val();
-      const date = moment($('#eventDate').val()).format('YYYY-MM-DD'); // convert to desired format
-
-      // create new event object
-      const newEvent = {
-        title: title,
-        start: moment(date).format('YYYY-MM-DD'),
-		description: description,
-        allDay: true
-      };
-
-      // add new event to calendar
-      $('#calendar').fullCalendar('renderEvent', newEvent);
-
-      // add new event to local storage
-      const events = JSON.parse(localStorage.getItem('events') || '[]');
-      events.push(newEvent);
-      localStorage.setItem('events', JSON.stringify(events));
- location.reload();
-      // clear form
-      $('#eventTitle').val('');
-      $('#eventDate').val('');
-      $('#description').val('');
-	
-    });
+  // initialize the calendar
+  
+  $('#calendar').fullCalendar({
+    header: {
+      left: 'prev,next today',
+      center: 'title',
+      right: 'month,agendaWeek,agendaDay'
+    },
+    allDayDefault: false,
+    events: JSON.parse(localStorage.getItem('events') || '[]'),
+	eventRender: function(event, element) {
+    if (event.priority === 'high') {
+      element.css('background-color', 'tomato');
+    }
+  },
+    eventClick: function(calEvent, jsEvent, view) {
+      // create a popup with the event details
+    const popup = $('<div class="event-popup"><p style="position:relative"><i style="position:absolute; top:1%; right:1%; cursor:pointer;" onclick="removepopup(this)" class="fa fa-times" aria-hidden="true"></i><strong>Category: ' + calEvent.category + '</strong><br><br><strong>Title:</strong> ' + calEvent.title + '<br><br> <strong>Start:</strong> ' + moment(calEvent.start).format('MMMM Do YYYY') + '</p><p><strong>End:</strong> ' + moment(calEvent.end).format('MMMM Do YYYY') + '</p><p><strong>Description:</strong> ' + calEvent.description + '</p><p><strong>Priority:</strong> ' + calEvent.priority + '</p><p><strong>Obstacles:</strong> ' + calEvent.obstacles + '</p></div>');
+	// add the popup to the body and show it
+      $('#calendar').append(popup);
+      popup.dialog({
+        modal: true,
+        title: calEvent.title,
+        close: function(event, ui) {
+          // remove the popup from the DOM
+          $(this).remove();
+        }
+      });
+    }
   });
   
-  
-  
+  $(document).on('click', '.fc-button', function() {
+    localStorage.setItem('events', JSON.stringify($('#calendar').fullCalendar('clientEvents')));
+  });
+
+  const form = $('#eventForm');
+
+  form.submit(function(event) {
+    event.preventDefault();
+
+    // get form values
+	const category = $('#audience').val();
+    const title = $('#eventTitle').val();
+    const description = $('#description').val();
+    const date = moment($('#eventDate').val()).format('YYYY-MM-DD'); // convert to desired format
+    const enddate = moment($('#eventendDate').val()).format('YYYY-MM-DD'); // convert to desired format
+	const priority = $('#priority').val();
+    const obstacles = $('#obstacles').val();
+    
+    // create new event object
+    const newEvent = {
+      priority:priority,
+	  obstacles:obstacles,
+	  category:category,
+	  title: title,
+      start: moment(date).format('YYYY-MM-DD'),
+      end: moment(enddate).format('YYYY-MM-DD'),
+      description: description,
+      allDay: true
+    };
+
+    // add new event to calendar
+    $('#calendar').fullCalendar('renderEvent', newEvent);
+
+    // add new event to local storage
+    const events = JSON.parse(localStorage.getItem('events') || '[]');
+    events.push(newEvent);
+    localStorage.setItem('events', JSON.stringify(events));
+    location.reload();
+
+    // clear form
+    $('#audience').val('');
+    $('#eventTitle').val('');
+    $('#eventDate').val('');
+    $('#eventendDate').val('');
+    $('#description').val('');
+	$('#priority').val('');
+    $('#obstacles').val('');
+    
+  });
+});
+
   const events2 = JSON.parse(localStorage.getItem('events'));
 const timelineSection = $(".timeline-wrapper");
 
@@ -823,7 +953,7 @@ function showTodo() {
         events2.forEach((event, id) => {            
             liTag2 += `
                 <div class="timeline-div">
-                    <p class="timeline-div-para" style="font-weight:800; color:black;">${event.start} </p>
+                    <p class="timeline-div-para" style="font-weight:800; color:black;">${event.start}  -  ${event.end} </p>
                     <strong><p style="color:#3C87FF">${event.title}</p></strong>
                     <p style="color:#333">${event.description}</p>
                 </div>`;
@@ -841,10 +971,223 @@ showTodo();
   
 </script>
 
-				
+		<script>
+
+function removepopup(elem) {
+  $(elem).closest('.event-popup').remove();
+}</script>		
 			
 			
-			
+	
+
+
+
+
+
+<style>
+
+.bar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 500px;
+  margin-top:-50px;
+  margin-bottom:50px;
+  
+}
+#userate{
+	margin:30px auto;
+	
+}
+#userate h1{
+	text-align:center;
+	color:black;
+	font-size:29px;
+	margin-top:50px;
+}
+
+#userate p{
+	text-align:center;
+	
+}
+.bar-container .bar {
+  width: calc(90% / 9);
+  position: relative;
+  margin: 0 10px;
+  background-color: #ccc;
+  cursor: pointer;
+  --fill-height: 0%;
+}
+
+.bar-container .bar::before {
+  content: attr(data-rating);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+}
+
+.bar-container .bar.selected {
+  background-color: #2196f3;
+}
+
+.bar-container .bar.selected::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: var(--fill-height);
+  width: 100%;
+  background-color: #2196f3;
+  z-index: -1;
+}
+
+.bar-container .bar[data-rating="1"] {
+  height: 50px;
+  --fill-height: 20px;
+}
+
+.bar-container .bar[data-rating="2"] {
+  height: 100px;
+  --fill-height: 100px;
+}
+
+.bar-container .bar[data-rating="3"] {
+  height: 150px;
+  --fill-height: 28.6%;
+}
+
+.bar-container .bar[data-rating="4"] {
+  height: 200px;
+  --fill-height: 200px;
+}
+
+.bar-container .bar[data-rating="5"] {
+  height: 250px;
+  --fill-height: 250px;
+}
+
+.bar-container .bar[data-rating="6"] {
+  height: 300px;
+  --fill-height: 300px;
+}
+
+.bar-container .bar[data-rating="7"] {
+  height: 350px;
+  --fill-height: 350px;
+}
+
+.bar-container .bar[data-rating="8"] {
+  height:400px;
+  --fill-height: 400px;
+}
+
+@media (max-width: 768px) {
+  .bar-container .bar {
+    width: calc(100% / 7);
+  }
+  
+  .bar-container .bar[data-rating="1"] {
+    height: 100px;
+    --fill-height: 0%;
+  }
+  
+  .bar-container .bar[data-rating="2"] {
+    height: 150px;
+    --fill-height: 20%;
+  }
+  
+  .bar-container .bar[data-rating="3"] {
+    height: 200px;
+    --fill-height: 40%;
+  }
+  
+  .bar-container .bar[data-rating="4"] {
+    height: 250px;
+    --fill-height: 60%;
+  }
+  
+  .bar-container .bar[data-rating="5"] {
+    height: 300px;
+    --fill-height: 80%;
+  }
+  
+  .bar-container .bar[data-rating="6"] {
+    height: 350px;
+    --fill-height: 100%;
+  }
+  
+  .bar-container .bar[data-rating="7"] {
+    height: 400px;
+    --fill-height: 100%;
+  }
+}
+
+	</style>
+	<div id="userate">
+<h1>User Level Rating</h1>
+	<p>Select a bar to rate yourself from level 1 (worst) to level 8 (best).</p>
+	<div class="bar-container">
+		<div class="bar" id="bar-0" data-rating="0"></div>
+		<div class="bar" id="bar-1" data-rating="1"></div>
+		<div class="bar" id="bar-2" data-rating="2"></div>
+		<div class="bar" id="bar-3" data-rating="3"></div>
+		<div class="bar" id="bar-4" data-rating="4"></div>
+		<div class="bar" id="bar-5" data-rating="5"></div>
+		<div class="bar" id="bar-6" data-rating="6"></div>
+		<div class="bar" id="bar-7" data-rating="7"></div>
+		<div class="bar" id="bar-8" data-rating="8"></div>
+	</div>
+	<p class="rating-text" style="color:red; font-size:17px;">You rated yourself at level <span id="selected-rating" style="font-weight:700">-</span>.</p>
+	</div>
+	<script>const bars = document.querySelectorAll('.bar');
+const ratingText = document.getElementById('selected-rating');
+
+// Check local storage for a previously selected rating
+const selectedRating = localStorage.getItem('selectedRating');
+
+if (selectedRating) {
+  const selectedBar = document.querySelector(`[data-rating="${selectedRating}"]`);
+  selectedBar.classList.add('selected');
+  selectedBar.style.setProperty('--fill-height', `${(selectedRating / 8) * 100}%`);
+  ratingText.textContent = `You rated yourself at level ${selectedRating}.`;
+}
+
+// Add click event listeners to bars
+bars.forEach(bar => {
+  bar.addEventListener('click', () => {
+    const rating = bar.dataset.rating;
+    const fillHeight = (rating / 8) * 100;
+
+    // Remove selected class from previously selected bar
+    const selectedBar = document.querySelector('.bar.selected');
+    if (selectedBar) {
+      selectedBar.classList.remove('selected');
+    }
+
+    // Add selected class to clicked bar
+    bar.classList.add('selected');
+
+    // Set fill height of clicked bar
+    bar.style.setProperty('--fill-height', `${fillHeight}%`);
+
+    // Update rating text
+    ratingText.textContent = `You rated yourself at level ${rating}.`;
+
+    // Store selected rating in local storage
+    localStorage.setItem('selectedRating', rating);
+  });
+});
+</script>
+	
+
+
+
+
+	
 			
 			
 			

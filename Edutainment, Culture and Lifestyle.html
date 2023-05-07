@@ -3,6 +3,7 @@
 
 <head>
     <!-- Required meta tags -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 					
 		
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" /> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
@@ -423,8 +424,9 @@
 								<span class="navbar-toggler-icon"></span>
 							</button>
 
-                    <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                    <div id="navbarSupportedContent" class="collapse navbar-collapse" style="overflow:hidden;">
                         <ul id="menu-primary-menu" class="navbar-nav mr-auto" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+						<li><div class="nav-toggle-btn2" onclick="showmymenu()"> <i class="fa fa-bars"></i></div></li>
                             <li id="menu-item-276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-14 current_page_item active menu-item-276 nav-item"><a itemprop="url" href="https://www.kingstreets.com/" class="nav-link" aria-current="page"><span itemprop="name">Home</span></a></li>
                             <li id="menu-item-277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277 nav-item"><a itemprop="url" href="https://www.kingstreets.com/about-us/" class="nav-link"><span itemprop="name">About us</span></a></li>
                             <li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295 nav-item"><a itemprop="url" href="https://www.kingstreets.com/services/" class="nav-link"><span itemprop="name">Services</span></a></li>
@@ -434,7 +436,19 @@
                             <li id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291 nav-item"><a itemprop="url" href="https://www.kingstreets.com/contact-us/" class="nav-link"><span itemprop="name">Contact us</span></a></li>
                         </ul>
                     </div>
-
+  <style>
+.nav-toggle-btn2{
+margin-top:3.5px;
+margin-right:10px;
+	max-width:40px;
+	padding:2px 10px;
+	background:#transparent;
+	color:#fff;
+	font-size:18px;
+	font-weight:200;
+	cursor:pointer;
+}
+</style> 
                     <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 								
@@ -479,11 +493,159 @@
 								</form>
 							</div> -->
                 </nav>
+				 <style>
+.navbar-wrapper5{
+	width:100%;
+	position:relative;
+	display:flex;
+	
+}
+.navbar1{
+	width:720px;
+	height:315px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	display:none;
+	border:1px solid #333;
+	padding:20px 0;
+	margin-left:14.5%;
+	background:#FAFAFA;
+	position:relative;
+}
+.navbar1:hover{
+	border:1.5px solid #333;
+}
+#crosssymbol{
+	position:absolute;
+	top:4%;
+	font-size:17px;
+	right:5%;
+	font-weight:600;
+	cursor:pointer;
+}
+#crosssymbol:hover{
+	color:tomato;
+}
+.navbar-list{
+display:flex;
+list-style:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+.navbar-link {
+color:black;
+  font-family: 'Poppins', sans-serif;;
+  font-size: 17px;
+  font-weight:200; 
+}
+.navbar-list .active{
+color:slateblue;
+font-weight:700;
+}
+.navbar-list li a{
+	text-decoration:none;
+}
+.navbar-list li{
+margin-bottom:10px;
+}
+</style>
                 <!-- end navbar -->
 	
+<style>
+.myfixednavbar-wrapper{
+	width:100%;
+}
+.myfixednavbar{
+	width:100%;
+	text-align:center;
+}
+.myfixednavbar .linksofnavbar{
+	margin-right:13px;
+	color:#333;
+}
+.active2{
+	font-weight:600;
+	padding-bottom:4px;
+	border-bottom:1px solid #777;
+}
+
+.myfixednavbar .linksofnavbar:hover{
+	color:black;
+	font-weight:600;
+	padding-bottom:4px;
+	border-bottom:1px solid #777;
+
+}
+.myfixednavbar a{
+	text-decoration:none;
+}
+</style>
+            	
+				
 				<!-- content wrapper -->
-                
+
+			   
 				<div class="content-wrapper" >
+				
+				
+<center>	  
+<div class="myfixednavbar-wrapper">
+	<div class="myfixednavbar">
+		<p><a href="Who am i.html" class="linksofnavbar">Who Am I</a>
+		<a href="Find Your Community.html" class="linksofnavbar">Find Your Community</a>
+		<a href="I can help.html" class="linksofnavbar">I Can Help</a>
+		 <a href="Share my experiences.html" class="linksofnavbar">Share Experiences</a>
+		<a href="Edutainment, Culture and Lifestyle.html" class="linksofnavbar active2" style="color:black;">Edutainment,Culture, & Lifestyle</a>
+		<a href="Creating a plan.html" class="linksofnavbar">Creating a Plan</a> 
+		<a href="I need help.html" class="linksofnavbar">I Need Help</a>
+		<a href="#" class="linksofnavbar">Mentoring Portals</a></p>
+	</div>
+</div>
+</center>				
+
+<div class="navbar-wrapper5">
+	<div class="navbar1" id="navbar1" style="display:none;">
+	<h1 id="crosssymbol" onclick="showmymenu()"><i class="fa fa-times" aria-hidden="true"></i></h1>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="Who am i.html" class="navbar-link">Who Am I? Change Your Life</a>
+          </li>
+
+          <li>
+            <a href="Find Your Community.html" class="navbar-link">Find Your Community</a>
+          </li>
+
+          <li>
+            <a href="I can help.html" class="navbar-link">I Can Help</a>
+          </li>
+
+          <li>
+            <a href="Share my experiences.html" class="navbar-link">Share My Experiences</a>
+          </li>
+
+          <li>
+            <a href="Edutainment, Culture and Lifestyle.html" class="navbar-link active">Edutainment,Culture, & Lifestyle</a>
+          </li>
+
+          <li>
+            <a href="Creating a plan.html" class="navbar-link ">Creating a Plan</a>
+          </li>
+
+          <li>
+            <a href="I need help.html" class="navbar-link">I Need Help[Resources]</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">The Mentoring Portals</a>
+          </li>
+
+        </ul>
+      </div></div>
+
                     <div class="row" >
                         <div class="col-md-12" >
               			
@@ -574,11 +736,12 @@ align-items:center;
 #main5{
 width:710px;
 height:620px;
-margin:30px auto
+margin:30px auto;
+margin-bottom:60px;
 }
 #first5{
 width:510px;
-height:610px;
+height:630px;
 box-shadow:0 0 0 1px rgba(14,41,57,0.12),0 2px 5px rgba(14,41,57,0.44),inset 0 -1px 2px rgba(14,41,57,0.15);
 float:left;
 padding:10px 50px 0;
@@ -619,13 +782,51 @@ color:#fff;
 font-size:19px;
 font-weight:700;
 cursor:pointer;
-text-shadow:0 1px 0 #13506D
+text-shadow:0 1px 0 #13506D;
 }
 #main5 #first5 #experienceForm input[type=submit]:hover{
 background:linear-gradient(to bottom,#36caf0 5%,#22abe9 100%)
 }
+#main5 #first5 select{
+	padding:12px;
+	width:400px;
+	border-radius:5px;
+border:1px solid #cbcbcb;
+box-shadow:inset 0 1px 2px rgba(0,0,0,0.18);
+font-size:16px
 
+}
+.event-popup{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+padding:30px;
+background:#636363;
+z-index:999;
+color:#fff;
+border:1px solid #fff;
+}
+.event-popup .fa:hover{
+	color:red;
+}
+.fc-event:hover {
+  cursor: pointer;
+}
   </style>
+  
+<script>
+
+  var x = document.getElementById("navbar1");
+function showmymenu(){
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
     <script>
 	
 const form = document.querySelector('#experienceForm');
@@ -697,7 +898,7 @@ fetchExperiences();
 
     </script>
   
-    <div id="calendar"></div>
+    <div id="calendar" style="position:relative"></div>
 
      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -713,7 +914,21 @@ $(document).ready(function() {
       right: 'month,agendaWeek,agendaDay'
     },
 	allDayDefault: true,
-    events: []
+    events: [],
+	eventClick: function(calEvent, jsEvent, view) {
+      // create a popup with the event details
+     const popup = $('<div class="event-popup"><p style="position:relative"><i style="position:absolute; top:-27%; right:-5%; cursor:pointer;" onclick="removepopup(this)" class="fa fa-times" aria-hidden="true"></i><strong>' + calEvent.title + '</strong><br><br> <strong>Date:</strong> ' + moment(calEvent.start).format('MMMM Do YYYY') + '</p><p><strong>Location:</strong> ' + calEvent.location + '</p><p><strong>Category:</strong> ' + calEvent.category + '</p><p><strong>Description:</strong> ' + calEvent.content + '</p></div>');
+ // add the popup to the body and show it
+      $('#calendar').append(popup);
+      popup.dialog({
+        modal: true,
+        title: calEvent.title,
+        close: function(event, ui) {
+          // remove the popup from the DOM
+          $(this).remove();
+        }
+      });
+    }
   });
 
   // get events from API and add them to calendar
@@ -743,6 +958,175 @@ $(document).ready(function() {
 
 
 </script>
+<script>
+
+function removepopup(elem) {
+  $(elem).closest('.event-popup').remove();
+}</script>		
+		
+	
+	<div id="industriesArea">
+    <form id="industriesForm" style="margin-bottom:20px;">
+    <h2 style="margin:20px 0; font-size:22px; font-weight:600; color:black; text-align:center;">Industries!</h2>
+    <input type="text" id="industry" name="industry" placeholder="Add a new industry" required style="padding:5px; border:none; border-bottom:1px solid #636363; padding-left:0;" >
+   
+    <input type="submit" value="Submit">
+  </form>
+  
+  
+<ol class="rounded-list"></ol>
+  </div>
+    <script>
+	
+const industriesForm = document.querySelector('#industriesForm');
+industriesForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  
+  const listitem = document.getElementById("industry").value;
+  
+  try {
+    const response = await fetch('https://backend-for-plans.onrender.com/industries', {
+      method: 'POST',
+      headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      listitem: listitem,
+    }),
+	
+ 	});
+	
+    alert('New Industry Added');
+  } catch (error) {
+    alert("Internal server error");
+  }
+  
+  
+location.reload();
+  
+});
+
+
+
+const myIndustriesList = document.querySelector('#industriesArea .rounded-list');
+
+async function fetchIndustries() {
+
+  try {
+    const response = await fetch('https://backend-for-plans.onrender.com/industries');
+    const data = await response.json();
+    data.forEach(industry => {
+	
+      const { listitem } = industry;
+	  
+	  const industryItem = document.createElement('li');
+	  industryItem.innerHTML = ` <a href="#">${listitem}</a> `;
+	  myIndustriesList.appendChild(industryItem);
+  
+	  
+	  
+    });
+  } catch (error) {
+    alert(error);
+  }
+}
+fetchIndustries();
+
+    </script>
+  
+	
+<style>
+#industry:focus{
+border:none;
+outline:none;
+border-bottom:4px solid ##f3efe7;
+}
+			#industriesArea{
+			margin: 40px auto;
+				width: 100%;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				flex-direction:column;
+				background:#fff;
+				padding:20px;
+			}
+			#industriesArea ol{
+				counter-reset: li;
+				list-style: none;
+				*list-style: decimal;
+				font: 15px 'trebuchet MS', 'lucida sans';
+				padding: 0;
+				margin-bottom: 4em;
+				text-shadow: 0 1px 0 rgba(255,255,255,.5);
+			}
+
+			#industriesArea ol ol{
+				margin: 0 0 0 2em;
+			}
+
+			/* -------------------------------------- */			
+
+			#industriesArea .rounded-list a{
+				position: relative;
+				display: block;
+				padding: .4em .4em .4em 2em;
+				*padding: .4em;
+				margin: .1em 0;
+				background: #f3efe7;
+				color: #444;
+				text-decoration: none;
+				-moz-border-radius: .3em;
+				-webkit-border-radius: .3em;
+				border-radius: .3em;
+				-webkit-transition: all .3s ease-out;
+				-moz-transition: all .3s ease-out;
+				-ms-transition: all .3s ease-out;
+				-o-transition: all .3s ease-out;
+				transition: all .3s ease-out;	
+			}
+
+			#industriesArea .rounded-list a:hover{
+				background: #eee;
+			}
+
+			#industriesArea .rounded-list a:hover:before{
+				-moz-transform: rotate(360deg);
+			  	-webkit-transform: rotate(360deg);
+			    -moz-transform: rotate(360deg);
+			    -ms-transform: rotate(360deg);
+			    -o-transform: rotate(360deg);
+			    transform: rotate(360deg);	
+			}
+
+			#industriesArea .rounded-list a:before{
+				content: counter(li);
+				counter-increment: li;
+				position: absolute;	
+				left: -1.3em;
+				top: 50%;
+				margin-top: -1.3em;
+				background: #636363;
+				height: 2.5em;
+				width: 2.5em;
+				line-height: 2em;
+				border: .3em solid #fff;
+				text-align: center;
+				font-weight: bold;
+				-moz-border-radius: 2em;
+				-webkit-border-radius: 2em;
+				border-radius: 2em;
+				-webkit-transition: all .3s ease-out;
+				-moz-transition: all .3s ease-out;
+				-ms-transition: all .3s ease-out;
+				-o-transition: all .3s ease-out;
+				transition: all .3s ease-out;
+				color:#fff;
+			}
+
+
+</style>
+	
 	</div></div></div>
 				
 				

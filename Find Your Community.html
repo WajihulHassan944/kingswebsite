@@ -4,6 +4,7 @@
 <head>
     <!-- Required meta tags -->
 					
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">		
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
@@ -419,6 +420,10 @@
 
                     <div id="navbarSupportedContent" class="collapse navbar-collapse">
                         <ul id="menu-primary-menu" class="navbar-nav mr-auto" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
+						<li>
+ <div class="nav-toggle-btn2" onclick="showmymenu()">
+        <i class="fa fa-bars"></i>
+      </div></li>
                             <li id="menu-item-276" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-14 current_page_item active menu-item-276 nav-item"><a itemprop="url" href="https://www.kingstreets.com/" class="nav-link" aria-current="page"><span itemprop="name">Home</span></a></li>
                             <li id="menu-item-277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-277 nav-item"><a itemprop="url" href="https://www.kingstreets.com/about-us/" class="nav-link"><span itemprop="name">About us</span></a></li>
                             <li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-295 nav-item"><a itemprop="url" href="https://www.kingstreets.com/services/" class="nav-link"><span itemprop="name">Services</span></a></li>
@@ -428,7 +433,20 @@
                             <li id="menu-item-291" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-291 nav-item"><a itemprop="url" href="https://www.kingstreets.com/contact-us/" class="nav-link"><span itemprop="name">Contact us</span></a></li>
                         </ul>
                     </div>
-
+  <style>
+.nav-toggle-btn2{
+margin-top:3.5px;
+margin-right:10px;
+	max-width:40px;
+	padding:2px 10px;
+	background:#transparent;
+	color:#fff;
+	font-size:18px;
+	margin-left:14.5%;
+	font-weight:200;
+	cursor:pointer;
+}
+</style> 
                     <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 								
@@ -474,6 +492,65 @@
 							</div> -->
                 </nav>
                 <!-- end navbar -->
+				 <style>
+.navbar-wrapper5{
+	width:100%;
+	position:relative;
+	display:flex;
+	
+}
+.navbar1{
+	width:720px;
+	height:315px;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	flex-direction:column;
+	display:none;
+	border:1px solid #333;
+	padding:20px 0;
+	margin-left:14.5%;
+	background:#FAFAFA;
+	position:relative;
+}
+.navbar1:hover{
+	border:1.5px solid #333;
+}
+#crosssymbol{
+	position:absolute;
+	top:4%;
+	font-size:17px;
+	right:5%;
+	font-weight:600;
+	cursor:pointer;
+}
+#crosssymbol:hover{
+	color:tomato;
+}
+.navbar-list{
+display:flex;
+list-style:none;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+}
+.navbar-link {
+color:black;
+  font-family: 'Poppins', sans-serif;;
+  font-size: 17px;
+  font-weight:200; 
+}
+.navbar-list .active{
+color:slateblue;
+font-weight:700;
+}
+.navbar-list li a{
+	text-decoration:none;
+}
+.navbar-list li{
+margin-bottom:10px;
+}
+</style>
 
    <style>
    h1, h2 {
@@ -694,7 +771,98 @@ align-items:center;
 				<!-- content wrapper -->
 
 			   
+<style>
+.myfixednavbar-wrapper{
+	width:100%;
+}
+.myfixednavbar{
+	width:100%;
+	text-align:center;
+}
+.myfixednavbar .linksofnavbar{
+	margin-right:13px;
+	color:#333;
+}
+.active2{
+	font-weight:600;
+	padding-bottom:4px;
+	border-bottom:1px solid #777;
+}
+
+.myfixednavbar .linksofnavbar:hover{
+	color:black;
+	font-weight:600;
+	padding-bottom:4px;
+	border-bottom:1px solid #777;
+
+}
+.myfixednavbar a{
+	text-decoration:none;
+}
+</style>
+            	
+				
+				<!-- content wrapper -->
+
+			   
 				<div class="content-wrapper" >
+				
+				
+<center>	  
+<div class="myfixednavbar-wrapper">
+	<div class="myfixednavbar">
+		<p><a href="Who am i.html" class="linksofnavbar">Who Am I</a>
+		<a href="Find Your Community.html" class="linksofnavbar active2" style="color:black;">Find Your Community</a>
+		<a href="I can help.html" class="linksofnavbar">I Can Help</a>
+		 <a href="Share my experiences.html" class="linksofnavbar">Share Experiences</a>
+		<a href="Edutainment, Culture and Lifestyle.html" class="linksofnavbar">Edutainment,Culture, & Lifestyle</a>
+		<a href="Creating a plan.html" class="linksofnavbar">Creating a Plan</a> 
+		<a href="I need help.html" class="linksofnavbar">I Need Help</a>
+		<a href="#" class="linksofnavbar">Mentoring Portals</a></p>
+	</div>
+</div>
+</center>				
+
+<div class="navbar-wrapper5">
+	<div class="navbar1" id="navbar1" style="display:none;">
+	<h1 id="crosssymbol" onclick="showmymenu()"><i class="fa fa-times" aria-hidden="true"></i></h1>
+        <ul class="navbar-list">
+
+          <li>
+            <a href="Who am i.html" class="navbar-link">Who Am I? Change Your Life</a>
+          </li>
+
+          <li>
+            <a href="Find Your Community.html" class="navbar-link active">Find Your Community</a>
+          </li>
+
+          <li>
+            <a href="I can help.html" class="navbar-link">I Can Help</a>
+          </li>
+
+          <li>
+            <a href="Share my experiences.html" class="navbar-link">Share My Experiences</a>
+          </li>
+
+          <li>
+            <a href="Edutainment, Culture and Lifestyle.html" class="navbar-link">Edutainment,Culture, & Lifestyle</a>
+          </li>
+
+          <li>
+            <a href="Creating a plan.html" class="navbar-link ">Creating a Plan</a>
+          </li>
+
+          <li>
+            <a href="I need help.html" class="navbar-link">I Need Help[Resources]</a>
+          </li>
+
+          <li>
+            <a href="#" class="navbar-link">The Mentoring Portals</a>
+          </li>
+
+        </ul>
+      </div></div>
+
                     <div class="row" >
                         <div class="col-md-12" >
             
@@ -710,43 +878,50 @@ align-items:center;
     </header>
 	
     <section id="fisrtCommunities">
-	<div class="input-group" style="margin-top:50px;">
+	 <div style="width:100%; display:flex; justify-content:center; align-items:center;">
+	<div style=" padding:25px; border:4px solid #333; margin-top:50px;">
+	<div class="input-group">
 	  <h1>Find Your Community</h1>
-	  <form id="form1">
+ 	 <form id="form1">
         <input type="text" required id="interest" placeholder="Search for communities by interest">
-        <button type="submit" >Search</button></form>
-	</div>
+        <button type="submit" >Search</button></form></div>
+	
   
 	<center><button id="showAllcommunities">Show All Communities</button></center>
-      
+     </div> </div>
 	  <section id="communities"></section>
 	  
-      <form id="form3">
+	  <div style="width:100%; display:flex; justify-content:center; align-items:center;">
+      <form id="form3" style="max-width:400px; padding:25px; border:4px solid #333;">
         <h2>Create a new community</h2>
         <input type="text" id="communityName" placeholder="Community name">
         <input type="text" id="communityInterest" placeholder="Interest or category">
         <textarea placeholder="Description" id="communityDescription"></textarea>
         <button type="submit">Create</button>
       </form>
-	  
+	  </div>
      </section> 
 	  
 	  
-	 <section id="secondEvents"> 
+	 <section id="secondEvents">
+ <div style="width:100%; display:flex; justify-content:center; align-items:center;">
+	<div style=" padding:25px; border:4px solid #333; margin-top:50px;">
+		 
 	<div class="input-group">
 	  <h1>Find Events</h1>
 	  <div class="input-group-form">
-		<form id="form2"><input type="text" required id="location" placeholder="Search for events by location">
-		<button >Search</button></form>				
+		  
+    <form id="form2"><input type="text" required id="location" placeholder="Search for events by location">
+		<button >Search</button></form>			
 	</div>
     </div>
 	
 	<center><button id="showAllEvents">Show All Events</button></center>
-	
+	</div></div>
       <section id="events">
       </section>
-	  
-      <form id="form4">
+	 <div style="width:100%; display:flex; justify-content:center; align-items:center;"> 
+      <form id="form4" style="max-width:400px; padding:25px; border:4px solid #333;">
         <h2>Create a new event</h2>
         <input type="text" placeholder="Event name" id="eventName">
         <input type="date" placeholder="Event date" id="eventDate">
@@ -762,22 +937,285 @@ align-items:center;
 		<input type="text" id="locationValue" placeholder="Enter location value">
         <button type="submit">Create</button>
       </form>
-	  
+	  </div>
 	
   
-      <section id="secUpcomingEvents">
+      <section id="secUpcomingEvents" style="position:relative">
         <h2>Upcoming events</h2>
-        <div id="upcomingEventss"></div>
+        <div id="upcomingEventss" style="cursor:pointer;"></div>
+		<div id="popupWrapper"></div>
       </section>
 	  
-    </section>>
+    </section>
+
+   <div class="custom-ol">
 
 
+
+        <ol>
+<li>Business</li>
+<li>Organization</li>
+<li>Government Agency</li>
+<li>Corporation</li>
+<li>Foundation</li>
+<li>Social Group</li>
+<li>Administration</li>
+<li>Sororities</li>
+<li>Fraternities</li>
+<li>Church</li>
+<li>Spiritual</li>
+<li>Organization</li>
+<li>Community Organization</li>
+<li>Industries</li>
+Misc.
+        </ol>
+    </div>
+
+
+<style>.custom-ol {
+    padding: 24px 32px;
+    box-shadow: 0 4px 16px -3px rgba(0, 0, 0, 0.25);
+    max-width: 500px;
+    margin: 24px auto;
+    border-radius: 10px;
+    font-family: "Roboto", sans-serif;
+    color: #073b4c;
+}
+
+
+.custom-ol ol {
+    margin: 0;
+    padding: 0;
+    margin-top: 27px;
+    list-style: none;
+    counter-reset: web-design;
+}
+
+.custom-ol ol li {
+    margin: 22px 0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    transition: all 400ms;
+}
+
+.custom-ol ol li:hover {
+    background: #ffd166;
+}
+
+.custom-ol ol li::before {
+    content: counter(web-design);
+    counter-increment: web-design;
+    margin-right: 22px;
+    font-size: 22px;
+    font-weight: bold;
+    background: #0071a7;
+    padding: 8px 16px;
+    border-radius: 0 8px 0 8px;
+    color: #eee;
+    transition: all 400ms;
+}
+
+.custom-ol ol li:hover::before {
+    background: #073b4c;
+    transform: scale(1.2) rotate(-5deg);
+}</style>
+
+	
+	<div id="industriesArea">
+     <div style="width:100%; display:flex; justify-content:center; align-items:center; ">
+	<div style=" padding:15px 40px; border:4px solid #333; margin-top:50px;">
+	<form id="industriesForm" style="margin-bottom:20px;">
+    <h2 style="margin:20px 0; font-size:22px; font-weight:600; color:black; text-align:center;">Industries!</h2>
+    <input type="text" id="industry" name="industry" placeholder="Add a new industry" required style="padding:5px; border:none; border-bottom:1px solid #636363; padding-left:0;" >
+   
+    <input type="submit" value="Submit">
+  </form>
+  
+  
+<ol class="rounded-list"></ol>
+  </div></div></div>
+    <script>
+	
+const industriesForm = document.querySelector('#industriesForm');
+industriesForm.addEventListener('submit', async (event) => {
+  event.preventDefault();
+  
+  const listitem = document.getElementById("industry").value;
+  
+  try {
+    const response = await fetch('https://backend-for-plans.onrender.com/industries', {
+      method: 'POST',
+      headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      listitem: listitem,
+    }),
+	
+ 	});
+	
+    alert('New Industry Added');
+  } catch (error) {
+    alert("Internal server error");
+  }
+  
+  
+location.reload();
+  
+});
+
+
+
+const myIndustriesList = document.querySelector('#industriesArea .rounded-list');
+
+async function fetchIndustries() {
+
+  try {
+    const response = await fetch('https://backend-for-plans.onrender.com/industries');
+    const data = await response.json();
+    data.forEach(industry => {
+	
+      const { listitem } = industry;
+	  
+	  const industryItem = document.createElement('li');
+	  industryItem.innerHTML = ` <a href="#">${listitem}</a> `;
+	  myIndustriesList.appendChild(industryItem);
+  
+	  
+	  
+    });
+  } catch (error) {
+    alert(error);
+  }
+}
+fetchIndustries();
+
+    </script>
+  
+	
+<style>
+#industry:focus{
+border:none;
+outline:none;
+border-bottom:4px solid #f3efe7;
+}
+			#industriesArea{
+			margin: 40px auto;
+				width: 100%;
+				display:flex;
+				justify-content:center;
+				align-items:center;
+				flex-direction:column;
+				background:#fff;
+				padding:20px;
+			}
+			#industriesArea ol{
+				counter-reset: li;
+				list-style: none;
+				*list-style: decimal;
+				font: 15px 'trebuchet MS', 'lucida sans';
+				padding: 0;
+				margin-bottom: 4em;
+				text-shadow: 0 1px 0 rgba(255,255,255,.5);
+			}
+
+			#industriesArea ol ol{
+				margin: 0 0 0 2em;
+			}
+
+			/* -------------------------------------- */			
+
+			#industriesArea .rounded-list a{
+				position: relative;
+				display: block;
+				padding: .4em .4em .4em 2em;
+				*padding: .4em;
+				margin: .5em 0;
+				background: #f3efe7;
+				color: #444;
+				text-decoration: none;
+				-moz-border-radius: .3em;
+				-webkit-border-radius: .3em;
+				border-radius: .3em;
+				-webkit-transition: all .3s ease-out;
+				-moz-transition: all .3s ease-out;
+				-ms-transition: all .3s ease-out;
+				-o-transition: all .3s ease-out;
+				transition: all .3s ease-out;	
+			}
+
+			#industriesArea .rounded-list a:hover{
+				background: #eee;
+			}
+
+			#industriesArea .rounded-list a:hover:before{
+				-moz-transform: rotate(360deg);
+			  	-webkit-transform: rotate(360deg);
+			    -moz-transform: rotate(360deg);
+			    -ms-transform: rotate(360deg);
+			    -o-transform: rotate(360deg);
+			    transform: rotate(360deg);	
+			}
+
+			#industriesArea .rounded-list a:before{
+				content: counter(li);
+				counter-increment: li;
+				position: absolute;	
+				left: -1.3em;
+				top: 50%;
+				margin-top: -1.3em;
+				background: #636363;
+				height: 2.5em;
+				width: 2.5em;
+				line-height: 2em;
+				border: .3em solid #fff;
+				text-align: center;
+				font-weight: bold;
+				-moz-border-radius: 2em;
+				-webkit-border-radius: 2em;
+				border-radius: 2em;
+				-webkit-transition: all .3s ease-out;
+				-moz-transition: all .3s ease-out;
+				-ms-transition: all .3s ease-out;
+				-o-transition: all .3s ease-out;
+				transition: all .3s ease-out;
+				color:#fff;
+			}
+.popup{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  padding:20px;
+  background: #636363;
+  z-index: 999;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.popup .fa:hover {
+  color: red;
+}
+
+</style>
+	
 
 
 
 </div></div></div>	
                 <!-- end content wrapper -->
+
+<script>
+
+  var x = document.getElementById("navbar1");
+function showmymenu(){
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
 
 
 <script>
@@ -1013,47 +1451,69 @@ showAllEvents.addEventListener("click", async () => {
 };
 
 });
-
 async function eventsToOccur(){
 	await fetch('https://find-community-backend.onrender.com/events')
-  .then(response => response.json())
-  .then(events => {
-    const recentEvents = events.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
+	  .then(response => response.json())
+	  .then(events => {
+	    const recentEvents = events.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3);
 
-    const slideshowContainer = document.getElementById('upcomingEventss');
+	    const slideshowContainer = document.getElementById('upcomingEventss');
 
-    recentEvents.forEach(event => {
-      const slide = document.createElement('div');
-      slide.classList.add('slide');
-	  const date12 = new Date(`${event.date}`);
-	  const formattedDate2 = date12.toLocaleDateString('en-US');
-		
-      slide.innerHTML = `
-        <h2>${event.name}</h2>
-		
-		
-        <p>${formattedDate2}</p>
-        <p>${event.description}</p>
-      `;
-      slideshowContainer.appendChild(slide);
-    });
+	    recentEvents.forEach(event => {
+	      const slide = document.createElement('div');
+	      slide.classList.add('slide');
+	      const date12 = new Date(`${event.date}`);
+	      const formattedDate2 = date12.toLocaleDateString('en-US');
 
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
+	      slide.innerHTML = `
+	        <h2>${event.name}</h2>
+	        <p>${formattedDate2}</p>
+	        <p>${event.description}</p>
+	      `;
+	      slideshowContainer.appendChild(slide);
+	    });
 
-    setInterval(() => {
-      slideIndex++;
-      if (slideIndex >= totalSlides) {
-        slideIndex = 0;
-      }
-      slides.forEach(slide => slide.classList.remove('active'));
-      slides[slideIndex].classList.add('active');
-    }, 3000);
-  })
-  .catch(error => alert(error));
+	    let slideIndex = 0;
+	    const slides = document.querySelectorAll('.slide');
+	    const totalSlides = slides.length;
+
+	    setInterval(() => {
+	      slideIndex++;
+	      if (slideIndex >= totalSlides) {
+	        slideIndex = 0;
+	      }
+	      slides.forEach(slide => slide.classList.remove('active'));
+	      slides[slideIndex].classList.add('active');
+
+	      // add click event listener to active slide
+	      const activeSlide = slides[slideIndex];
+	      activeSlide.addEventListener('click', () => {
+	        const popup = document.createElement('div');
+	        popup.classList.add('popup');
+			const date13 = new Date(`${recentEvents[slideIndex].date}`);
+	      const formattedDate3 = date13.toLocaleDateString('en-US');
+
+	        popup.innerHTML = `
+			<p style="position:relative;"><i style="position:absolute; cursor:pointer;" onclick="removepopup(this.parentNode.parentNode)" class="fa fa-times" aria-hidden="true"></i></p>
+	          <h2 style="color:cyan; font-weight:700;">${recentEvents[slideIndex].name}</h2>
+	          <p>Date: ${formattedDate3}</p>
+	          <p>Description: ${recentEvents[slideIndex].description}</p>
+	          <p>${recentEvents[slideIndex].location}: ${recentEvents[slideIndex].locationValue}</p>
+	          
+	        `;
+	        document.getElementById("popupWrapper").appendChild(popup);
+			popup.addEventListener('click', removepopup);
+	      });
+	    }, 3000);
+	  })
+	  .catch(error => alert(error));
 }
-
+function removepopup() {
+  const popupWrapper = document.getElementById("popupWrapper");
+  while (popupWrapper.firstChild) {
+    popupWrapper.removeChild(popupWrapper.firstChild);
+  }
+}
 window.onload = function() {
 	eventsToOccur();
 }

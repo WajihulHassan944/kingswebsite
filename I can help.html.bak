@@ -3,15 +3,8 @@
 
 <head>
     <!-- Required meta tags -->
-		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-			
+			<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">		
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
-	
-<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
-			
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +14,7 @@
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Kingstreets &#8211; Share My Experience</title>
+    <title>Kingstreets &#8211; I can Help</title>
     <style>
         #wpadminbar #wp-admin-bar-vtrts_free_top_button .ab-icon:before {
             content: "\f185";
@@ -434,7 +427,7 @@
                         </ul>
                     </div>
 
-           <style>
+    <style>
 .nav-toggle-btn2{
 margin-top:3.5px;
 margin-right:10px;
@@ -447,8 +440,7 @@ margin-right:10px;
 	font-weight:200;
 	cursor:pointer;
 }
-</style> 
-        <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+</style>                   <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
 
 								
 
@@ -492,12 +484,7 @@ margin-right:10px;
 								</form>
 							</div> -->
                 </nav>
-                <!-- end navbar -->
-
-            	
-				
-				<!-- content wrapper -->
-     <style>
+				 <style>
 .navbar-wrapper5{
 	width:100%;
 	position:relative;
@@ -523,7 +510,8 @@ margin-right:10px;
 }
 #crosssymbol{
 	position:absolute;
-	top:0;
+	top:4%;
+	font-size:17px;
 	right:5%;
 	font-weight:600;
 	cursor:pointer;
@@ -554,14 +542,11 @@ font-weight:700;
 .navbar-list li{
 margin-bottom:10px;
 }
-</style>           
-	<script>function exp(){
-	const card = document.querySelector(".card");
-	card.style.display = "flex";
-}
-</script>
+</style>
+                <!-- end navbar -->
 
-
+              
+				
 <style>
 .myfixednavbar-wrapper{
 	width:100%;
@@ -571,7 +556,7 @@ margin-bottom:10px;
 	text-align:center;
 }
 .myfixednavbar .linksofnavbar{
-	margin-right:13px;
+	margin-right:10px;
 	color:#333;
 }
 .active2{
@@ -604,8 +589,8 @@ margin-bottom:10px;
 	<div class="myfixednavbar">
 		<p><a href="Who am i.html" class="linksofnavbar">Who Am I</a>
 		<a href="Find Your Community.html" class="linksofnavbar">Find Your Community</a>
-		<a href="I can help.html" class="linksofnavbar">I Can Help</a>
-		 <a href="Share my experiences.html" class="linksofnavbar active2" style="color:black;">Share Experiences</a>
+		<a href="I can help.html" class="linksofnavbar active2" style="color:black;">I Can Help</a>
+		 <a href="Share my experiences.html" class="linksofnavbar">Share Experiences</a>
 		<a href="Edutainment, Culture and Lifestyle.html" class="linksofnavbar">Edutainment,Culture, & Lifestyle</a>
 		<a href="Creating a plan.html" class="linksofnavbar">Creating a Plan</a> 
 		<a href="I need help.html" class="linksofnavbar">I Need Help</a>
@@ -613,8 +598,6 @@ margin-bottom:10px;
 	</div>
 </div>
 </center>				
-
-
 
 <div class="navbar-wrapper5">
 	<div class="navbar1" id="navbar1" style="display:none;">
@@ -630,7 +613,7 @@ margin-bottom:10px;
           </li>
 
           <li>
-            <a href="I can help.html" class="navbar-link">I Can Help</a>
+            <a href="I can help.html" class="navbar-link active">I Can Help</a>
           </li>
 
           <li>
@@ -655,269 +638,193 @@ margin-bottom:10px;
 
         </ul>
       </div></div>
-	  <div class="row">
-	<div class="col-md-12">
-		<div class="row mt-4">
-				<div class="col-md-12">
-					
-					<center><a style="margin-bottom:30px" onclick="exp()" class="btn btn-primary">Share Your Experience ! </a></center>
-				</div>
-			</div><center><h1 style="font-size:17px; font-weight:500;">Your experiences are public. A greater community benefit from it!</h1></center>
 
+    <div class="row" >
+	<div class="col-md-12"><style>
+#divContainer h1{
+	text-align: center;
+	margin-top: 50px;
+}
 
-		<div class="card" style="display:none">
-<style>
-.container h1{
-	color:black;
-	font-size:18px;
-	font-weight:500;
-	border:none;
-	
-	display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-padding:20px 0;
+#divContainer form {
+	margin: 30px auto;
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
 }
-#myform{
-margin:20px 0;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-width:100%;
-}
-.input-group{
-	margin:10px 0;
-	display:flex;
+
+#divContainer form div {
+	margin-bottom: 10px;
 	justify-content:space-between;
+}
+
+#divContainer label {
+	margin-right:20px;
+	font-weight:700;
+}
+
+#divContainer input[type="text"],#divContainer input[type="email"],
+#divContainer textarea {
+	padding: 5px;
+	border-radius: 0px;
+	border: none;
+	border-bottom:2px solid #ccc;
+	width:100%;
+}
+
+#divContainer button[type="submit"] {
+	padding: 10px;
+	background-color: #3C87FF;
+	color: white;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+}
+ #divContainer select {
+        font-size: 16px;
+        padding: 7px;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+		width:100%;
+    }
+
+    /* Style the options inside the select element */
+   #divContainer  option {
+        font-size: 16px;
+        padding: 10px;
+    }
+#divContainer ul {
+	margin: 30px auto;
+	list-style: none;
+	padding: 20px;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:center;
 	align-items:center;
-	text-align:center;
-	width:260px;
+	width:100%;
 }
-.input-group label{
-	color:#3C87FF;
-	font-size:18px;
-	font-weight:600;
-	margin-top:5px;
-}
-.input-group input , .input-group textarea{
-padding:5px;
-border:none;
-border-bottom:2px solid #3C87FF;
-margin-top:-5px;
-}
-#myform button{
-	padding:8px 90px;
-	background:#3C87FF;
+
+#divContainer li {
+	margin:10px;
+	border: 1px solid #ccc;
+	padding: 35px 30px;
+	border-radius: 3px;
+	background: linear-gradient(to top, #141e30, #243b55);
 	color:#fff;
-	margin-top:40px;
-	margin-bottom:40px;
+    border-radius: 10px;
+	max-width:325px;
+	
 }
-</style> 
- <div class="container">
-      <h1 style="margin-top:40px;">Your experience will greatly help other users.</h1>
-	  
-<div style="width:100%; display:flex; justify-content:center; align-items:center;">
-      <form id="myform" style="max-width:400px; padding:25px 25px 10px 12px; border:4px solid #333;">
-	  <div class="input-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
-</div>
-<div class="input-group">
-        <label for="title">Title</label>
-        <input type="text" id="title" name="title" required />
-</div>
-<div class="input-group">
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location" />
-</div>
-<div class="input-group">
-        <label for="category">Category</label>
-        <input type="text" id="category" name="category" />
-</div>
-
-<div class="input-group">
-        <label for="content">Content</label>
-        <textarea id="content" name="content"></textarea>
-</div>
-
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-</div></div>
-
-		<div id="data-container"></div>					
-		
-	
-	<div id="industriesArea">
-    <form id="industriesForm" style="margin-bottom:20px;">
-    <h2 style="margin:20px 0; font-size:22px; font-weight:600; color:black; text-align:center;">Industries!</h2>
-    <input type="text" id="industry" name="industry" placeholder="Add a new industry" required style="padding:5px; border:none; border-bottom:1px solid #636363; padding-left:0;" >
-   
-    <input type="submit" value="Submit">
-  </form>
-  
-  
-<ol class="rounded-list"></ol>
-  </div>
-    <script>
-	
-const industriesForm = document.querySelector('#industriesForm');
-industriesForm.addEventListener('submit', async (event) => {
-  event.preventDefault();
-  
-  const listitem = document.getElementById("industry").value;
-  
-  try {
-    const response = await fetch('https://backend-for-plans.onrender.com/industries', {
-      method: 'POST',
-      headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      listitem: listitem,
-    }),
-	
- 	});
-	
-    alert('New Industry Added');
-  } catch (error) {
-    alert("Internal server error");
-  }
-  
-  
-location.reload();
-  
-});
-
-
-
-const myIndustriesList = document.querySelector('#industriesArea .rounded-list');
-
-async function fetchIndustries() {
-
-  try {
-    const response = await fetch('https://backend-for-plans.onrender.com/industries');
-    const data = await response.json();
-    data.forEach(industry => {
-	
-      const { listitem } = industry;
-	  
-	  const industryItem = document.createElement('li');
-	  industryItem.innerHTML = ` <a href="#">${listitem}</a> `;
-	  myIndustriesList.appendChild(industryItem);
-  
-	  
-	  
-    });
-  } catch (error) {
-    alert(error);
-  }
+#divContainer li h1{
+	text-align:center;
+	margin:0;
+	font-weight:600;
+	font-size:21px;
 }
-fetchIndustries();
-
-    </script>
-  
-	
-<style>
-#industry:focus{
-border:none;
-outline:none;
-border-bottom:4px solid ##f3efe7;
+#divContainer li h2{
+	text-align:center;
+	margin:0;
+	font-weight:400;
+	font-size:18px;
 }
-			#industriesArea{
-			margin: 40px auto;
-				width: 100%;
-				display:flex;
-				justify-content:center;
-				align-items:center;
-				flex-direction:column;
-				background:#fff;
-				padding:20px;
-			}
-			#industriesArea ol{
-				counter-reset: li;
-				list-style: none;
-				*list-style: decimal;
-				font: 15px 'trebuchet MS', 'lucida sans';
-				padding: 0;
-				margin-bottom: 4em;
-				text-shadow: 0 1px 0 rgba(255,255,255,.5);
-			}
-
-			#industriesArea ol ol{
-				margin: 0 0 0 2em;
-			}
-
-			/* -------------------------------------- */			
-
-			#industriesArea .rounded-list a{
-				position: relative;
-				display: block;
-				padding: .4em .4em .4em 2em;
-				*padding: .4em;
-				margin: .5em 0;
-				background: #f3efe7;
-				color: #444;
-				text-decoration: none;
-				-moz-border-radius: .3em;
-				-webkit-border-radius: .3em;
-				border-radius: .3em;
-				-webkit-transition: all .3s ease-out;
-				-moz-transition: all .3s ease-out;
-				-ms-transition: all .3s ease-out;
-				-o-transition: all .3s ease-out;
-				transition: all .3s ease-out;	
-			}
-
-			#industriesArea .rounded-list a:hover{
-				background: #eee;
-			}
-
-			#industriesArea .rounded-list a:hover:before{
-				-moz-transform: rotate(360deg);
-			  	-webkit-transform: rotate(360deg);
-			    -moz-transform: rotate(360deg);
-			    -ms-transform: rotate(360deg);
-			    -o-transform: rotate(360deg);
-			    transform: rotate(360deg);	
-			}
-
-			#industriesArea .rounded-list a:before{
-				content: counter(li);
-				counter-increment: li;
-				position: absolute;	
-				left: -1.3em;
-				top: 50%;
-				margin-top: -1.3em;
-				background: #636363;
-				height: 2.5em;
-				width: 2.5em;
-				line-height: 2em;
-				border: .3em solid #fff;
-				text-align: center;
-				font-weight: bold;
-				-moz-border-radius: 2em;
-				-webkit-border-radius: 2em;
-				border-radius: 2em;
-				-webkit-transition: all .3s ease-out;
-				-moz-transition: all .3s ease-out;
-				-ms-transition: all .3s ease-out;
-				-o-transition: all .3s ease-out;
-				transition: all .3s ease-out;
-				color:#fff;
-			}
-
-
+#divContainer li:hover {
+          transform: scale(1.02);
+        }
+#divContainer .helpers-container{
+	width:100%;
+	padding:10px;
+}
 </style>
-			
-	</div>
-	</div>
-	</div>
+	<div id="divContainer">
+	<h1 style="color:black; font-weight:500; font-size:23px;">Helpers Directory</h1>
+	<center><p>Create Your Helper Profile</p></center>
+	<form>
+		<div>
+			<label for="name" >Name:</label>
+			<input type="text" id="name" required>
+		</div>
+		<div>
+			<label for="email">Email:</label>
+			<input type="email" id="email" required>
+		</div>
+		
+		<div>
+			<label for="typeOfHelp">Type of Help:</label>
+			<input type="text" id="typeOfHelp" placeholder="describe type of help you provide" required>
+		</div>
+		<div>
+			<label for="categoriestype">Help Category Type:</label>
+    <select id="categoriestype" required>
+        <option>Services</option>
+		<option>Products</option>
+		<option>Resources</option>
+        
+    </select>
+		</div>
+		
+		
+		<div>
+			<label for="categories">Category value:</label><br>
+    <select id="categories" required>
+        <option>Select Relevant category type value</option>
+        <optgroup label="Services">
+            <option>Healthcare</option>
+            <option>Legal</option>
+            <option>Financial</option>
+            <option>Education</option>
+            <option>Counseling</option>
+        </optgroup>
+        <optgroup label="Products">
+            <option>Food and Supplies</option>
+            <option>Technology</option>
+            <option>Clothing</option>
+            <option>Housing</option>
+        </optgroup>
+        <optgroup label="Resources">
+            <option>Community Programs</option>
+            <option>Volunteer Opportunities</option>
+            <option>Mental Health Support</option>
+            <option>Job Placement Services</option>
+            <option>Transportation</option>
+        </optgroup>
+    </select>
+		</div>
+		
+		<div>
+  <label for="location-type">Location Type:</label>
+  <select id="location-type" required>
+    <option>--Please select--</option>
+    <option>By country</option>
+    <option>By state</option>
+    <option>By zip code</option>
+    <option>By town</option>
+  </select>
+</div>
+		
+		
+		<div>
+			<label for="location">Location:</label>
+			<input type="text" id="location" required placeholder="Please type relevant location value">
+		</div>
+		<div>
+			<label for="schedule">Schedule:</label>
+			<input type="text" id="schedule" required>
+		</div>
+		<div>
+			<label for="comments">Comments:</label>
+			<textarea id="comments"></textarea>
+		</div>
+		<button type="submit">Add Helper</button>
+	</form>
 	
+	<div class="helpers-container">
+	<center><h2 style="color:black; font-weight:500; ">Helpers</h2></center>
+	<ul id="helpers-list"></ul>
+</div>
+
+</div>
+
 <script>
 
   var x = document.getElementById("navbar1");
@@ -930,115 +837,118 @@ function showmymenu(){
 }
 </script>
 
-<script>
-const form = document.querySelector('#myform');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const name = document.getElementById("name").value;
-  const title = document.getElementById("title").value;
-  const content = document.getElementById("content").value;
-  const location = document.getElementById("location").value;
-  const category = document.getElementById("category").value;
-
-
-  
-  try {
-    const response = await fetch('https://backend-for-experiences.onrender.com/experiences', {
-      method: 'POST',
-      headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      name: name,
-	  title: title,
-      content: content,
-      location: location,
-      category: category,
-    }),
+	<script>
 	
- 	});
-    const data = await response.json();
-    alert('Your Experience is shared');
-  } catch (error) {
-    alert("Internal server error");
-  }
-  
-  document.getElementById("name").value = "";
-  document.getElementById("title").value = "";
-  document.getElementById("content").value = "";
-  document.getElementById("location").value = "";
-  document.getElementById("category").value = "";
-  
+	// Handle form submission
+const form = document.querySelector('form');
+form.addEventListener('submit', async (event) => {
+	event.preventDefault();
+	
+	// Get form data
+	const typeOfHelp = document.getElementById('typeOfHelp').value;
+	const categories = document.getElementById('categories').value;
+	const location = document.getElementById('location').value;
+	const schedule = document.getElementById('schedule').value;
+	const comments = document.getElementById('comments').value;
+	const categoriestype = document.getElementById('categoriestype').value;
+	const locationtype = document.getElementById('location-type').value;
+	const name = document.getElementById('name').value;
+	const email = document.getElementById('email').value;
+	
+	// Create helper object
+	const helper = {
+		typeOfHelp,
+		categories,
+		location,
+		schedule,
+		comments,
+		categoriestype,
+		locationtype,
+		name,
+		email,
+	};
+	
+	// Add helper to database
+	try {
+		const response = await fetch('https://backend-for-plans.onrender.com/api/helpers', {
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(helper)
+		});
+		
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		if (response.ok) {
+			alert("Ok hogya");
+		}
+		
+		const data = await response.json();
+		console.log(data);
+		// Clear form inputs
+		form.reset();
+	} catch (error) {
+		console.error(error);
+		alert('Failed to add helper. Please try again.');
+	}
+	
+
+location.reload();	
 });
 
-
-const con = document.getElementById("data-container");
-
-async function fetchExperiences() {
-
-  try {
-    const response = await fetch('https://backend-for-experiences.onrender.com/experiences');
-    const data = await response.json();
-    data.forEach(experience => {
-	
-      const { name, title, content, location, category } = experience;
-	  
-	  const card = document.createElement('div');
-        card.className = 'card';
-		card.innerHTML += `<h3><strong>${name}</strong> shared the experience <strong>${title}</strong> about ${location} (${category})</h3> <span>" ${content}"</span>`;
-        con.appendChild(card);
-      
-	  
-	  
-	  
-    });
-  } catch (error) {
-    alert(error);
-  }
+// Get helpers from database
+async function getHelpers() {
+	try {
+		const response = await fetch('https://backend-for-plans.onrender.com/api/helpers');
+		
+		if (!response.ok) {
+			throw new Error(`HTTP error! status: ${response.status}`);
+		}
+		
+		const helpers = await response.json();
+		const helpersList = document.getElementById('helpers-list');
+		
+		helpers.forEach(helper => {
+			const li = document.createElement('li');
+			li.innerHTML = `<h1>${helper.name}</h1> <br> <h2 style="margin-top:-13px">${helper.email}</h2> <br><hr style="height:1px;margin-top:-10px; background:#fff;">
+				<p><strong style="margin-right:15px;" >Type of help:</strong> ${helper.typeOfHelp}</p>
+				<p><strong style="margin-right:25px;">Categories:</strong> ${helper.categoriestype} - ${helper.categories}</p>
+				<p><strong style="margin-right:41px;">Location:</strong> ${helper.locationtype} - ${helper.location}</p>
+				<p><strong style="margin-right:37px;">Schedule:</strong> ${helper.schedule}</p>
+				<p><strong style="margin-right:20px;">Description: </strong> ${helper.comments}</p>
+				
+			`;
+			helpersList.appendChild(li);
+		});
+	} catch (error) {
+		console.error(error);
+		alert('Failed to get helpers. Please try again.');
+	}
 }
+
+
 window.onload = function() {
-fetchExperiences();}
+getHelpers();
+}
 </script>
-<style>
-#data-container{
-	margin:40px 0;
-  display: flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  width:100%;
-}
-#data-container .card{
-	background:#fff;
-	padding:20px 25px;
-	border:1px solid #ccc;
-	line-height:1.7;
-	margin:15px;
-	box-shadow:0 20px 25px -15px rgba(0,0,0,0.3);
-	text-align:center;
-	width:800px;
-	margin-bottom:30px;
-	
-	
-}
-.card strong{
-	text-transform:capitalize;
-}
-.card h3 {
-  font-family: Arial, sans-serif;
-  font-size: 17px;
-  color:#3C87FF;
-}
-.card span{
-	color:black;
-	font-style:italic;
-	font-size:17px;
-	font-weight:700;
-}
 
-</style>
-                <!-- end content wrapper -->
+	</div>
+	</div>
+	</div>
+
+
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				<!-- end content wrapper -->
 
                 <!-- footer -->
                 <footer id="footer">
@@ -1083,7 +993,6 @@ fetchExperiences();}
                             <h4 class="widget-title">Quick Links</h4>
                             <div class="menu-quick-links-container">
                                 <ul id="menu-quick-links" class="menu" itemscope itemtype="http://www.schema.org/SiteNavigationElement">
-								
                                     <li id="menu-item-517" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-517"><a href="https://www.kingstreets.com/about-us/">About us</a></li>
                                     <li id="menu-item-518" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-518"><a href="https://www.kingstreets.com/contact-us/">Contact us</a></li>
                                     <li id="menu-item-519" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-519"><a href="https://www.kingstreets.com/kings-tv/">King&#8217;s TV</a></li>
