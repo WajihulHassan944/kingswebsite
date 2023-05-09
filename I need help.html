@@ -605,7 +605,7 @@ margin-bottom:10px;
 		<a href="Edutainment, Culture and Lifestyle.html" class="linksofnavbar">Edutainment,Culture, & Lifestyle</a>
 		<a href="Creating a plan.html" class="linksofnavbar">Creating a Plan</a> 
 		<a href="I need help.html" class="linksofnavbar active2" style="color:black;">I Need Help</a>
-		<a href="#" class="linksofnavbar">Mentoring Portals</a></p>
+		<a href="Mentoring Portals.html" class="linksofnavbar">Mentoring Portals</a></p>
 	</div>
 </div>
 </center>				
@@ -644,7 +644,7 @@ margin-bottom:10px;
           </li>
 
           <li>
-            <a href="#" class="navbar-link">The Mentoring Portals</a>
+            <a href="Mentoring Portals.html" class="navbar-link">The Mentoring Portals</a>
           </li>
 
         </ul>
@@ -734,6 +734,14 @@ margin-bottom:10px;
 
 		<label for="location">Location:</label><br>
 		<input type="text" id="location" name="location"><br>
+
+		 <label for="contact-method">Preferred method of contact:</label>
+  <select id="contact-method" name="contact-method">
+    <option value="email">Email</option>
+    <option value="phone">Phone</option>
+    <option value="both">Both</option>
+    <!-- Add more options as needed -->
+  </select>
 
 		<label for="situation">Situation:</label><br>
 		<textarea id="situation" name="situation" rows="5"></textarea><br>
@@ -930,6 +938,7 @@ const emailInput = document.querySelector("#email");
 const topicInput = document.querySelector("#topic");
 const locationInput = document.querySelector("#location");
 const situationInput = document.querySelector("#situation");
+const contactmethod = document.querySelector("#contact-method");
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -940,6 +949,7 @@ form.addEventListener("submit", async (event) => {
         topic: topicInput.value,
         location: locationInput.value,
         situation: situationInput.value,
+		contactmethod: contactmethod.value,
 		
 		
     };
@@ -965,6 +975,7 @@ form.addEventListener("submit", async (event) => {
         topicInput.value="";
         locationInput.value="";
         situationInput.value="";
+		contactmethod.value="";
 		location.reload();
 });
 
@@ -976,11 +987,11 @@ async function fetchExperiences() {
     const response = await fetch('https://backend-for-plans.onrender.com/plans');
     const data = await response.json();
     data.forEach(experience => {
-      const { name, email , topic , location , situation } = experience;
+      const { name, email , topic , location , situation , contactmethod} = experience;
 	  
       const card = document.createElement('div');
       card.className = 'cardleft';
-      card.innerHTML += `<h1>${name}</h1> <div><p>${email} - ${topic} - ${location}</p></div> <p id="lastp">" ${situation}"</p>
+      card.innerHTML += `<h1>${name}</h1> <div><p>${email} - ${topic} - ${location}</p></div> <p id="lastp">" ${situation} "</p> Preferred contact method: ${contactmethod}
         <button class="reply-button">Reply</button>
         <div class="reply-form-wrapper" style="background: #f3efe7; padding:20px; margin:10px; width:fit-content; display:none;">
           <form method="post" class="reply-form">
