@@ -665,6 +665,153 @@ function showmymenu(){
 }
 </script>
 
+  <div id="searchwrap">
+  <div class="searchwrap2">
+<form id="mysearchform">
+<div class="search-box">
+  <input class="search-input" type="text" placeholder="Search something.." required>
+  <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+ 
+</div> </form></div>
+</div>
+ <div id="resultsdiv"></div>
+<script>
+const searchForm = document.getElementById('mysearchform');
+const resultsDiv = document.getElementById('resultsdiv');
+
+searchForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const searchInput = document.querySelector('.search-input');
+  const searchKey = searchInput.value.trim().toLowerCase();
+
+  const events = JSON.parse(localStorage.getItem('events'));
+
+  if (events) {
+    const matchedEvents = events.filter((event) => {
+      return Object.values(event).some((value) => {
+        return typeof value === 'string' && value.toLowerCase().includes(searchKey);
+      });
+    });
+
+    if (matchedEvents.length) {
+      resultsDiv.innerHTML = "";
+      for (const event of matchedEvents) {
+        const li = document.createElement('li');
+        li.innerHTML = `
+          <h2>${event.title}</h2>
+          <p><strong>Priority:</strong> ${event.priority}</p>
+          <p><strong>Obstacles:</strong> ${event.obstacles}</p>
+          <p><strong>Category:</strong> ${event.category}</p>
+          <p><strong>Start:</strong> ${event.start}</p>
+          <p><strong>End:</strong> ${event.end}</p>
+          <p><strong>Description:</strong> ${event.description}</p>
+        `;
+        resultsDiv.appendChild(li);
+      }
+    } else {
+      resultsDiv.innerHTML = 'No matching events found.';
+    }
+  } else {
+    resultsDiv.innerHTML = 'No events found.';
+  }
+});
+</script>
+
+<style>
+#resultsdiv{
+	width:100%;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+}
+#resultsdiv li{
+	background:linear-gradient(to top, #141e30, #243b55);
+	padding:20px 30px;
+	max-width:330px;
+	margin:20px;
+	color:#fff;
+	border-radius:8px;
+}
+#resultsdiv li h1{
+	font-size:22px;
+	
+}
+
+#resultsdiv li h2{
+	font-size:20px;
+}
+#searchwrap {
+  text-align: center;
+  min-height: 10vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:100%;
+  margin:10px 0;
+
+}
+#searchwrap .searchwrap2{
+  width:450px;
+  height:9.5vh;display:flex;
+  justify-content:center;
+  align-items:center;
+  
+  
+}
+#searchwrap .search-box {
+  width: 350px;
+  position: relative;
+  display: flex;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+#searchwrap .search-input {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding: 10px 45px 10px 15px;
+  background-color: #eaeaeb;
+  color: #6c6c6c;
+  border-radius: 6px;
+  border:2px solid #485461;
+  transition: all .4s;
+}
+
+#searchwrap .search-input:focus {
+  border:2px solid black;
+  outline:none;
+  box-shadow: 0 1px 12px #b8c6db;
+  -moz-box-shadow: 0 1px 12px #b8c6db;
+  -webkit-box-shadow: 0 1px 12px #b8c6db;
+}
+
+#searchwrap .search-btn {
+  background-color: transparent;
+  font-size: 18px;
+  padding: 6px 9px;
+  margin-left:-45px;
+  border:none;
+  color: black;
+  transition: all .4s;
+  z-index: 10;
+  margin-top:-9px;
+}
+
+#searchwrap .search-btn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+  color: black;
+}
+
+#searchwrap .search-btn:focus {
+  outline:none;
+  color:black;
+}
+</style>  
                     <div class="row" >
                         <div class="col-md-12" >
 			
