@@ -661,7 +661,7 @@ margin-bottom:10px;
  
 </div> </form></div>
 </div>
- <div id="resultsdiv"></div>
+ <div id="resultsdiv" style="width:100%; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; "></div>
  
 <script>const searchForm = document.getElementById('mysearchform');
 const resultsDiv = document.getElementById('resultsdiv');
@@ -834,7 +834,7 @@ searchForm.addEventListener('submit', async (event) => {
     margin-bottom: 20px;
     border: none;
     border-radius: 3px;
-    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
 }
 
 #helpForm #helpForm1 select {
@@ -865,10 +865,10 @@ searchForm.addEventListener('submit', async (event) => {
     background-color: #3e8e41;
 }
 </style>
-
-<div id="helpForm">
-	<h1 style="color:black; font-weight:500; margin:20px auto; font-size:20px;">Help Request Center</h1>
-	<form action="#" method="post" id="helpForm1">
+<div style="width:100%; display:flex; justify-content:center; align-items:center; margin-top:15px;">
+<div id="helpForm" style="padding:20px; padding-bottom:30px; border:3.5px solid black; width:50%;">
+	<h1 style="color:black; font-weight:500; margin:10px auto 20px; font-size:20px;">Help Request Center</h1>
+	<form action="#" method="post" id="helpForm1" style="width:100%;">
 		<label for="name">Name:</label><br>
 		<input type="text" id="name" name="name" required><br>
 
@@ -899,7 +899,7 @@ searchForm.addEventListener('submit', async (event) => {
 		<textarea id="situation" name="situation" rows="5"></textarea><br>
 
 		<center><input type="submit" value="Submit"></center>
-	</form></div>
+	</form></div></div>
 	
 	<div id="data-container"></div>
 	
@@ -909,16 +909,18 @@ searchForm.addEventListener('submit', async (event) => {
 	
 	
 	<div id="industriesArea">
-    <form id="industriesForm" style="margin-bottom:20px;">
+     <div style="width:100%; display:flex; justify-content:center; align-items:center; ">
+	<div style=" padding:15px 40px; border:3.5px solid #333; margin-top:50px; background:#fff;">
+	<form id="industriesForm" style="margin-bottom:20px;">
     <h2 style="margin:20px 0; font-size:22px; font-weight:600; color:black; text-align:center;">Industries!</h2>
-    <input type="text" id="industry" name="industry" placeholder="Add a new industry" required style="padding:5px; border:none; border-bottom:1px solid #636363; padding-left:0;" >
+    <center><input type="text" id="industry" name="industry" placeholder="Add a new industry" required style="padding:5px; border:none; border-bottom:1px solid #636363; padding-left:0;" >
    
-    <input type="submit" value="Submit">
+    <input type="submit" value="Submit"></center>
   </form>
   
   
 <ol class="rounded-list"></ol>
-  </div>
+  </div></div></div>
     <script>
 	
 const industriesForm = document.querySelector('#industriesForm');
@@ -991,7 +993,7 @@ border-bottom:4px solid ##f3efe7;
 				justify-content:center;
 				align-items:center;
 				flex-direction:column;
-				background:#fff;
+				
 				padding:20px;
 			}
 			#industriesArea ol{

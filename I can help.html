@@ -648,7 +648,7 @@ margin-bottom:10px;
  
 </div> </form></div>
 </div>
- <div id="resultsdiv"></div>
+ <div id="resultsdiv" style="width:100%; display:flex; justify-content:center; align-items:center; flex-wrap:wrap; "></div>
  
 <script>const searchForm = document.getElementById('mysearchform');
 const resultsDiv = document.getElementById('resultsdiv');
@@ -787,7 +787,7 @@ searchForm.addEventListener('submit', async (event) => {
 	<div class="col-md-12"><style>
 #divContainer h1{
 	text-align: center;
-	margin-top: 50px;
+	margin-top: 30px;
 }
 
 #divContainer form {
@@ -880,7 +880,8 @@ searchForm.addEventListener('submit', async (event) => {
 	padding:10px;
 }
 </style>
-	<div id="divContainer">
+	<div id="divContainer" style="width:100%; display:flex; justify-content:center; align-items:center; flex-direction:column; margin-top:30px;">
+	<div style="width:45%; border:3px solid black;">
 	<h1 style="color:black; font-weight:500; font-size:23px;">Helpers Directory</h1>
 	<center><p>Create Your Helper Profile</p></center>
 	<form id="form2">
@@ -961,8 +962,8 @@ searchForm.addEventListener('submit', async (event) => {
 		</div>
 		<button type="submit">Add Helper</button>
 	</form>
-	
-	<div class="helpers-container">
+	</div>
+	<div class="helpers-container" style="margin-top:50px">
 	<center><h2 style="color:black; font-weight:500; ">Helpers</h2></center>
 	<ul id="helpers-list"></ul>
 </div>
