@@ -391,14 +391,11 @@
                 <!-- header -->
                 <header id="header">
                     <div class="page-header d-md-flex align-items-center">
-                        <div>
-                            <div id="wp-custom-header" class="wp-custom-header"><img src="wp-content/themes/kingstreets/assets/img/martin-luther-king.png" width="332" height="127" alt="Kingstreets" /></div>
-                            <!-- <img src="img/martin-luther-king.png" class="img-fluid"> -->
-                        </div>
-                        <div class="logo">
-                            <!-- <img src="img/logo.png" class="img-fluid"> -->
-                            <a href="https://www.kingstreets.com/" class="custom-logo-link" rel="home" aria-current="page"><img class="logo-img" width="460" height="82" src="wp-content/uploads/2020/10/cropped-logo.png" class="custom-logo" alt="Kingstreets" srcset="wp-content/uploads/2020/10/cropped-logo.png 460w, wp-content/uploads/2020/10/cropped-logo-300x53.png 300w" sizes="(max-width: 460px) 100vw, 460px" /></a>                            </div>
-                        <div class="freedomring">
+                       <div>
+									
+								<a href="https://www.kingstreets.com/"><img src="https://i.ibb.co/M5hFm7D/banner.png" style="margin-right:170px;">	</a>
+									
+								</div> <div class="freedomring">
                             <img src="wp-content/themes/kingstreets/assets/img/freedomring.png" width="100">
                         </div>
                         <div class="credentials flex-fill">
@@ -863,9 +860,11 @@ margin-top:-5px;
 	<div style=" padding:15px 40px; border:4px solid #333; margin-top:50px;">
 	<form id="industriesForm" style="margin-bottom:20px;">
     <h2 style="margin:20px 0; font-size:22px; font-weight:600; color:black; text-align:center;">Industries!</h2>
+	<div style="display:flex; flex-direction:column; justify-content:center; align-items:center;">
     <center><input type="text" id="industry" name="industry" placeholder="Add a new industry" required style="padding:5px; border:none; border-bottom:1px solid #636363; padding-left:0;" >
-   
-    <input type="submit" value="Submit"></center>
+   <center><input type="text" id="industryLink" name="industryLink" placeholder="Add an industry link respectively" style="padding:5px; border:none; border-bottom:1px solid #636363; padding-left:0; margin-bottom:20px;" >
+   </center>
+    <input type="submit" value="Submit" style="padding:4px 40px; color:#fff; background:black;"></div>
   </form>
   
   
@@ -878,6 +877,7 @@ industriesForm.addEventListener('submit', async (event) => {
   event.preventDefault();
   
   const listitem = document.getElementById("industry").value;
+  const link = document.getElementById("industryLink").value;
   
   try {
     const response = await fetch('https://backend-for-plans.onrender.com/industries', {
@@ -887,6 +887,7 @@ industriesForm.addEventListener('submit', async (event) => {
     },
     body: JSON.stringify({
       listitem: listitem,
+	  link: link,
     }),
 	
  	});
@@ -912,10 +913,10 @@ async function fetchIndustries() {
     const data = await response.json();
     data.forEach(industry => {
 	
-      const { listitem } = industry;
+      const { listitem , link } = industry;
 	  
 	  const industryItem = document.createElement('li');
-	  industryItem.innerHTML = ` <a href="#">${listitem}</a> `;
+	  industryItem.innerHTML = ` <a href="${link}">${listitem}</a> `;
 	  myIndustriesList.appendChild(industryItem);
   
 	  
