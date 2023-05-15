@@ -391,14 +391,11 @@
                 <!-- header -->
                 <header id="header">
                     <div class="page-header d-md-flex align-items-center">
-                        <div>
-                            <div id="wp-custom-header" class="wp-custom-header"><img src="wp-content/themes/kingstreets/assets/img/martin-luther-king.png" width="332" height="127" alt="Kingstreets" /></div>
-                            <!-- <img src="img/martin-luther-king.png" class="img-fluid"> -->
-                        </div>
-                        <div class="logo">
-                            <!-- <img src="img/logo.png" class="img-fluid"> -->
-                            <a href="https://www.kingstreets.com/" class="custom-logo-link" rel="home" aria-current="page"><img class="logo-img" width="460" height="82" src="wp-content/uploads/2020/10/cropped-logo.png" class="custom-logo" alt="Kingstreets" srcset="wp-content/uploads/2020/10/cropped-logo.png 460w, wp-content/uploads/2020/10/cropped-logo-300x53.png 300w" sizes="(max-width: 460px) 100vw, 460px" /></a>                            </div>
-                        <div class="freedomring">
+                       <div>
+									
+								<a href="https://www.kingstreets.com/"><img src="https://i.ibb.co/M5hFm7D/banner.png" style="margin-right:170px;">	</a>
+									
+								</div> <div class="freedomring">
                             <img src="wp-content/themes/kingstreets/assets/img/freedomring.png" width="100">
                         </div>
                         <div class="credentials flex-fill">
@@ -563,12 +560,13 @@ margin-bottom:10px;
 	justify-content:center;
 }
 .containered .hello{
-	width:280px;
-	height:180px;
+	width:310px;
+	height:210px;
 	background:#eee;
 	border:1px solid rgba(0,0,0,0.1);
 	margin:10px;
 	position:relative;
+	margin-bottom:20px;
 }
 .containered .hello .title{
 	position:absolute;
@@ -776,40 +774,38 @@ function showmymenu(){
                         <div class="col-md-12" >
 						<div style="border:3.5px solid black ; padding:20px 0;">
                 <form>
-							<div class="banners mb-4" style="width:100%; height:500px; padding:0px; " >
+							<div class="banners mb-4" style="width:100%;  padding:0px; " >
                                <span property="itemListElement" typeof="ListItem"><a property="item" typeof="WebPage" title="Go to Kingstreets." href="https://www.kingstreets.com" class="home" ><span property="name"></span></a><meta property="position" content="1"></span>  <span property="itemListElement" typeof="ListItem"><span property="name" class="archive post-sharemyexperiences-archive current-item" style="letter-spacing:1px;"> </span><meta property="url" content="https://www.kingstreets.com/sharemyexperiences/"><meta property="position" content="2"></span>					
 							<center><p style="letter-spacing:0.5px; max-width:70%; text-align:center; margin-bottom:20px;">If you select any of the checkbox, you are at the brighter & positive side. It will reflect you have sound knowledge about yourself. At the end, your report will be generated, based on your selected attributes.</p></center>
                              	<div class="containered" style="margin-top:20px;">
 
 									<div class="hello hello1" style=" display:flex;   flex-direction:column;">
 										<div class="title">
-											<input class="checkbox" onclick="myfunc1()" type="checkbox" id="My Life" value="My Life">
-											<label for="checkbox-title" style="font-weight:600; color:black; ">My Life</label>
+											<input class="checkbox" onclick="myfunc1()" type="checkbox" id="Personal Growth and Learning" value="Personal Growth and Learning">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Personal Growth and Learning</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="My Life" type="checkbox" id="A growth mindset" value="A growth mindset">
-										<label for="checkbox" >A growth mindset</label>
+										<input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Self-Reflection and Self-Awareness" value="Self-Reflection and Self-Awareness">
+										<label for="checkbox" >Self-Reflection and Self-Awareness</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="My Life" type="checkbox" id="Personal Values" value="Personal Values">
-										<label for="checkbox" >Personal values</label>
+										<label for="checkbox" ><input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Goal Setting and Personal Development Planning" value="Goal Setting and Personal Development Planning"> Goal Setting and Personal Development Planning</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="My Life" type="checkbox" id="Strengths and weaknesses" value="Strengths and weaknesses">
-										<label for="checkbox">Strengths and weaknesses</label>
+										<input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Continuous Learning and Skill Acquisition" value="Continuous Learning and Skill Acquisition">
+										<label for="checkbox">Continuous Learning and Skill Acquisition</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="My Life" type="checkbox" id="Fears and insecurities" value="Fears and insecurities">
-										<label for="checkbox">Fears and insecurities</label>
+										<input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Emotional Intelligence and Self-Management" value="Emotional Intelligence and Self-Management">
+										<label for="checkbox">Emotional Intelligence and Self-Management</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="My Life" type="checkbox" id="achievements and failures" value="achievements and failures">
-										<label for="checkbox">achievements and failures</label>
+										<label for="checkbox"><input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Overcoming Challenges and Resilience Building" value="Overcoming Challenges and Resilience Building"> Overcoming Challenges and Resilience Building</label>
 										</div>
 										
 									</div>
@@ -819,23 +815,34 @@ function showmymenu(){
 
 									<div class="hello hello1" style=" display:flex;   flex-direction:column;">
 										<div class="title">
-											<input class="checkbox" onclick="myfun2()" type="checkbox" id="My Finances" value="My Finances">
-											<label for="checkbox-title" style="font-weight:600; color:black; ">My Finances</label>
+											<input class="checkbox" onclick="myfun2()" type="checkbox" id="Career and Professional Development" value="Career and Professional Development">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Career and Professional Development</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="My Finances" type="checkbox" id="Goals and aspirations" value="Goals and aspirations">
-										<label for="checkbox">Goals and aspirations</label>
+										<input class="checkbox" name="Career and Professional Development" type="checkbox" id="Goal Setting and Planning" value="Goal Setting and Planning">
+										<label for="checkbox">Goal Setting and Planning</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="My Finances" type="checkbox" id="Budgeting & managing money" value="Budgeting & managing money">
-										<label for="checkbox">Budgeting & managing money</label>
+										<input class="checkbox" name="Career and Professional Development" type="checkbox" id="Skill Development and Training" value="Skill Development and Training">
+										<label for="checkbox">Skill Development and Training</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="My Finances" type="checkbox" id="Debt and savings" value="Debt and savings">
-										<label for="checkbox">Debt and savings</label>
+										<input class="checkbox" name="Career and Professional Development" type="checkbox" id="Networking and Professional Relationships" value="Networking and Professional Relationships">
+										<label for="checkbox">Networking and Professional Relationships</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Career and Professional Development" type="checkbox" id="Job Satisfaction and Work-Life Balance" value="Job Satisfaction and Work-Life Balance">
+										<label for="checkbox">Job Satisfaction and Work-Life Balance</label>
+										</div>
+										
+										
+										<div>
+										<input class="checkbox" name="Career and Professional Development" type="checkbox" id="Advancement and Promotion Opportunities" value="Advancement and Promotion Opportunities">
+										<label for="checkbox">Advancement and Promotion Opportunities</label>
 										</div>
 										
 									</div>
@@ -844,23 +851,103 @@ function showmymenu(){
 									
 									<div class="hello hello1" style=" display:flex;   flex-direction:column;">
 										<div class="title">
-											<input class="checkbox" onclick="myfun3()" type="checkbox" id="Social Life/Family/Friends" value="Social Life/Family/Friends">
-											<label for="checkbox-title" style="font-weight:600; color:black; ">Social Life/Family/Friends</label>
+											<input class="checkbox" onclick="myfun3()" type="checkbox" id="Health and Wellness" value="Health and Wellness">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Health and Wellness</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Social Life/Family/Friends" type="checkbox" id="Social confidence in social settings" value="Social confidence in social settings">
-										<label for="checkbox">Social confidence in social settings</label>
+										<input class="checkbox" name="Health and Wellness" type="checkbox" id="Physical Fitness and Exercise" value="Physical Fitness and Exercise">
+										<label for="checkbox">Physical Fitness and Exercise</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Social Life/Family/Friends" type="checkbox" id="Social circles and communities" value="Social circles and communities">
-										<label for="checkbox">Social circles and communities</label>
+										<input class="checkbox" name="Health and Wellness" type="checkbox" id="Nutrition and Healthy Eating Habits" value="Nutrition and Healthy Eating Habits">
+										<label for="checkbox">Nutrition and Healthy Eating Habits</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Social Life/Family/Friends" type="checkbox" id="Closest confidants" value="Closest confidants">
-										<label for="checkbox">Closest confidants</label>
+										<input class="checkbox" name="Health and Wellness" type="checkbox" id="Stress Management and Mental Health" value="Stress Management and Mental Health">
+										<label for="checkbox">Stress Management and Mental Health</label>
+										</div>
+										
+										
+										<div>
+										<input class="checkbox" name="Health and Wellness" type="checkbox" id="Preventive Care and Regular Check-ups" value="Preventive Care and Regular Check-ups">
+										<label for="checkbox">Preventive Care and Regular Check-ups</label>
+										</div>
+										
+										
+										<div>
+										<input class="checkbox" name="Health and Wellness" type="checkbox" id="Sleep Quality and Restorative Practices" value="Sleep Quality and Restorative Practices">
+										<label for="checkbox">Sleep Quality and Restorative Practices</label>
+										</div>
+									</div>
+									
+									
+									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
+										<div class="title">
+											<input class="checkbox checkbox-box" onclick="myfun4()" type="checkbox" id="Home and Environment" value="Home and Environment">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Home and Environment</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Home and Environment" type="checkbox" id="Home Organization and Maintenance" value="Home Organization and Maintenance">
+										<label for="checkbox">Home Organization and Maintenance</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Home and Environment"  type="checkbox" id="Interior Design and Aesthetics" value="Interior Design and Aesthetics">
+										<label for="checkbox">Interior Design and Aesthetics</label>
+										</div>
+										
+										<div>
+										
+										<label for="checkbox"><input class="checkbox" name="Home and Environment" type="checkbox" id="Sustainable Living and Environmental Responsibility" value="Sustainable Living and Environmental Responsibility"> Sustainable Living and Environmental Responsibility</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Home and Environment" type="checkbox" id="Neighborhood and Community Engagement" value="Neighborhood and Community Engagement">
+										<label for="checkbox">Neighborhood and Community Engagement</label>
+										</div>
+			
+										<div>
+										<input class="checkbox" name="Home and Environment" type="checkbox" id="Safety and Security Measures" value="Safety and Security Measures">
+										<label for="checkbox">Safety and Security Measures</label>
+										</div>
+										
+									</div>
+									
+									
+									
+									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
+										<div class="title">
+											<input class=" checkbox checkbox-box" onclick="myfun5()" type="checkbox" id="Relationships and Social Connections" value="Relationships and Social Connections">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Relationships and Social Connections</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Relationships and Social Connections" type="checkbox" id="Family and Close Relationships" value="Family and Close Relationships">
+										<label for="checkbox">Family and Close Relationships</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Relationships and Social Connections" type="checkbox" id="Friendship and Social Support Network" value="Friendship and Social Support Network">
+										<label for="checkbox">Friendship and Social Support Network</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Relationships and Social Connections" type="checkbox" id="Romantic Relationships and Intimacy" value="Romantic Relationships and Intimacy">
+										<label for="checkbox">Romantic Relationships and Intimacy</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Relationships and Social Connections" type="checkbox" id="Communication and Conflict Resolution" value="Communication and Conflict Resolution">
+										<label for="checkbox">Communication and Conflict Resolution</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Relationships and Social Connections" type="checkbox" id="Building and Maintaining Social Connections" value="Building and Maintaining Social Connections">
+										<label for="checkbox">Building and Maintaining Social Connections</label>
 										</div>
 										
 									</div>
@@ -868,105 +955,158 @@ function showmymenu(){
 									
 									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
 										<div class="title">
-											<input class="checkbox checkbox-box" onclick="myfun4()" type="checkbox" id="Surroundings" value="Surroundings">
-											<label for="checkbox-title" style="font-weight:600; color:black; ">Surroundings</label>
+											<input class="checkbox checkbox-box" onclick="myfun6()" type="checkbox" id="Finances and Wealth" value="Finances and Wealth">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Finances and Wealth</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Surroundings" type="checkbox" id="Clutter and minimalism" value="Clutter and minimalism">
-										<label for="checkbox">Clutter and minimalism</label>
+										<input class="checkbox" name="Finances and Wealth" type="checkbox" id="Budgeting and Financial Planning" value="Budgeting and Financial Planning">
+										<label for="checkbox">Budgeting and Financial Planning</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Surroundings"  type="checkbox" id="Favorite smells, textures, & tastes" value="Favorite smells, textures, & tastes">
-										<label for="checkbox">Favorite smells, textures, & tastes</label>
+										<input class="checkbox" name="Finances and Wealth" type="checkbox" id="Savings and Investments" value="Savings and Investments">
+										<label for="checkbox">Savings and Investments</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Surroundings" type="checkbox" id="Cleanliness and organization" value="Cleanliness and organization">
-										<label for="checkbox">Cleanliness and organization</label>
+										<input class="checkbox" name="Finances and Wealth" type="checkbox" id="Debt Management and Credit Score" value="Debt Management and Credit Score">
+										<label for="checkbox">Debt Management and Credit Score</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Surroundings" type="checkbox" id="Level of comfort with noise" value="Level of comfort with noise">
-										<label for="checkbox">Level of comfort with noise</label>
+										<input class="checkbox" name="Finances and Wealth" type="checkbox" id="Income Generation and Career Growth" value="Income Generation and Career Growth">
+										<label for="checkbox">Income Generation and Career Growth</label>
+										</div>
+										
+										<div>
+										<label for="checkbox"><input class="checkbox" name="Finances and Wealth" type="checkbox" id="Retirement Planning and Long-Term Financial Security" value="Retirement Planning and Long-Term Financial Security"> Retirement Planning and Long-Term Financial Security</label>
 										</div>
 										
 									</div>
+									
+									
+									
+									
+									
+									
+									
+									<!--third row started    -->
+									
+									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
+										<div class="title">
+											<input class="checkbox checkbox-box" onclick="myfun6()" type="checkbox" id="Recreation and Leisure" value="Recreation and Leisure">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Recreation and Leisure</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Recreation and Leisure" type="checkbox" id="Hobbies and Creative Pursuits" value="Hobbies and Creative Pursuits">
+										<label for="checkbox">Hobbies and Creative Pursuits</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Recreation and Leisure" type="checkbox" id="Sports and Physical Activities" value="Sports and Physical Activities">
+										<label for="checkbox">Sports and Physical Activities</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Recreation and Leisure" type="checkbox" id="Travel and Exploration" value="Travel and Exploration">
+										<label for="checkbox">Travel and Exploration</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Recreation and Leisure" type="checkbox" id="Entertainment and Media Consumption" value="Entertainment and Media Consumption">
+										<label for="checkbox">Entertainment and Media Consumption</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Recreation and Leisure" type="checkbox" id="Relaxation Techniques and Stress Relief" value="Relaxation Techniques and Stress Relief">
+										<label for="checkbox">Relaxation Techniques and Stress Relief</label>
+										</div>
+										
+									</div>
+									
 									
 									
 									
 									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
 										<div class="title">
-											<input class=" checkbox checkbox-box" onclick="myfun5()" type="checkbox" id="Health" value="Health">
-											<label for="checkbox-title" style="font-weight:600; color:black; ">Health</label>
+											<input class="checkbox checkbox-box" onclick="myfun6()" type="checkbox" id="Spirituality and Meaning" value="Spirituality and Meaning">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Spirituality and Meaning</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Health" type="checkbox" id="Preventive care and health screenings" value="Preventive care and health screenings">
-										<label for="checkbox">Preventive care and health screenings</label>
+										<input class="checkbox" name="Spirituality and Meaning" type="checkbox" id="Personal Beliefs and Values Exploration" value="Personal Beliefs and Values Exploration">
+										<label for="checkbox">Personal Beliefs and Values Exploration</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Health" type="checkbox" id="Mental health and emotional well-being" value="Mental health and emotional well-being">
-										<label for="checkbox">Mental health and emotional well-being</label>
+										<input class="checkbox" name="Spirituality and Meaning" type="checkbox" id="Meditation and Mindfulness Practices" value="Meditation and Mindfulness Practices">
+										<label for="checkbox">Meditation and Mindfulness Practices</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Health" type="checkbox" id="Relationship with food and eating habits" value="Relationship with food and eating habits">
-										<label for="checkbox">Relationship with food and eating habits</label>
+										<input class="checkbox" name="Spirituality and Meaning" type="checkbox" id="Rituals and Ceremonies" value="Rituals and Ceremonies">
+										<label for="checkbox">Rituals and Ceremonies</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Health" type="checkbox" id="self-care and stress management" value="self-care and stress management">
-										<label for="checkbox">self-care and stress management</label>
+										<input class="checkbox" name="Spirituality and Meaning" type="checkbox" id="Connection with Nature and the Universe" value="Connection with Nature and the Universe">
+										<label for="checkbox">Connection with Nature and the Universe</label>
+										</div>
+										
+										<div>
+										<input class="checkbox" name="Spirituality and Meaning" type="checkbox" id="Finding Purpose and Meaning in Life" value="Finding Purpose and Meaning in Life">
+										<label for="checkbox">Finding Purpose and Meaning in Life</label>
 										</div>
 										
 									</div>
+									
+									
 									
 									
 									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
 										<div class="title">
-											<input class="checkbox checkbox-box" onclick="myfun6()" type="checkbox" id="Work/Job/Unemployed" value="Work/Job/Unemployed">
-											<label for="checkbox-title" style="font-weight:600; color:black; ">Work/Job/Unemployed</label>
+											<input class="checkbox checkbox-box" onclick="myfun6()" type="checkbox" id="Contribution and Giving Back" value="Contribution and Giving Back">
+											<label for="checkbox-title" style="font-weight:600; color:black; ">Contribution and Giving Back</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Preferred work environments" value="Preferred work environments">
-										<label for="checkbox">Preferred work environments</label>
+										<input class="checkbox" name="Contribution and Giving Back" type="checkbox" id="Volunteer Work and Community Service" value="Volunteer Work and Community Service">
+										<label for="checkbox">Volunteer Work and Community Service</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Work style and schedule" value="Work style and schedule">
-										<label for="checkbox">Work style and schedule</label>
+										<input class="checkbox" name="Contribution and Giving Back" type="checkbox" id="Philanthropy and Charitable Giving" value="Philanthropy and Charitable Giving">
+										<label for="checkbox">Philanthropy and Charitable Giving</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Short-term and long-term career goals" value="Short-term and long-term career goals">
-										<label for="checkbox">Short-term and long-term career goals</label>
+										<input class="checkbox" name="Contribution and Giving Back" type="checkbox" id="Mentorship and Coaching" value="Mentorship and Coaching">
+										<label for="checkbox">Mentorship and Coaching</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Job searching and networking" value="Job searching and networking">
-										<label for="checkbox">Job searching and networking</label>
+										<input class="checkbox" name="Contribution and Giving Back" type="checkbox" id="Advocacy and Social Activism" value="Advocacy and Social Activism">
+										<label for="checkbox">Advocacy and Social Activism</label>
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Work/Job/Unemployed" type="checkbox" id="Self-employment or entrepreneurship" value="Self-employment or entrepreneurship">
-										<label for="checkbox">Self-employment or entrepreneurship</label>
+										<label for="checkbox"><input class="checkbox" name="Contribution and Giving Back" type="checkbox" id="Environmental and Social Responsibility Initiatives" value="Environmental and Social Responsibility Initiatives"> Environmental and Social Responsibility Initiatives</label>
 										</div>
 										
 									</div>
+									
 									
                             </div>
                      </div>
+						
 						</form>
-						
-						<script>
-
-						</script>
-						
-							<!-- Profile section-->
+						<center><div class="showReport" >
+								<h3 id="test"  >Show Report</h3>
+							</div>	</center></div>
+					
+							<!-- Profile section   onclick="showTheReport()"      -->
 							
 							
 							
@@ -1041,9 +1181,7 @@ function showmymenu(){
 						<div class="ReportWrapper" style="margin:70px 0;">
 						
 						<div class="report-container" style="margin-top:10px;" >
-							<div class="showReport" >
-								<h3 id="test" onclick="showTheReport()" >Show Report</h3>
-							</div>
+							
 							</div>
 							
 							<div id="reportarea" class="reportarea">
@@ -1133,7 +1271,7 @@ function showmymenu(){
 							
 							
 							</div>
-							</div>
+							
 							<style>
 							.lifePreprocessor{
 								width:70%;
