@@ -559,6 +559,9 @@ margin-bottom:10px;
 	padding:30px 0;
 	justify-content:center;
 }
+.containered .hello label{
+	font-weight:600;
+}
 .containered .hello{
 	width:310px;
 	height:210px;
@@ -566,7 +569,7 @@ margin-bottom:10px;
 	border:1px solid rgba(0,0,0,0.1);
 	margin:10px;
 	position:relative;
-	margin-bottom:20px;
+	margin-bottom:10px;
 }
 .containered .hello .title{
 	position:absolute;
@@ -791,7 +794,7 @@ function showmymenu(){
 										</div>
 										
 										<div>
-										<label for="checkbox" ><input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Goal Setting and Personal Development Planning" value="Goal Setting and Personal Development Planning"> Goal Setting and Personal Development Planning</label>
+										<label for="checkbox" ><input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Goal Setting and Personal Development Planning" value="Goal Setting and Personal Development Planning"> Personal Development</label>
 										</div>
 										
 										<div>
@@ -800,12 +803,11 @@ function showmymenu(){
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Emotional Intelligence and Self-Management" value="Emotional Intelligence and Self-Management">
-										<label for="checkbox">Emotional Intelligence and Self-Management</label>
+										<label for="checkbox"><input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Emotional Intelligence and Self-Management" value="Emotional Intelligence and Self-Management"> Emotional Intelligence and Self-Management</label>
 										</div>
 										
 										<div>
-										<label for="checkbox"><input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Overcoming Challenges and Resilience Building" value="Overcoming Challenges and Resilience Building"> Overcoming Challenges and Resilience Building</label>
+										<label for="checkbox"><input class="checkbox" name="Personal Growth and Learning" type="checkbox" id="Overcoming Challenges and Resilience Building" value="Overcoming Challenges and Resilience Building"> Overcoming Challenges</label>
 										</div>
 										
 									</div>
@@ -946,8 +948,7 @@ function showmymenu(){
 										</div>
 										
 										<div>
-										<input class="checkbox" name="Relationships and Social Connections" type="checkbox" id="Building and Maintaining Social Connections" value="Building and Maintaining Social Connections">
-										<label for="checkbox">Building and Maintaining Social Connections</label>
+										<label for="checkbox"><input class="checkbox" name="Relationships and Social Connections" type="checkbox" id="Building and Maintaining Social Connections" value="Building and Maintaining Social Connections"> Building and Maintaining Social Connections</label>
 										</div>
 										
 									</div>
@@ -995,7 +996,7 @@ function showmymenu(){
 									
 									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
 										<div class="title">
-											<input class="checkbox checkbox-box" onclick="myfun6()" type="checkbox" id="Recreation and Leisure" value="Recreation and Leisure">
+											<input class="checkbox checkbox-box" onclick="myfunc7()" type="checkbox" id="Recreation and Leisure" value="Recreation and Leisure">
 											<label for="checkbox-title" style="font-weight:600; color:black; ">Recreation and Leisure</label>
 										</div>
 										
@@ -1031,7 +1032,7 @@ function showmymenu(){
 									
 									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
 										<div class="title">
-											<input class="checkbox checkbox-box" onclick="myfun6()" type="checkbox" id="Spirituality and Meaning" value="Spirituality and Meaning">
+											<input class="checkbox checkbox-box" onclick="myfunc8()" type="checkbox" id="Spirituality and Meaning" value="Spirituality and Meaning">
 											<label for="checkbox-title" style="font-weight:600; color:black; ">Spirituality and Meaning</label>
 										</div>
 										
@@ -1067,7 +1068,7 @@ function showmymenu(){
 									
 									<div class="hello" style=" display:flex;   flex-direction:column; margin-top:40px;">
 										<div class="title">
-											<input class="checkbox checkbox-box" onclick="myfun6()" type="checkbox" id="Contribution and Giving Back" value="Contribution and Giving Back">
+											<input class="checkbox checkbox-box" onclick="myfunc9()" type="checkbox" id="Contribution and Giving Back" value="Contribution and Giving Back">
 											<label for="checkbox-title" style="font-weight:600; color:black; ">Contribution and Giving Back</label>
 										</div>
 										
@@ -1103,10 +1104,12 @@ function showmymenu(){
 						
 						</form>
 						<center><div class="showReport" >
-								<h3 id="test"  >Show Report</h3>
-							</div>	</center></div>
+								<h3 id="test" onclick="showTheReport()" >Show Report</h3>
+							</div>
+							</center>
+						</div>
 					
-							<!-- Profile section   onclick="showTheReport()"      -->
+							<!-- Profile section         -->
 							
 							
 							
@@ -1181,7 +1184,6 @@ function showmymenu(){
 						<div class="ReportWrapper" style="margin:70px 0;">
 						
 						<div class="report-container" style="margin-top:10px;" >
-							
 							</div>
 							
 							<div id="reportarea" class="reportarea">
@@ -1193,17 +1195,23 @@ function showmymenu(){
 								
 								
 								<div class="secOneHolding">
-								<div class="reportSectionone reportSection1"><h1 class="titleds mb-2">My Life</h1><p id="sec1selects" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone reportSection1"><h1 class="titleds mb-2">Personal Growth and Learning</h1><p id="sec1selects" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone reportSection2"><h1 class="titleds mb-2">My Finances</h1><p id="sec2selects" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone reportSection2"><h1 class="titleds mb-2">Career and Professional Development</h1><p id="sec2selects" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone reportSection3"><h1 class="titleds mb-2">Social Life/Family/Friends</h1><p id="sec3selects" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone reportSection3"><h1 class="titleds mb-2">Health and Wellness</h1><p id="sec3selects" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone reportSection4"><h1 class="titleds mb-2">Surroundings</h1><p id="sec4selects" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone reportSection4"><h1 class="titleds mb-2">Home and Environment</h1><p id="sec4selects" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone reportSection5"><h1 class="titleds mb-2">Health</h1><p id="sec5selects" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone reportSection5"><h1 class="titleds mb-2">Relationships and Social Connections</h1><p id="sec5selects" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone reportSection6"><h1 class="titleds mb-2">Job</h1><p id="sec6selects" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone reportSection6"><h1 class="titleds mb-2">Finances and Wealth</h1><p id="sec6selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection7"><h1 class="titleds mb-2">Recreation and Leisure</h1><p id="sec7selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection8"><h1 class="titleds mb-2">Spirituality and Meaning</h1><p id="sec8selects" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone reportSection9"><h1 class="titleds mb-2">Contribution and Giving Back</h1><p id="sec9selects" style="margin-left:5px;"></p></div>
 								
 								</div>
 								
@@ -1229,7 +1237,7 @@ function showmymenu(){
 						
 						
 							<div id="profiles" class="profile" onclick="myyy()">
-							<h1 style="color:#f0b017">Hi!</h1>
+							<h1 style="color:black">Areas of Life selected</h1>
 							<div id="reportarea2" class="reportarea2" style="margin-left:-60px;">
 							<div>
 							
@@ -1239,17 +1247,23 @@ function showmymenu(){
 								
 								
 								<div class="secOneHolding" style="display:flex; flex-wrap:wrap">
-								<div class="reportSectionone1 reportSection11" style="border:none;"><h1 >My Life</h1><p id="sec1selects1" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone1 reportSection11" style="border:none;"><h1 >Personal Growth and Learning</h1><p id="sec1selects1" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone1 reportSection22" style="border:none;"><h1 >My Finances</h1><p id="sec2selects2" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone1 reportSection22" style="border:none;"><h1 >Career and Professional Development</h1><p id="sec2selects2" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone1 reportSection33" style="border:none;"><h1 >Social Life/Family/Friends</h1><p id="sec3selects3" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone1 reportSection33" style="border:none;"><h1 >Health and Wellness</h1><p id="sec3selects3" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone1 reportSection44" style="border:none;"><h1 >Surroundings</h1><p id="sec4selects4" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone1 reportSection44" style="border:none;"><h1 >Home and Environment</h1><p id="sec4selects4" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone1 reportSection55" style="border:none;"><h1 >Health</h1><p id="sec5selects5" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone1 reportSection55" style="border:none;"><h1 >Relationships and Social Connections</h1><p id="sec5selects5" style="margin-left:5px;"></p></div>
 								
-								<div class="reportSectionone1 reportSection66" style="border:none;"><h1 >Job</h1><p id="sec6selects6" style="margin-left:5px;"></p></div>
+								<div class="reportSectionone1 reportSection66" style="border:none;"><h1 >Finances and Wealth</h1><p id="sec6selects6" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone1 reportSection77" style="border:none;"><h1 >Recreation and Leisure</h1><p id="sec7selects7" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone1 reportSection88" style="border:none;"><h1 >Spirituality and Meaning</h1><p id="sec8selects8" style="margin-left:5px;"></p></div>
+								
+								<div class="reportSectionone1 reportSection99" style="border:none;"><h1 >Contribution and Giving Back</h1><p id="sec9selects9" style="margin-left:5px;"></p></div>
 								
 								</div>
 								
@@ -2351,31 +2365,23 @@ function addTask(){
 				
 				<script>
 				var listArray=[];						function myfun2(){
-							var checkboxtwo =document.getElementById("My Finances");
+							var checkboxtwo =document.getElementById("Career and Professional Development");
 							var guidelines=document.getElementById("guidelines-para");
 				
 							if(checkboxtwo.checked == true){
-								var allcheckboxes = document.getElementsByName("My Finances");
+								var allcheckboxes = document.getElementsByName("Career and Professional Development");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=true;
 									listArray.push(allcheckboxes[i].value);
 							
-							guidelines.innerHTML = `General guidelines for My Finances <br><br> My Finances: Your finances are a crucial part of your life and can greatly impact your overall well-being. Consider your current financial situation, including your income, expenses, assets, and liabilities. Reflect on your financial goals and values.<br>
-Goals and Aspirations: Your goals and aspirations are important factors in determining who you are and what you want out of life. Consider what you want to achieve in your personal and professional life, both in the short-term and the long-term. Reflect on what drives you and motivates you to succeed. <br>
-Budgeting & Managing Money: Budgeting and managing money are key skills for achieving financial stability and reaching your goals. Consider your spending habits, financial priorities, and strategies for managing your money. Reflect on how you can improve your financial management skills and develop healthy money habits. <br>
-Debt: Debt can be a significant source of stress and can impact your financial health. Consider your current debt situation, including any outstanding loans or credit card balances. Reflect on strategies for managing and paying off your debt. <br>
-Savings: Saving money is an important part of achieving financial security and reaching your goals. Consider your current savings habits, including how much you save and where you save it. Reflect on strategies for increasing your savings and building a strong financial foundation. <br>
-When exploring the question, "Who am I?" it's important to consider your financial situation and goals as an integral part of your identity. By reflecting on these five points, you can gain a better understanding of your financial values, goals, and priorities, and work towards achieving financial stability and success. Remember to approach the process with openness, honesty, and self-compassion, and seek out resources and support when needed. <br>
-
-
-`;
+							guidelines.innerHTML = ``;
 			
 						
 							
 							
 								}
 							}else{
-								var allcheckboxes = document.getElementsByName("My Finances");
+								var allcheckboxes = document.getElementsByName("Career and Professional Development");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=false;
 									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
@@ -2385,25 +2391,18 @@ When exploring the question, "Who am I?" it's important to consider your financi
 							
 						}
 						function myfun3(){
-							var checkboxthree =document.getElementById("Social Life/Family/Friends");
+							var checkboxthree =document.getElementById("Health and Wellness");
 							var guidelines=document.getElementById("guidelines-para");
 							if(checkboxthree.checked == true){
-								var allcheckboxes = document.getElementsByName("Social Life/Family/Friends");
+								var allcheckboxes = document.getElementsByName("Health and Wellness");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=true;
 									listArray.push(allcheckboxes[i].value);
-							guidelines.innerHTML = `General guidelines for Social Life/Family/Friends <br><br> Social Life/Family/Friends: Your social life, including your relationships with family and friends, can greatly influence your sense of self and your overall well-being. Consider your current relationships and the role they play in your life. Reflect on how you maintain these relationships and how they contribute to your happiness and personal growth.<br>
-Social Confidence in Social Settings: Social confidence refers to your ability to interact with others in social settings, whether it's at work, school, or social events. Consider your level of social confidence and any areas where you may feel uncomfortable or insecure. Reflect on strategies for improving your social skills and building confidence in social settings. <br>
-Social Circles and Communities: Your social circles and communities can be a source of support, belonging, and personal growth. Consider the different groups and communities you belong to, such as your workplace, school, or hobbies. Reflect on how these communities contribute to your sense of identity and how you can become more involved and connected. <br>
-Closest Confidants: Your closest confidants, such as your best friends or family members, play a significant role in your life and can greatly influence your sense of self. Consider the people you confide in the most and the role they play in your life. Reflect on how these relationships contribute to your personal growth and well-being. <br>
-When exploring the question, "Who am I?" it's important to consider your social life and relationships as an integral part of your identity. By reflecting on these four points, you can gain a better understanding of your social values, goals, and priorities, and work towards building strong and supportive relationships. Remember to approach the process with openness, honesty, and self-compassion, and seek out support and resources when needed. <br>
-
-
-`;
+							guidelines.innerHTML = ``;
 			
 								}
 							}else{
-								var allcheckboxes = document.getElementsByName("Social Life/Family/Friends");
+								var allcheckboxes = document.getElementsByName("Health and Wellness");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=false;
 									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
@@ -2413,25 +2412,18 @@ When exploring the question, "Who am I?" it's important to consider your social 
 							
 						}
 						function myfun4(){
-							var checkboxfour =document.getElementById("Surroundings");
+							var checkboxfour =document.getElementById("Home and Environment");
 							var guidelines=document.getElementById("guidelines-para");
 							if(checkboxfour.checked == true){
-								var allcheckboxes = document.getElementsByName("Surroundings");
+								var allcheckboxes = document.getElementsByName("Home and Environment");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=true;
 									listArray.push(allcheckboxes[i].value);
-							guidelines.innerHTML = `General guidelines for Surroundings <br><br>Surroundings: Your surroundings can greatly impact your mood, productivity, and overall well-being. Consider the spaces you spend the most time in, such as your home, workplace, or favorite hangouts. Reflect on how these spaces make you feel and how they contribute to your sense of self.<br>
-Clutter and Minimalism: Clutter and minimalism can both have a significant impact on your surroundings and your sense of well-being. Consider your preferences for clutter or minimalism and how they affect your mood and productivity. Reflect on strategies for maintaining a clutter-free and organized space that aligns with your preferences. <br>
-Favorite Smells, Textures, & Tastes: Your favorite smells, textures, and tastes can be a reflection of your personality and preferences. Consider your favorite scents, fabrics, and foods, and how they contribute to your sense of comfort and well-being. Reflect on how you can incorporate these preferences into your surroundings to create a space that feels truly you. <br>
-Cleanliness and Organization: Cleanliness and organization are important aspects of creating a comfortable and productive environment. Consider your level of comfort with messiness and disorganization and how they affect your mood and productivity. Reflect on strategies for maintaining a clean and organized space that aligns with your preferences. <br>
-Level of Comfort with Noise: Your level of comfort with noise can greatly impact your ability to focus and relax in your surroundings. Consider your preferences for noise level and how it affects your mood and productivity. Reflect on strategies for creating a space that aligns with your preferences, whether it's a quiet and peaceful space or a bustling and lively environment. <br>
-When exploring the question, "Who am I?" it's important to consider your surroundings and the impact they have on your well-being. By reflecting on these five points, you can gain a better understanding of your preferences, values, and priorities when it comes to your environment. Remember to approach the process with openness, honesty, and self-compassion, and seek out support and resources when needed. <br>
-
-`;
+							guidelines.innerHTML = ``;
 			
 								}
 							}else{
-								var allcheckboxes = document.getElementsByName("Surroundings");
+								var allcheckboxes = document.getElementsByName("Home and Environment");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=false;
 									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
@@ -2441,26 +2433,18 @@ When exploring the question, "Who am I?" it's important to consider your surroun
 							
 						}
 						function myfun5(){
-							var checkboxfive =document.getElementById("Health");
+							var checkboxfive =document.getElementById("Relationships and Social Connections");
 							var guidelines=document.getElementById("guidelines-para");
 							if(checkboxfive.checked == true){
-								var allcheckboxes = document.getElementsByName("Health");
+								var allcheckboxes = document.getElementsByName("Relationships and Social Connections");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=true;
 									listArray.push(allcheckboxes[i].value);
-							guidelines.innerHTML = `General guidelines for Health <br><br>Health: Your physical health is an important aspect of your overall well-being. Consider your current level of health and any chronic conditions or illnesses you may have. Reflect on strategies for maintaining and improving your physical health, such as exercise and proper nutrition.<br>
-Preventive Care and Health Screenings: Preventive care and health screenings are important for maintaining good health and detecting potential health problems early. Consider your current level of engagement with preventive care, such as regular check-ups and health screenings. Reflect on any barriers you may face in accessing preventive care and strategies for overcoming them. <br>
-Mental Health and Emotional Well-being: Your mental health and emotional well-being are just as important as your physical health. Consider your current level of mental health and any emotional challenges you may be facing. Reflect on strategies for maintaining and improving your mental health, such as therapy and self-care practices. <br>
-Relationship with Food and Eating Habits: Your relationship with food and eating habits can greatly impact your physical and emotional well-being. Consider your current eating habits and any challenges you may face when it comes to food. Reflect on strategies for developing a healthy and positive relationship with food, such as mindful eating and seeking support from a nutritionist or therapist if needed. <br>
-Self-care and Stress Management: Self-care and stress management are important for maintaining good mental and emotional health. Consider your current level of self-care and any stressors you may be facing. Reflect on strategies for developing a self-care routine that aligns with your needs and preferences, such as meditation, exercise, or hobbies that bring you joy. <br>
-When exploring the question, "Who am I?" it's important to consider your physical and mental health, as well as your relationship with food and self-care practices. By reflecting on these five points, you can gain a better understanding of your health needs and priorities, and work towards developing a healthy and fulfilling lifestyle. Remember to approach the process with openness, honesty, and self-compassion, and seek out support and resources when needed. <br>
-
-
-`;
+							guidelines.innerHTML = ``;
 			
 								}
 							}else{
-								var allcheckboxes = document.getElementsByName("Health");
+								var allcheckboxes = document.getElementsByName("Relationships and Social Connections");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=false;
 									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
@@ -2470,27 +2454,18 @@ When exploring the question, "Who am I?" it's important to consider your physica
 							
 						}
 						function myfun6(){
-							var checkboxsix =document.getElementById("Work/Job/Unemployed");
+							var checkboxsix =document.getElementById("Finances and Wealth");
 							var guidelines=document.getElementById("guidelines-para");
 							if(checkboxsix.checked == true){
-								var allcheckboxes = document.getElementsByName("Work/Job/Unemployed");
+								var allcheckboxes = document.getElementsByName("Finances and Wealth");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=true;
 									listArray.push(allcheckboxes[i].value);
-							guidelines.innerHTML = `General guidelines for Work/Job/Unemployed <br><br>Work/Job/Unemployed: Your career is an important aspect of your identity and can greatly impact your overall well-being. Consider your current employment status and any career-related challenges or aspirations you may have. Reflect on strategies for finding meaningful and fulfilling work, whether you are currently employed or seeking employment.<br>
-Preferred Work Environments: Your preferred work environment can greatly impact your productivity and job satisfaction. Consider the types of work environments that you thrive in, such as working from home, working in a team-oriented environment, or working independently. Reflect on strategies for finding or creating a work environment that aligns with your preferences and needs. <br>
-Work Style and Schedule: Your work style and schedule can also impact your job satisfaction and overall well-being. Consider the work style and schedule that you prefer, such as a flexible schedule, a consistent routine, or a highly structured environment. Reflect on strategies for finding or creating a work schedule that aligns with your preferences and needs. <br>
-Short-term and Long-term Career Goals: Having clear career goals can help guide your career decisions and keep you motivated and focused. Consider your short-term and long-term career goals, and reflect on strategies for achieving them. This may involve seeking out education or training, networking with professionals in your field, or seeking out mentors or career coaches. <br>
-Job Searching and Networking: Whether you are currently employed or seeking employment, job searching and networking are important skills to have. Consider strategies for job searching and networking, such as building a strong online presence, attending industry events, or seeking out mentorship or guidance from professionals in your field. <br>
-Self-employment or Entrepreneurship: Self-employment or entrepreneurship may be a viable option for those who want more control over their career path and work schedule. Consider your interest in self-employment or entrepreneurship, and reflect on strategies for starting and growing a business. <br>
-When exploring the question, "Who am I?" it's important to consider your career aspirations, preferred work environment, work style and schedule, and job searching and networking skills. By reflecting on these six points, you can gain a better understanding of your career goals and priorities, and work towards building a fulfilling and meaningful career. Remember to approach the process with openness, honesty, and self-compassion, and seek out support and resources when needed. <br>
-
-
-`;
+							guidelines.innerHTML = ``;
 			
 								}
 							}else{
-								var allcheckboxes = document.getElementsByName("Work/Job/Unemployed");
+								var allcheckboxes = document.getElementsByName("Finances and Wealth");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=false;
 									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
@@ -2500,29 +2475,20 @@ When exploring the question, "Who am I?" it's important to consider your career 
 							
 						}
 						function myfunc1(){
-							var checkboxone =document.getElementById("My Life");
+							var checkboxone =document.getElementById("Personal Growth and Learning");
 							var guidelines=document.getElementById("guidelines-para");
 							
 							
 							if(checkboxone.checked == true){
-								var allcheckboxes = document.getElementsByName("My Life");
+								var allcheckboxes = document.getElementsByName("Personal Growth and Learning");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=true;
 									listArray.push(allcheckboxes[i].value);
-							guidelines.innerHTML = `General guidelines for My Life <br><br>My Life: Your life experiences, both positive and negative, shape who you are. Consider your family background, childhood experiences, education, career, relationships, and any significant life events. Reflect on how these experiences have influenced your beliefs, values, and attitudes.<br>
-A Growth Mindset: Adopting a growth mindset means believing that your abilities can be developed through dedication and hard work. Consider your attitudes towards learning, challenges, and failure. Reflect on how you approach new experiences and how you handle setbacks. <br>
-Personal Values: Your values are the principles or beliefs that guide your behavior and decision-making. Consider what is most important to you in life, such as honesty, compassion, or creativity. Reflect on how your values align with your actions and goals. <br>
-Strengths and Weaknesses: Your strengths are the skills and abilities that come naturally to you, while your weaknesses are areas where you struggle. Consider your natural talents, learned skills, and areas for improvement. Reflect on how you can leverage your strengths and work on your weaknesses. <br>
-Fears and Insecurities: Everyone has fears and insecurities, but acknowledging them can help you better understand yourself. Consider what makes you feel anxious or uncertain, whether it's public speaking, rejection, or uncertainty about the future. Reflect on how you can work on overcoming these fears. <br>
-Achievements and Failures: Your achievements and failures are both important parts of your personal journey. Consider your proudest accomplishments, as well as the times when you fell short of your goals. Reflect on what you learned from both your successes and your failures. <br>
-When exploring the question, "Who am I?" it's important to approach the process with openness, honesty, and self-compassion. Remember that your identity is complex and multifaceted, and it's okay to have multiple aspects to your personality and experiences. By reflecting on these six points, you can gain a deeper understanding of yourself and work towards becoming the best version of yourself. <br>
-
-
-`;
+							guidelines.innerHTML = ``;
 			
 								}
 							}else{
-								var allcheckboxes = document.getElementsByName("My Life");
+								var allcheckboxes = document.getElementsByName("Personal Growth and Learning");
 								for(var i=0; i<allcheckboxes.length; i++){
 									allcheckboxes[i].checked=false;
 									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
@@ -2533,7 +2499,88 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							
 							}
 							
+						
+
+
+							function myfunc7(){
+							var checkboxone =document.getElementById("Recreation and Leisure");
+							var guidelines=document.getElementById("guidelines-para");
 							
+							
+							if(checkboxone.checked == true){
+								var allcheckboxes = document.getElementsByName("Recreation and Leisure");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=true;
+									listArray.push(allcheckboxes[i].value);
+							guidelines.innerHTML = ``;
+			
+								}
+							}else{
+								var allcheckboxes = document.getElementsByName("Recreation and Leisure");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=false;
+									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
+									guidelines.innerHTML = "";
+			
+								}
+							}
+							
+							}
+
+
+
+							function myfunc8(){
+							var checkboxone =document.getElementById("Spirituality and Meaning");
+							var guidelines=document.getElementById("guidelines-para");
+							
+							
+							if(checkboxone.checked == true){
+								var allcheckboxes = document.getElementsByName("Spirituality and Meaning");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=true;
+									listArray.push(allcheckboxes[i].value);
+							guidelines.innerHTML = ``;
+			
+								}
+							}else{
+								var allcheckboxes = document.getElementsByName("Spirituality and Meaning");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=false;
+									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
+									guidelines.innerHTML = "";
+			
+								}
+							}
+							
+							}
+
+
+
+
+							function myfunc9(){
+							var checkboxone =document.getElementById("Contribution and Giving Back");
+							var guidelines=document.getElementById("guidelines-para");
+							
+							
+							if(checkboxone.checked == true){
+								var allcheckboxes = document.getElementsByName("Contribution and Giving Back");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=true;
+									listArray.push(allcheckboxes[i].value);
+							guidelines.innerHTML = ``;
+			
+								}
+							}else{
+								var allcheckboxes = document.getElementsByName("Contribution and Giving Back");
+								for(var i=0; i<allcheckboxes.length; i++){
+									allcheckboxes[i].checked=false;
+									listArray = listArray.filter(e => e !== allcheckboxes[i].value);
+									guidelines.innerHTML = "";
+			
+								}
+							}
+							
+							}							
 
 
 
@@ -2568,6 +2615,9 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							var array4 = [];
 							var array5 = [];
 							var array6 = [];
+							var array7 = [];
+							var array8 = [];
+							var array9 = [];
 				
 							var sec1selects = document.getElementById("sec1selects");
 							var sec2selects = document.getElementById("sec2selects");
@@ -2575,6 +2625,9 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							var sec4selects = document.getElementById("sec4selects");
 							var sec5selects = document.getElementById("sec5selects");
 							var sec6selects = document.getElementById("sec6selects");
+							var sec7selects = document.getElementById("sec7selects");
+							var sec8selects = document.getElementById("sec8selects");
+							var sec9selects = document.getElementById("sec9selects");
 							
 							var sec1selects1 = document.getElementById("sec1selects1");
 							var sec2selects2 = document.getElementById("sec2selects2");
@@ -2582,6 +2635,9 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							var sec4selects4 = document.getElementById("sec4selects4");
 							var sec5selects5 = document.getElementById("sec5selects5");
 							var sec6selects6 = document.getElementById("sec6selects6");
+							var sec7selects7 = document.getElementById("sec7selects7");
+							var sec8selects8 = document.getElementById("sec8selects8");
+							var sec9selects9 = document.getElementById("sec9selects9");
 							
 							
 							
@@ -2596,6 +2652,9 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							var count4=0;
 							var count5=0;
 							var count6=0;
+							var count7=0;
+							var count8=0;
+							var count9=0;
 							
 							
 							var perc1=0
@@ -2604,6 +2663,9 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							var perc4=0
 							var perc5=0
 							var perc6=0
+							var perc7=0
+							var perc8=0
+							var perc9=0
 							
 							var reportSection1 = document.querySelector(".reportSection1");
 							var reportSection2 = document.querySelector(".reportSection2");
@@ -2611,6 +2673,9 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							var reportSection4 = document.querySelector(".reportSection4");
 							var reportSection5 = document.querySelector(".reportSection5");
 							var reportSection6 = document.querySelector(".reportSection6");
+							var reportSection7 = document.querySelector(".reportSection7");
+							var reportSection8 = document.querySelector(".reportSection8");
+							var reportSection9 = document.querySelector(".reportSection9");
 							
 							
 							
@@ -2620,6 +2685,9 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							var reportSection44 = document.querySelector(".reportSection44");
 							var reportSection55 = document.querySelector(".reportSection55");
 							var reportSection66 = document.querySelector(".reportSection66");
+							var reportSection77 = document.querySelector(".reportSection77");
+							var reportSection88 = document.querySelector(".reportSection88");
+							var reportSection99 = document.querySelector(".reportSection99");
 							
 							
 							
@@ -2636,127 +2704,219 @@ When exploring the question, "Who am I?" it's important to approach the process 
 						
 							
 							
-							if(listArray.includes('A growth mindset')){
-								if(!array1.includes('A growth mindset')){
-								array1.push("A growth mindset");}
+							if(listArray.includes('Self-Reflection and Self-Awareness')){
+								if(!array1.includes('Self-Reflection and Self-Awareness')){
+								array1.push("Self-Reflection and Self-Awareness");}
 							}
 							
-							if(listArray.includes('Personal Values')){
-							if(!array1.includes('Personal Values')){
-								array1.push("Personal Values");}
+							if(listArray.includes('Goal Setting and Personal Development Planning')){
+							if(!array1.includes('Goal Setting and Personal Development Planning')){
+								array1.push("Goal Setting and Personal Development Planning");}
 							}
 							
-							if(listArray.includes('Strengths and weaknesses')){
-							if(!array1.includes('Strengths and weaknesses')){
-								array1.push("Strengths and weaknesses");}
+							if(listArray.includes('Continuous Learning and Skill Acquisition')){
+							if(!array1.includes('Continuous Learning and Skill Acquisition')){
+								array1.push("Continuous Learning and Skill Acquisition");}
 							}
 							
-							if(listArray.includes('Fears and insecurities')){
-							if(!array1.includes('Fears and insecurities')){
-								array1.push("Fears and insecurities");}
+							if(listArray.includes('Emotional Intelligence and Self-Management')){
+							if(!array1.includes('Emotional Intelligence and Self-Management')){
+								array1.push("Emotional Intelligence and Self-Management");}
 							}
 							
-							if(listArray.includes('achievements and failures')){
-							if(!array1.includes('achievements and failures')){
-								array1.push("achievements and failures");}
-							}
-							
-							
-							
-							
-							if(listArray.includes('Goals and aspirations')){
-							if(!array2.includes('Goals and aspirations')){
-								array2.push("Goals and aspirations");}
-							}
-							if(listArray.includes('Budgeting & managing money')){
-							if(!array2.includes('Budgeting & managing money')){
-								array2.push("Budgeting & managing money");}
-							}
-							if(listArray.includes('Debt and savings')){
-							if(!array2.includes('Debt and savings')){
-								array2.push("Debt and savings");}
+							if(listArray.includes('Overcoming Challenges and Resilience Building')){
+							if(!array1.includes('Overcoming Challenges and Resilience Building')){
+								array1.push("Overcoming Challenges and Resilience Building");}
 							}
 							
 							
 							
-							if(listArray.includes('Social confidence in social settings')){
-							if(!array3.includes('Social confidence in social settings')){
-								array3.push("Social confidence in social settings");}
+							
+							if(listArray.includes('Goal Setting and Planning')){
+							if(!array2.includes('Goal Setting and Planning')){
+								array2.push("Goal Setting and Planning");}
 							}
-							if(listArray.includes('Social circles and communities')){
-							if(!array3.includes('Social circles and communities')){
-								array3.push("Social circles and communities");}
+							if(listArray.includes('Skill Development and Training')){
+							if(!array2.includes('Skill Development and Training')){
+								array2.push("Skill Development and Training");}
 							}
-							if(listArray.includes('Closest confidants')){
-							if(!array3.includes('Closest confidants')){
-								array3.push("Closest confidants");}
+							if(listArray.includes('Networking and Professional Relationships')){
+							if(!array2.includes('Networking and Professional Relationships')){
+								array2.push("Networking and Professional Relationships");}
+							}
+							if(listArray.includes('Job Satisfaction and Work-Life Balance')){
+							if(!array2.includes('Job Satisfaction and Work-Life Balance')){
+								array2.push("Job Satisfaction and Work-Life Balance");}
+							}
+							if(listArray.includes('Advancement and Promotion Opportunities')){
+							if(!array2.includes('Advancement and Promotion Opportunities')){
+								array2.push("Advancement and Promotion Opportunities");}
 							}
 							
 							
 							
-							if(listArray.includes('Clutter and minimalism')){
-							if(!array4.includes('Clutter and minimalism')){
-								array4.push("Clutter and minimalism");}
+							if(listArray.includes('Physical Fitness and Exercise')){
+							if(!array3.includes('Physical Fitness and Exercise')){
+								array3.push("Physical Fitness and Exercise");}
 							}
-							if(listArray.includes('Favorite smells, textures, & tastes')){
-							if(!array4.includes('Favorite smells, textures, & tastes')){
-								array4.push("Favorite smells, textures, & tastes");}
+							if(listArray.includes('Nutrition and Healthy Eating Habits')){
+							if(!array3.includes('Nutrition and Healthy Eating Habits')){
+								array3.push("Nutrition and Healthy Eating Habits");}
 							}
-							if(listArray.includes('Cleanliness and organization')){
-							if(!array4.includes('Cleanliness and organization')){
-								array4.push("Cleanliness and organization");}
+							if(listArray.includes('Stress Management and Mental Health')){
+							if(!array3.includes('Stress Management and Mental Health')){
+								array3.push("Stress Management and Mental Health");}
 							}
-							if(listArray.includes('Level of comfort with noise')){
-							if(!array4.includes('Level of comfort with noise')){
-								array4.push("Level of comfort with noise");}
+							if(listArray.includes('Preventive Care and Regular Check-ups')){
+							if(!array3.includes('Preventive Care and Regular Check-ups')){
+								array3.push("Preventive Care and Regular Check-ups");}
+							}
+							if(listArray.includes('Sleep Quality and Restorative Practices')){
+							if(!array3.includes('Sleep Quality and Restorative Practices')){
+								array3.push("Sleep Quality and Restorative Practices");}
 							}
 							
 							
 							
-							if(listArray.includes('Preventive care and health screenings')){
-							if(!array5.includes('Preventive care and health screenings')){
-								array5.push("Preventive care and health screenings");}
+							if(listArray.includes('Home Organization and Maintenance')){
+							if(!array4.includes('Home Organization and Maintenance')){
+								array4.push("Home Organization and Maintenance");}
 							}
-							if(listArray.includes('Mental health and emotional well-being')){
-							if(!array5.includes('Mental health and emotional well-being')){
-								array5.push("Mental health and emotional well-being");}
+							if(listArray.includes('Interior Design and Aesthetics')){
+							if(!array4.includes('Interior Design and Aesthetics')){
+								array4.push("Interior Design and Aesthetics");}
 							}
-							if(listArray.includes('Relationship with food and eating habits')){
-							if(!array5.includes('Relationship with food and eating habits')){
-								array5.push("Relationship with food and eating habits");}
+							if(listArray.includes('Sustainable Living and Environmental Responsibility')){
+							if(!array4.includes('Sustainable Living and Environmental Responsibility')){
+								array4.push("Sustainable Living and Environmental Responsibility");}
 							}
-							if(listArray.includes('self-care and stress management')){
-							if(!array5.includes('self-care and stress management')){
-								array5.push("self-care and stress management");}
+							if(listArray.includes('Neighborhood and Community Engagement')){
+							if(!array4.includes('Neighborhood and Community Engagement')){
+								array4.push("Neighborhood and Community Engagement");}
+							}
+							if(listArray.includes('Safety and Security Measures')){
+							if(!array4.includes('Safety and Security Measures')){
+								array4.push("Safety and Security Measures");}
+							}
+							
+							
+							
+							if(listArray.includes('Family and Close Relationships')){
+							if(!array5.includes('Family and Close Relationships')){
+								array5.push("Family and Close Relationships");}
+							}
+							if(listArray.includes('Friendship and Social Support Network')){
+							if(!array5.includes('Friendship and Social Support Network')){
+								array5.push("Friendship and Social Support Network");}
+							}
+							if(listArray.includes('Romantic Relationships and Intimacy')){
+							if(!array5.includes('Romantic Relationships and Intimacy')){
+								array5.push("Romantic Relationships and Intimacy");}
+							}
+							if(listArray.includes('Communication and Conflict Resolution')){
+							if(!array5.includes('Communication and Conflict Resolution')){
+								array5.push("Communication and Conflict Resolution");}
+							}
+							if(listArray.includes('Building and Maintaining Social Connections')){
+							if(!array5.includes('Building and Maintaining Social Connections')){
+								array5.push("Building and Maintaining Social Connections");}
 							}
 			
 			
 			
 			
 			
-							if(listArray.includes('Preferred work environments')){
-							if(!array6.includes('Preferred work environments')){
-								array6.push("Preferred work environments");}
+							if(listArray.includes('Budgeting and Financial Planning')){
+							if(!array6.includes('Budgeting and Financial Planning')){
+								array6.push("Budgeting and Financial Planning");}
 							}
-							if(listArray.includes('Work style and schedule')){
-							if(!array6.includes('Work style and schedule')){
-								array6.push("Work style and schedule");}
+							if(listArray.includes('Savings and Investments')){
+							if(!array6.includes('Savings and Investments')){
+								array6.push("Savings and Investments");}
 							}
-							if(listArray.includes('Short-term and long-term career goals')){
-							if(!array6.includes('Short-term and long-term career goals')){
-								array6.push("Short-term and long-term career goals");}
+							if(listArray.includes('Debt Management and Credit Score')){
+							if(!array6.includes('Debt Management and Credit Score')){
+								array6.push("Debt Management and Credit Score");}
 							}
-							if(listArray.includes('Job searching and networking')){
-							if(!array6.includes('Job searching and networking')){
-								array6.push("Job searching and networking");}
+							if(listArray.includes('Income Generation and Career Growth')){
+							if(!array6.includes('Income Generation and Career Growth')){
+								array6.push("Income Generation and Career Growth");}
 							}
-							if(listArray.includes('Self-employment or entrepreneurship')){
-							if(!array6.includes('Self-employment or entrepreneurship')){
-								array6.push("Self-employment or entrepreneurship");}
+							if(listArray.includes('Retirement Planning and Long-Term Financial Security')){
+							if(!array6.includes('Retirement Planning and Long-Term Financial Security')){
+								array6.push("Retirement Planning and Long-Term Financial Security");}
 							}
 							
 							
 							
+							if(listArray.includes('Hobbies and Creative Pursuits')){
+							if(!array7.includes('Hobbies and Creative Pursuits')){
+								array7.push("Hobbies and Creative Pursuits");}
+							}
+							if(listArray.includes('Sports and Physical Activities')){
+							if(!array7.includes('Sports and Physical Activities')){
+								array7.push("Sports and Physical Activities");}
+							}
+							if(listArray.includes('Travel and Exploration')){
+							if(!array7.includes('Travel and Exploration')){
+								array7.push("Travel and Exploration");}
+							}
+							if(listArray.includes('Entertainment and Media Consumption')){
+							if(!array7.includes('Entertainment and Media Consumption')){
+								array7.push("Entertainment and Media Consumption");}
+							}
+							if(listArray.includes('Relaxation Techniques and Stress Relief')){
+							if(!array7.includes('Relaxation Techniques and Stress Relief')){
+								array7.push("Relaxation Techniques and Stress Relief");}
+							}
+							
+							
+							
+							
+							if(listArray.includes('Personal Beliefs and Values Exploration')){
+							if(!array8.includes('Personal Beliefs and Values Exploration')){
+								array8.push("Personal Beliefs and Values Exploration");}
+							}
+							if(listArray.includes('Meditation and Mindfulness Practices')){
+							if(!array8.includes('Meditation and Mindfulness Practices')){
+								array8.push("Meditation and Mindfulness Practices");}
+							}
+							if(listArray.includes('Rituals and Ceremonies')){
+							if(!array8.includes('Rituals and Ceremonies')){
+								array8.push("Rituals and Ceremonies");}
+							}
+							if(listArray.includes('Connection with Nature and the Universe')){
+							if(!array8.includes('Connection with Nature and the Universe')){
+								array8.push("Connection with Nature and the Universe");}
+							}
+							if(listArray.includes('Finding Purpose and Meaning in Life')){
+							if(!array8.includes('Finding Purpose and Meaning in Life')){
+								array8.push("Finding Purpose and Meaning in Life");}
+							}
+							
+							
+							
+							
+							if(listArray.includes('Volunteer Work and Community Service')){
+							if(!array9.includes('Volunteer Work and Community Service')){
+								array9.push("Volunteer Work and Community Service");}
+							}
+							if(listArray.includes('Philanthropy and Charitable Giving')){
+							if(!array9.includes('Philanthropy and Charitable Giving')){
+								array9.push("Philanthropy and Charitable Giving");}
+							}
+							if(listArray.includes('Mentorship and Coaching')){
+							if(!array9.includes('Mentorship and Coaching')){
+								array9.push("Mentorship and Coaching");}
+							}
+							if(listArray.includes('Advocacy and Social Activism')){
+							if(!array9.includes('Advocacy and Social Activism')){
+								array9.push("Advocacy and Social Activism");}
+							}
+							if(listArray.includes('Environmental and Social Responsibility Initiatives')){
+							if(!array9.includes('Environmental and Social Responsibility Initiatives')){
+								array9.push("Environmental and Social Responsibility Initiatives");}
+							}
 							
 							
 							sec1selects.innerHTML = array1.join(`<br>`);
@@ -2765,6 +2925,9 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							sec4selects.innerHTML = array4.join(`<br>`);
 							sec5selects.innerHTML = array5.join(`<br>`);
 							sec6selects.innerHTML = array6.join(`<br>`);
+							sec7selects.innerHTML = array7.join(`<br>`);
+							sec8selects.innerHTML = array8.join(`<br>`);
+							sec9selects.innerHTML = array9.join(`<br>`);
 							
 							
 							sec1selects1.innerHTML = array1.join(`<br>`);
@@ -2773,6 +2936,9 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							sec4selects4.innerHTML = array4.join(`<br>`);
 							sec5selects5.innerHTML = array5.join(`<br>`);
 							sec6selects6.innerHTML = array6.join(`<br>`);
+							sec7selects7.innerHTML = array7.join(`<br>`);
+							sec8selects8.innerHTML = array8.join(`<br>`);
+							sec9selects9.innerHTML = array9.join(`<br>`);
 							
 							
 							
@@ -2783,23 +2949,63 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							count4=array4.length;
 							count5=array5.length;
 							count6=array6.length;
+							count7=array7.length;
+							count8=array8.length;
+							count9=array9.length;
 							
 							
 							perc1 = Math.floor((count1/5)*100);
-							
-							perc2 = Math.floor((count2/3)*100);
-							perc3 = Math.floor((count3/3)*100);
-							perc4 = Math.floor((count4/4)*100);
-							perc5 = Math.floor((count5/4)*100);
+							perc2 = Math.floor((count2/5)*100);
+							perc3 = Math.floor((count3/5)*100);
+							perc4 = Math.floor((count4/5)*100);
+							perc5 = Math.floor((count5/5)*100);
 							perc6 = Math.floor((count6/5)*100);
+							perc7 = Math.floor((count7/5)*100);
+							perc8 = Math.floor((count8/5)*100);
+							perc9 = Math.floor((count9/5)*100);
 							
-							var avg = (perc1 + perc2 + perc3 + perc4 + perc5 + perc6)/6;
-							percentageArray.push(perc1,perc2,perc3,perc4,perc5,perc6)
+							var avg = (perc1 + perc2 + perc3 + perc4 + perc5 + perc6 + perc7 + perc8 + perc9)/9;
+							percentageArray.push(perc1,perc2,perc3,perc4,perc5,perc6,perc7,perc8,perc9);
 							
-							secTwoHoldingPara.innerHTML=`You know ${perc1}% about your life. <br>
-							You know ${perc2}% about your finances management. <br>You know ${perc3}% about your Sociality. <br>
-							You know ${perc4}% about your Surroundings. <br>You know ${perc5}% about your Health. <br>
-							You know ${perc6}% about your Job. <br><br><strong>Overall, percentage you know about yourself , your ups and downs is ${avg}%</strong>`;
+							
+							const variableLetters = ['Personal Growth and Learning','Career and Professional Development',
+														'Health and Wellness','Home and Environment','Relationships and Social Connections','Finances and Wealth',
+														'Recreation and Leisure','Spirituality and Meaning','Contribution and Giving Back'];
+							
+							const percentageVariables = [
+															{ percentage: perc1, letter: variableLetters[0] },
+															{ percentage: perc2, letter: variableLetters[1] },
+															{ percentage: perc3, letter: variableLetters[2] },
+															{ percentage: perc4, letter: variableLetters[3] },
+															{ percentage: perc5, letter: variableLetters[4] },
+															{ percentage: perc6, letter: variableLetters[5] },
+															{ percentage: perc7, letter: variableLetters[6] },
+															{ percentage: perc8, letter: variableLetters[7] },
+															{ percentage: perc9, letter: variableLetters[8] },
+														];
+							 // Find the highest percentage using Math.max()
+							const highestPercentage = Math.max(...percentageVariables.map(percVar => percVar.percentage));
+
+							// Find all the highest percentages using filter()
+							const highestPercentages = percentageVariables.filter(percVar => percVar.percentage === highestPercentage);
+
+							// Map the highest percentage variables to an array of letters
+							const highestPercentageLetters = highestPercentages.map(percVar => percVar.letter);
+							
+						
+							
+							secTwoHoldingPara.innerHTML=`
+							You selected the top <strong>${perc1}%</strong> of your Personal Growth and Learning section. <br>
+							You selected the top <strong>${perc2}%</strong> of your Career and Professional Development section. <br>
+							You selected the top <strong>${perc3}%</strong> of your Health and Wellness section. <br>
+							You selected the top <strong>${perc4}%</strong> of your Home and Environment section. <br>
+							You selected the top <strong>${perc5}%</strong> of your Relationships and Social Connections section. <br>
+							You selected the top <strong>${perc6}%</strong> of your Finances and Wealth section. <br>
+							You selected the top <strong>${perc7}%</strong> of your Recreation and Leisure section. <br>
+							You selected the top <strong>${perc8}%</strong> of your Spirituality and Meaning section. <br>
+							You selected the top <strong>${perc9}%</strong> of your Contribution and Giving Back section. <br><br><strong>Overall, percentage you know about yourself , your ups and downs is ${avg}%</strong>`;
+							
+							perc1 = 0;perc2 = 0;perc3 = 0;perc4 = 0;perc5 = 0;perc6 = 0;perc7 = 0;perc8 = 0;perc9 = 0;
 							
 							if(array1.length == []){
 							reportSection1.style.display="none";
@@ -2861,6 +3067,33 @@ When exploring the question, "Who am I?" it's important to approach the process 
 							
 							}
 	
+							
+							if(array7.length == []){
+							reportSection7.style.display="none";
+							reportSection77.style.display="none";
+							}else{
+							reportSection7.style.display="block";
+							reportSection77.style.display="block";
+							
+							}
+							
+							if(array8.length == []){
+							reportSection8.style.display="none";
+							reportSection88.style.display="none";
+							}else{
+							reportSection8.style.display="block";
+							reportSection88.style.display="block";
+							
+							}
+							
+							if(array9.length == []){
+							reportSection9.style.display="none";
+							reportSection99.style.display="none";
+							}else{
+							reportSection9.style.display="block";
+							reportSection99.style.display="block";
+							
+							}
 	
 	
 	
@@ -2868,7 +3101,7 @@ When exploring the question, "Who am I?" it's important to approach the process 
 creating_chart(
    'canvas',
 	'line',
-	['My Life', 'My Finances','Social Life', 'Surrounding', 'Health', 'Job'],
+	['Personal Growth', 'Professional Development','Health', 'Home & Environment', 'Relationships', 'Finances', 'Recreation', 'Spirituality', 'Contribution '],
 	percentageArray,
 	'Points Earned Based on your Self-knowledge'
 );
