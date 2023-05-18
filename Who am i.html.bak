@@ -2300,9 +2300,9 @@ function addTask(){
 							}
 							.reportSectionone{
 								width:280px;
-								height:180px;
+								height:210px;
 								border:1px solid rgba(0,0,0,0.1);
-								margin:10px;
+								margin:13px;
 								display:flex;
 								flex-direction:column;
 								
